@@ -6,13 +6,13 @@
                 <button class="mobile-menu-toggler" type="button">
                     <i class="icon-menu"></i>
                 </button>
-                <a href="index.html" class="logo">
+                <a href="#" class="logo">
                     <img src="assets/images/abouelgoukh/Black-on-White-EngVer2.png" alt="Porto Logo">
                 </a>
                 <nav class="main-nav">
                     <ul class="menu">
                         <li>
-                            <a href="index.html">Home</a>
+                            <a href="#">Home</a>
                         </li>
                         <li>
                             <a href="#">A-Store</a>
@@ -21,13 +21,13 @@
                                 <div class="col-md-4">
                                   <a class="nolink">Categories</a>
                                   <ul class="submenu">
-                                    <li><a href="/bicycles">Bicycles</a></li>
-                                    <li><a href="/#">Petrol Scooter</a></li>
-                                    <li><a href="/#">Accessories</a></li>
-                                    <li><a href="/#">Kids scooter</a></li>
-                                    <li><a href="/#">Sport</a></li>
-                                    <li><a href="/#">Toys</a></li>
-                                    <li><a href="/#">Bicycle Car Holder</a></li>
+                                    <li><a href="{{route('bicycles')}}">Bicycles</a></li>
+                                    <li><a href="#">Petrol Scooter</a></li>
+                                    <li><a href="#">Accessories</a></li>
+                                    <li><a href="#">Kids scooter</a></li>
+                                    <li><a href="#">Sport</a></li>
+                                    <li><a href="#">Toys</a></li>
+                                    <li><a href="#">Bicycle Car Holder</a></li>
                                   </ul>
                                 </div>
                                 <div class="col-md-8 image-container">
@@ -87,13 +87,13 @@
                             <div class="dropdown-cart-header">
                                 <span>2 Items</span>
 
-                                <a href="cart.html">View Cart</a>
+                                <a href="#">View Cart</a>
                             </div><!-- End .dropdown-cart-header -->
                             <div class="dropdown-cart-products">
                                 <div class="product">
                                     <div class="product-details">
                                         <h4 class="product-title">
-                                            <a href="product.html">Woman Ring</a>
+                                            <a href="#">Woman Ring</a>
                                         </h4>
 
                                         <span class="cart-product-info">
@@ -103,7 +103,7 @@
                                     </div><!-- End .product-details -->
 
                                     <figure class="product-image-container">
-                                        <a href="product.html" class="product-image">
+                                        <a href="#" class="product-image">
                                             <img src="assets/images/products/cart/product-1.jpg" alt="product">
                                         </a>
                                         <a href="#" class="btn-remove" title="Remove Product"><i class="icon-retweet"></i></a>
@@ -113,7 +113,7 @@
                                 <div class="product">
                                     <div class="product-details">
                                         <h4 class="product-title">
-                                            <a href="product.html">Woman Necklace</a>
+                                            <a href="#">Woman Necklace</a>
                                         </h4>
 
                                         <span class="cart-product-info">
@@ -123,7 +123,7 @@
                                     </div><!-- End .product-details -->
 
                                     <figure class="product-image-container">
-                                        <a href="product.html" class="product-image">
+                                        <a href="#" class="product-image">
                                             <img src="assets/images/products/cart/product-2.jpg" alt="product">
                                         </a>
                                         <a href="#" class="btn-remove" title="Remove Product"><i class="icon-retweet"></i></a>
@@ -138,7 +138,7 @@
                             </div><!-- End .dropdown-cart-total -->
 
                             <div class="dropdown-cart-action">
-                                <a href="checkout-shipping.html" class="btn btn-block">Checkout</a>
+                                <a href="#" class="btn btn-block">Checkout</a>
                             </div><!-- End .dropdown-cart-total -->
                         </div><!-- End .dropdownmenu-wrapper -->
                     </div><!-- End .dropdown-menu -->
@@ -183,7 +183,7 @@
             <nav class="mobile-nav">
                 <ul class="mobile-menu">
                     <li>
-                        <a href="index.html">Home</a>
+                        <a href="#">Home</a>
                     </li>
                     <li>
                         <a href="#">A-Store</a>
@@ -191,7 +191,7 @@
                           <div class="row row-sm">
                             <div class="col-md-4">
                               <ul class="submenu">
-                                <li><a href="/bicycles">Bicycles</a></li>
+                                <li><a href={{route('bicycles')}}>Bicycles</a></li>
                                 <li><a href="#">Petrol Scooter</a></li>
                                 <li><a href="#">Accessories</a></li>
                                 <li><a href="#">Kids scooter</a></li>
