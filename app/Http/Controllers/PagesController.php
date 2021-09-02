@@ -11,8 +11,12 @@ class PagesController extends Controller
     {
         return view('pages.bicycles')->with('sub_categories',SubCategories::all());
     }
-    public function bicycles_under_13()
+    public function abouelgoukh()
     {
-        return view('pages.bicycles_under_13');
+        return view('pages.about');
+    }
+    public function contact()
+    {
+        return view('pages.contact');
     }
 }

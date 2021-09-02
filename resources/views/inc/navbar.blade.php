@@ -38,8 +38,8 @@
                           </li>
 
 
-                        <li><a href="#" target="_blank">Abou El-Goukh</a></li>
-                        <li><a href="#" target="_blank">Contact Us</a></li>
+                        <li><a href="{{route('about')}}">Abou El-Goukh</a></li>
+                        <li><a href="{{route('contact')}}">Contact Us</a></li>
                     </ul>
                 </nav>
             </div>
@@ -190,8 +190,8 @@
                       </li>
 
 
-                    <li><a href="#" target="_blank">Abou El-Goukh</a></li>
-                    <li><a href="#" target="_blank">Contact Us</a></li>
+                    <li><a href="{{route('about')}}">Abou El-Goukh</a></li>
+                    <li><a href="{{route('contact')}}">Contact Us</a></li>
                 </ul>
             </nav><!-- End .mobile-nav -->
 

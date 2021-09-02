@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/', 'App\Http\Controllers\ProductsController@index')->name('home');
+Route::get('/abouelgoukh', 'App\Http\Controllers\PagesController@abouelgoukh')->name('about');
+Route::get('/contact', 'App\Http\Controllers\PagesController@contact')->name('contact');
 Route::resource('sub_categories','App\Http\Controllers\SubCategoriesController');
 Route::resource('subsub_categories','App\Http\Controllers\SubsubCategoriesController');
 Route::resource('products','App\Http\Controllers\ProductsController');
