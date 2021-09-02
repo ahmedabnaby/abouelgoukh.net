@@ -4,7 +4,7 @@
     <nav aria-label="breadcrumb" class="breadcrumb-nav">
         <div class="container">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href={{route('home')}}>Home</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Bicycles</li>
             </ol>
         </div>
@@ -14,7 +14,7 @@
             <div class="col-lg-10">
                 <div class="boxed-slider owl-carousel owl-carousel-lazy owl-theme owl-theme-light">
                     <div class="category-slide">
-                        <div class="slide-bg owl-lazy"  data-src="assets/images/abouelgoukh/2000_60d26f433c2bf.jpg"></div><!-- End .slide-bg -->
+                        <div class="slide-bg owl-lazy"  data-src="{{asset('assets/images/abouelgoukh/2000_60d26f433c2bf.jpg')}}"></div><!-- End .slide-bg -->
                         <div class="banner boxed-slide-content offset-1">
                             <h2 class="banner-subtitle" style="color: white;">check out over <span>200+</span></h2>
                             <h1 class="banner-title" style="color: white;">
@@ -33,7 +33,7 @@
                                     <h4 class="cross-txt">BIKES</h4>
                                 </div>
                                 <div class="content-center">
-                                    <img src="assets/images/abouelgoukh/800_610d57021404d.png" class="bike_padding">
+                                    <img src="{{asset('assets/images/abouelgoukh/800_610d57021404d.png')}}" class="bike_padding">
                                 </div>
                                 <div class="content-right">
                                     <p>Summer Sale</p>
@@ -45,13 +45,17 @@
                 </div><!-- End .home-slider -->
 
             
-
+                
                 <div class="row row-sm">
+
+                    {{-- @foreach ($subsub_categories as $subsub_category)
+                    @if ($sub_category->id === $subsub_category->sub_category_id)
+  
                     <div class="col-6 col-md-4 col-xl-3">
                         <div class="product-default inner-quickview inner-icon">
                             <figure>
                                 <a href="#">
-                                    <img src="assets/images/abouelgoukh/800_61192bc4bd562.jpg">
+                                    <img src="{{asset('assets/images/abouelgoukh/'.$subsub_category->image)}}">
                                 </a>
                                 <a href="#" class="btn-quickview" title="Quick View">View</a> 
                             </figure>
@@ -62,22 +66,50 @@
                                     </div>
                                 </div>
                                 <h2 class="product-title">
-                                    <a href="#">24 '' Steps</a>
+                                    <a href="#">{{$subsub_category->name}}</a>
                                 </h2>
-                            </div><!-- End .product-details -->
+                            </div>
                         </div>
                     </div>
+                    @endif
+                    @endforeach --}}
+        @if(count($subcategories)>0)
 
+                    @foreach ($subcategories as $subcategory)
+  
+                    <div class="col-6 col-md-4 col-xl-3">
+                        <div class="product-default inner-quickview inner-icon">
+                            <figure>
+                                <a href="#">
+                                    <img src="{{asset('assets/images/abouelgoukh/'.$subcategory->image)}}">
+                                </a>
+                                <a href="#" class="btn-quickview" title="Quick View">View</a> 
+                            </figure>
+                            <div class="product-details">
+                                <div class="category-wrap">
+                                    <div class="category-list">
+                                        <a href="#" class="product-category">{{($subcategoryname[0]->name)}}</a>
+                                    </div>
+                                </div>
+                                <h2 class="product-title">
+                                    <a href="#">{{$subcategory->name}}</a>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                    @endforeach
+                    @else
+                    <h1>No Categories</h1>
+        @endif 
 
-                    {{-- <button class="btn btn- btn-primary" type="submit">Apply Discount</button> --}}
-
-
+                    {{-- @for ($i = 0; $i < count($subsub_categories); $i++)
+                    @if ($sub_category->id === $subsub_categories[$i]->sub_category_id)
 
                     <div class="col-6 col-md-4 col-xl-3">
                         <div class="product-default inner-quickview inner-icon">
                             <figure>
                                 <a href="#">
-                                    <img src="assets/images/abouelgoukh/800_611185d130d1a.jpg">
+                                    <img src="{{asset('assets/images/abouelgoukh/'.$subsub_categories[$i]->image)}}">
                                 </a>
                                 <a href="#" class="btn-quickview" title="Quick View">View</a> 
                             </figure>
@@ -88,54 +120,15 @@
                                     </div>
                                 </div>
                                 <h2 class="product-title">
-                                    <a href="#">20 '' Bikes</a>
+                                    <a href="#">{{$subsub_categories[$i]->name}}</a>
                                 </h2>
-                            </div><!-- End .product-details -->
+                            </div>
                         </div>
                     </div>
-
-                    <div class="col-6 col-md-4 col-xl-3">
-                        <div class="product-default inner-quickview inner-icon">
-                            <figure>
-                                <a href="#">
-                                    <img src="assets/images/abouelgoukh/800_61117a9b331b6.jpg">
-                                </a>
-                                <a href="#" class="btn-quickview" title="Quick View">View</a> 
-                            </figure>
-                            <div class="product-details">
-                                <div class="category-wrap">
-                                    <div class="category-list">
-                                        <a href="#" class="product-category">Bicycles under the age of 13</a>
-                                    </div>
-                                </div>
-                                <h2 class="product-title">
-                                    <a href="#">16-Inch Bikes</a>
-                                </h2>
-                            </div><!-- End .product-details -->
-                        </div>
-                    </div>
-
-                    <div class="col-6 col-md-4 col-xl-3">
-                        <div class="product-default inner-quickview inner-icon">
-                            <figure>
-                                <a href="#">
-                                    <img src="assets/images/abouelgoukh/800_611170591de36.jpg">
-                                </a>
-                                <a href="#" class="btn-quickview" title="Quick View">View</a> 
-                            </figure>
-                            <div class="product-details">
-                                <div class="category-wrap">
-                                    <div class="category-list">
-                                        <a href="#" class="product-category">Bicycles under the age of 13</a>
-                                    </div>
-                                </div>
-                                <h2 class="product-title">
-                                    <a href="#">12-Inch Bikes</a>
-                                </h2>
-                            </div><!-- End .product-details -->
-                        </div>
-                    </div>
+                    @endif
+                    @endfor --}}
                 </div><!-- End .row -->
+
             </div><!-- End .col-lg-9 -->
 
             <aside class="sidebar-shop col-lg-2 order-lg-first">

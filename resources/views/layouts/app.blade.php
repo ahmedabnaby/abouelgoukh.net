@@ -28,13 +28,13 @@
     </script>
     
     <!-- Plugins CSS File -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
 
     <!-- Main CSS File -->
-    <link rel="stylesheet" href="assets/css/style.min.css">
-    <link rel="stylesheet" href="assets/css/custom.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
-    <link rel="stylesheet" type="text/css" href="assets/vendor/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="{{asset('assets/css/style.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/custom.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/responsive.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/vendor/fontawesome-free/css/all.min.css')}}">
 </head>
 <body>
     @include('inc.navbar')
@@ -64,12 +64,12 @@
       </a>
   
       <!-- Plugins JS File -->
-      <script src="assets/js/jquery.min.js"></script>
-      <script src="assets/js/bootstrap.bundle.min.js"></script>
-      <script src="assets/js/plugins.min.js"></script>
-      <script src="assets/js/plugins/isotope-docs.min.js"></script>
+      <script src="{{asset('assets/js/jquery.min.js')}}"></script>
+      <script src="{{asset('assets/js/bootstrap.bundle.min.js')}}"></script>
+      <script src="{{asset('assets/js/plugins.min.js')}}"></script>
+      <script src="{{asset('assets/js/plugins/isotope-docs.min.js')}}"></script>
   
       <!-- Main JS File -->
-      <script src="assets/js/main.min.js"></script>
+      <script src="{{asset('assets/js/main.min.js')}}"></script>
   </body>
   </html>

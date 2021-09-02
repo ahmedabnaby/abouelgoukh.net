@@ -17,7 +17,7 @@ class CreateProductsTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->unsignedBigInteger('category_id');
-            $table->unsignedBigInteger('sub_category_id')->nullable();
+            $table->unsignedBigInteger('subsub_category_id')->nullable();
             $table->string('image');
             $table->string('image2')->nullable();
             $table->string('image3')->nullable();
@@ -28,7 +28,7 @@ class CreateProductsTable extends Migration
             $table->timestamps();
 
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
-            $table->foreign('sub_category_id')->references('id')->on('sub_categories')->onDelete('cascade');
+            $table->foreign('subsub_category_id')->references('id')->on('subsub_categories')->onDelete('cascade');
         });
     }
 

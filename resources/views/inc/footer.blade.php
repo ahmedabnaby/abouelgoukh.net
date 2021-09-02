@@ -35,12 +35,12 @@
               }
             }
         }">
-            <img src="assets/images/instagram/instagram1.jpg" alt="instagram image">
-            <img src="assets/images/instagram/instagram2.jpg" alt="instagram image">
-            <img src="assets/images/instagram/instagram3.jpg" alt="instagram image">
-            <img src="assets/images/instagram/instagram4.jpg" alt="instagram image">
-            <img src="assets/images/instagram/instagram5.jpg" alt="instagram image">
-            <img src="assets/images/instagram/instagram6.jpg" alt="instagram image">
+            <img src="{{asset('assets/images/instagram/instagram1.jpg')}}" alt="instagram image">
+            <img src="{{asset('assets/images/instagram/instagram2.jpg')}}" alt="instagram image">
+            <img src="{{asset('assets/images/instagram/instagram3.jpg')}}" alt="instagram image">
+            <img src="{{asset('assets/images/instagram/instagram4.jpg')}}" alt="instagram image">
+            <img src="{{asset('assets/images/instagram/instagram5.jpg')}}" alt="instagram image">
+            <img src="{{asset('assets/images/instagram/instagram6.jpg')}}" alt="instagram image">
         </div>
     </div>
 
@@ -73,7 +73,7 @@
         <div class="container">
             <div class="row row-sm">
                 <div class="col-md-6 col-lg-3">
-                    <img src="assets/images/abouelgoukh/logo.png">
+                    <img src="{{asset('assets/images/abouelgoukh/logo.png')}}">
                     <p>Lorem ipsum dolor sit amet, consectetur adipis.</p>
                     <div class="social-link">
                         <h3 class="link-title">QUESTIONS?</h3>

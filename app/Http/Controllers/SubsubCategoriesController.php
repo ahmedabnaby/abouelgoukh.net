@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\SubCategories;
 use App\Models\SubsubCategories;
 use Illuminate\Http\Request;
 
-class SubCategoriesController extends Controller
+class SubsubCategoriesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -42,23 +41,21 @@ class SubCategoriesController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\SubCategories  $subCategories
+     * @param  \App\Models\SubsubCategories  $subsubCategories
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(SubsubCategories $subsubCategories)
     {
-        $sub_category_name = SubCategories::where('id',$id)->get();
-        $sub_category = SubsubCategories::where('sub_category_id',$id)->get();
-        return view('pages.show')->withSubcategories($sub_category)->withSubcategoryname($sub_category_name);  
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\SubCategories  $subCategories
+     * @param  \App\Models\SubsubCategories  $subsubCategories
      * @return \Illuminate\Http\Response
      */
-    public function edit(SubCategories $subCategories)
+    public function edit(SubsubCategories $subsubCategories)
     {
         //
     }
@@ -67,10 +64,10 @@ class SubCategoriesController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\SubCategories  $subCategories
+     * @param  \App\Models\SubsubCategories  $subsubCategories
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, SubCategories $subCategories)
+    public function update(Request $request, SubsubCategories $subsubCategories)
     {
         //
     }
@@ -78,10 +75,10 @@ class SubCategoriesController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\SubCategories  $subCategories
+     * @param  \App\Models\SubsubCategories  $subsubCategories
      * @return \Illuminate\Http\Response
      */
-    public function destroy(SubCategories $subCategories)
+    public function destroy(SubsubCategories $subsubCategories)
     {
         //
     }

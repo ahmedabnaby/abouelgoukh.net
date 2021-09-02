@@ -10,7 +10,6 @@ class PagesController extends Controller
     public function bicycles()
     {
         return view('pages.bicycles')->with('sub_categories',SubCategories::all());
-
     }
     public function bicycles_under_13()
     {

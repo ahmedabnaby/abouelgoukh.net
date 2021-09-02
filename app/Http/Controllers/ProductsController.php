@@ -82,4 +82,8 @@ class ProductsController extends Controller
     {
         //
     }
+    public function bicycles()
+    {
+        return view('products.bicycles')->with('bicycles',Products::all());
+    }
 }

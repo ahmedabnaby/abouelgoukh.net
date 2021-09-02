@@ -6,13 +6,13 @@
                 <button class="mobile-menu-toggler" type="button">
                     <i class="icon-menu"></i>
                 </button>
-                <a href="#" class="logo">
-                    <img src="assets/images/abouelgoukh/Black-on-White-EngVer2.png" alt="Porto Logo">
+                <a href="{{route('home')}}" class="logo">
+                    <img src="{{asset('assets/images/abouelgoukh/Black-on-White-EngVer2.png')}}" alt="Porto Logo">
                 </a>
                 <nav class="main-nav">
                     <ul class="menu">
                         <li>
-                            <a href="#">Home</a>
+                            <a href="{{route('home')}}">Home</a>
                         </li>
                         <li>
                             <a href="#">A-Store</a>
@@ -31,7 +31,7 @@
                                   </ul>
                                 </div>
                                 <div class="col-md-8 image-container">
-                                  <img src="assets/images/abouelgoukh/2000_60d26f433c2bf.jpg" />
+                                  <img src="{{asset('assets/images/abouelgoukh/2000_60d26f433c2bf.jpg')}}" />
                                 </div>
                               </div>
                             </div>
@@ -104,7 +104,7 @@
 
                                     <figure class="product-image-container">
                                         <a href="#" class="product-image">
-                                            <img src="assets/images/products/cart/product-1.jpg" alt="product">
+                                            <img src="{{asset('assets/images/products/cart/product-1.jpg')}}" alt="product">
                                         </a>
                                         <a href="#" class="btn-remove" title="Remove Product"><i class="icon-retweet"></i></a>
                                     </figure>
@@ -124,7 +124,7 @@
 
                                     <figure class="product-image-container">
                                         <a href="#" class="product-image">
-                                            <img src="assets/images/products/cart/product-2.jpg" alt="product">
+                                            <img src="{{asset('assets/images/products/cart/product-2.jpg')}}" alt="product">
                                         </a>
                                         <a href="#" class="btn-remove" title="Remove Product"><i class="icon-retweet"></i></a>
                                     </figure>
@@ -183,7 +183,7 @@
             <nav class="mobile-nav">
                 <ul class="mobile-menu">
                     <li>
-                        <a href="#">Home</a>
+                        <a href="{{route('home')}}">Home</a>
                     </li>
                     <li>
                         <a href="#">A-Store</a>

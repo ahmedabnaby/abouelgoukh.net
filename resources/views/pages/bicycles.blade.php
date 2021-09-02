@@ -4,7 +4,7 @@
     <nav aria-label="breadcrumb" class="breadcrumb-nav">
         <div class="container">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href={{route('home')}}>Home</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Bicycles</li>
             </ol>
         </div>
@@ -36,10 +36,10 @@
                     <div class="col-6 col-md-4 col-xl-3">
                         <div class="product-default inner-quickview inner-icon">
                             <figure>
-                                <a href="#">
+                                <a href={{route('sub_categories.show',$sub_category->id)}}>
                                     <img src={{$sub_category->image}}>
                                 </a>
-                                <a href="#" class="btn-quickview" title="Quick View">View</a> 
+                                <a href={{route('sub_categories.show',$sub_category->id)}} class="btn-quickview" title="Quick View">View</a> 
                             </figure>
                             <div class="product-details">
                                 <div class="category-wrap">
@@ -72,7 +72,7 @@
                                     <li><a href="#">Mountain Bikes</a></li>
                                     <li><a href="#">Racing Bikes</a></li>
                                     <li><a href="#">Hybird Bikes</a></li>
-                                    <li><a href="{{route('bicycles13')}}">Bicycles under the age of 13</a></li>
+                                    <li><a href="#">Bicycles under the age of 13</a></li>
                                 </ul>
                             </div><!-- End .widget-body -->
                         </div><!-- End .collapse -->
