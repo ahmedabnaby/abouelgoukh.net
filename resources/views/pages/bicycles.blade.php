@@ -31,11 +31,13 @@
             
 
                 <div class="row row-sm">
+                    @foreach ($sub_categories as $sub_category)
+                        
                     <div class="col-6 col-md-4 col-xl-3">
                         <div class="product-default inner-quickview inner-icon">
                             <figure>
                                 <a href="#">
-                                    <img src="assets/images/abouelgoukh/800_5e4dda4e0df9a.jpg">
+                                    <img src={{$sub_category->image}}>
                                 </a>
                                 <a href="#" class="btn-quickview" title="Quick View">View</a> 
                             </figure>
@@ -46,79 +48,14 @@
                                     </div>
                                 </div>
                                 <h2 class="product-title">
-                                    <a href="#">Mountain Bikes</a>
+                                    <a href="#">{{$sub_category->name}}</a>
                                 </h2>
                             </div><!-- End .product-details -->
                         </div>
                     </div>
 
+                    @endforeach
 
-                    {{-- <button class="btn btn- btn-primary" type="submit">Apply Discount</button> --}}
-
-
-
-                    <div class="col-6 col-md-4 col-xl-3">
-                        <div class="product-default inner-quickview inner-icon">
-                            <figure>
-                                <a href="#">
-                                    <img src="assets/images/abouelgoukh/800_5cdc41fe125ca.jpg">
-                                </a>
-                                <a href="#" class="btn-quickview" title="Quick View">View</a> 
-                            </figure>
-                            <div class="product-details">
-                                <div class="category-wrap">
-                                    <div class="category-list">
-                                        <a href="#" class="product-category">Bicycles</a>
-                                    </div>
-                                </div>
-                                <h2 class="product-title">
-                                    <a href="#">Racing Bikes</a>
-                                </h2>
-                            </div><!-- End .product-details -->
-                        </div>
-                    </div>
-
-                    <div class="col-6 col-md-4 col-xl-3">
-                        <div class="product-default inner-quickview inner-icon">
-                            <figure>
-                                <a href="#">
-                                    <img src="assets/images/abouelgoukh/800_5ebbee66d545d.jpg">
-                                </a>
-                                <a href="#" class="btn-quickview" title="Quick View">View</a> 
-                            </figure>
-                            <div class="product-details">
-                                <div class="category-wrap">
-                                    <div class="category-list">
-                                        <a href="#" class="product-category">Bicycles</a>
-                                    </div>
-                                </div>
-                                <h2 class="product-title">
-                                    <a href="#">Hybird Bikes</a>
-                                </h2>
-                            </div><!-- End .product-details -->
-                        </div>
-                    </div>
-
-                    <div class="col-6 col-md-4 col-xl-3">
-                        <div class="product-default inner-quickview inner-icon">
-                            <figure>
-                                <a href="{{route('bicycles13')}}">
-                                    <img src="assets/images/abouelgoukh/800_5fd8f7febbbcc.jpg">
-                                </a>
-                                <a href="{{route('bicycles13')}}" class="btn-quickview" title="Quick View">View</a> 
-                            </figure>
-                            <div class="product-details">
-                                <div class="category-wrap">
-                                    <div class="category-list">
-                                        <a href="#" class="product-category">Bicycles</a>
-                                    </div>
-                                </div>
-                                <h2 class="product-title">
-                                    <a href="{{route('bicycles13')}}">Bicycles under the age of 13</a>
-                                </h2>
-                            </div><!-- End .product-details -->
-                        </div>
-                    </div>
                 </div><!-- End .row -->
             </div><!-- End .col-lg-9 -->
 
