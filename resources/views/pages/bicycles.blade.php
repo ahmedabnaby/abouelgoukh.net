@@ -1,0 +1,146 @@
+@extends('layouts.app')
+@section('content')
+<main class="main">
+    <nav aria-label="breadcrumb" class="breadcrumb-nav">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Bicycles</li>
+            </ol>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10">
+                <div class="category-banner mb-2">
+                    <div class="container">
+                        <div class="content-left">
+                            <span>EXTRA</span>
+                            <h2>20% OFF</h2>
+                            <h4 class="cross-txt">BIKES</h4>
+                        </div>
+                        <div class="content-center">
+                            <img src="assets/images/abouelgoukh/800_610d57021404d.png" style="padding: 55px;">
+                        </div>
+                        <div class="content-right">
+                            <p>Summer Sale</p>
+                            <button class="btn">Shop All Sale</button>
+                        </div>
+                    </div>
+                </div>
+            
+
+                <div class="row row-sm">
+                    <div class="col-6 col-md-4 col-xl-3">
+                        <div class="product-default inner-quickview inner-icon">
+                            <figure>
+                                <a href="#">
+                                    <img src="assets/images/abouelgoukh/800_5e4dda4e0df9a.jpg">
+                                </a>
+                                <a href="#" class="btn-quickview" title="Quick View">View</a> 
+                            </figure>
+                            <div class="product-details">
+                                <div class="category-wrap">
+                                    <div class="category-list">
+                                        <a href="#" class="product-category">Bicycles</a>
+                                    </div>
+                                </div>
+                                <h2 class="product-title">
+                                    <a href="#">Mountain Bikes</a>
+                                </h2>
+                            </div><!-- End .product-details -->
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-xl-3">
+                        <div class="product-default inner-quickview inner-icon">
+                            <figure>
+                                <a href="#">
+                                    <img src="assets/images/abouelgoukh/800_5cdc41fe125ca.jpg">
+                                </a>
+                                <a href="#" class="btn-quickview" title="Quick View">View</a> 
+                            </figure>
+                            <div class="product-details">
+                                <div class="category-wrap">
+                                    <div class="category-list">
+                                        <a href="#" class="product-category">Bicycles</a>
+                                    </div>
+                                </div>
+                                <h2 class="product-title">
+                                    <a href="#">Racing Bikes</a>
+                                </h2>
+                            </div><!-- End .product-details -->
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-xl-3">
+                        <div class="product-default inner-quickview inner-icon">
+                            <figure>
+                                <a href="#">
+                                    <img src="assets/images/abouelgoukh/800_5ebbee66d545d.jpg">
+                                </a>
+                                <a href="#" class="btn-quickview" title="Quick View">View</a> 
+                            </figure>
+                            <div class="product-details">
+                                <div class="category-wrap">
+                                    <div class="category-list">
+                                        <a href="#" class="product-category">Bicycles</a>
+                                    </div>
+                                </div>
+                                <h2 class="product-title">
+                                    <a href="#">Hybird Bikes</a>
+                                </h2>
+                            </div><!-- End .product-details -->
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-xl-3">
+                        <div class="product-default inner-quickview inner-icon">
+                            <figure>
+                                <a href="#">
+                                    <img src="assets/images/abouelgoukh/800_5fd8f7febbbcc.jpg">
+                                </a>
+                                <a href="#" class="btn-quickview" title="Quick View">View</a> 
+                            </figure>
+                            <div class="product-details">
+                                <div class="category-wrap">
+                                    <div class="category-list">
+                                        <a href="#" class="product-category">Bicycles</a>
+                                    </div>
+                                </div>
+                                <h2 class="product-title">
+                                    <a href="#">Bicycles under the age of 13</a>
+                                </h2>
+                            </div><!-- End .product-details -->
+                        </div>
+                    </div>
+                </div><!-- End .row -->
+            </div><!-- End .col-lg-9 -->
+
+            <aside class="sidebar-shop col-lg-2 order-lg-first">
+                <div class="sidebar-wrapper">
+                    <div class="widget">
+                        <h3 class="widget-title">
+                            <a data-toggle="collapse" href="#widget-body-2" role="button" aria-expanded="true" aria-controls="widget-body-2">Bicycles</a>
+                        </h3>
+
+                        <div class="collapse show" id="widget-body-2">
+                            <div class="widget-body">
+                                <ul class="cat-list">
+                                    <li><a href="#">Mountain Bikes</a></li>
+                                    <li><a href="#">Racing Bikes</a></li>
+                                    <li><a href="#">Hybird Bikes</a></li>
+                                    <li><a href="#">Bicycles under the age of 13</a></li>
+                                </ul>
+                            </div><!-- End .widget-body -->
+                        </div><!-- End .collapse -->
+                    </div><!-- End .widget -->
+                </div><!-- End .sidebar-wrapper -->
+            </aside><!-- End .col-lg-3 -->
+        </div><!-- End .row -->
+    </div><!-- End .container -->
+
+    <div class="mb-5"></div><!-- margin -->
+</main><!-- End .main -->
+
+@endsection
