@@ -99,4 +99,42 @@ class ProductsController extends Controller
         $accessories = Products::all();
         return view('products.show_accessories')->withProduct($accessory)->withAccessories($accessories);
     }
+    public function scooters()
+    {
+        return view('products.scooters')->with('scooters',Products::all());
+    }
+    public function show_scooters($id)
+    {
+        $scooter = Products::findOrFail($id);
+        $scooters = Products::all();
+        return view('products.show_scooters')->withProduct($scooter)->withScooters($scooters);
+    }
+    public function kids_scooter()
+    {
+        return view('products.kids_scooter');
+    }
+    public function toys()
+    {
+        return view('products.toys');
+    }
+    public function sports()
+    {
+        return view('products.sports')->with('sports',Products::all());
+    }
+    public function show_sports($id)
+    {
+        $sport = Products::findOrFail($id);
+        $sports = Products::all();
+        return view('products.show_sports')->withProduct($sport)->withSports($sports);
+    }
+    public function car_holders()
+    {
+        return view('products.car_holders')->with('car_holders',Products::all());
+    }
+    public function show_car_holders($id)
+    {
+        $car_holder = Products::findOrFail($id);
+        $car_holders = Products::all();
+        return view('products.show_car_holders')->withProduct($car_holder)->withCarholders($car_holders);
+    }
 }

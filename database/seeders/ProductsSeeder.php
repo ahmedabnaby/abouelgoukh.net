@@ -231,6 +231,95 @@ class ProductsSeeder extends Seeder
                 'image' => '800_611d4313c1dcd.jpg',
                 'category_id' => '1',
                 'subsub_category_id' => '3'
+            ],[
+                'name' => 'EGOS KELLY 150 - 2021',
+                'description' => "Egos Kelly 150 - 2021 model, cash price 22450 pounds - special discount for a limited time 2950 pounds on cash sale only Price after discount 19500 specifications Climbing angle: 15 degrees to 20 degrees with fixed torque Front brake: Oil pressure disc Rear brake: Drum Battery type Lead acid battery Battery capacity: 7 Ah Battery voltage 12V Engine type: Latest version CVT 150cc GY7 Engine power: 8.3 kW (11.19 HP) Engine torque: 10.78 Nm At 6500 rpm LED Tail Light: Yes LED Headlight: Yes Alarm: Yes Remote Control: Yes MP3: Yes Front Windscreen: Yes Body Size: (L*W*H): 1890*68*1100mm Wheelbase: 1278 mm Wheel size: 3.5-10 or 90-90-10 Payload: 150 kg Seat height: 810 mm Double rear assist, dual front shock assist.",
+                'price' => '19500',
+                'image' => '800_60f2e2db467fa.jpg',
+                'category_id' => '2',
+                'subsub_category_id' => null
+            ],[
+                'name' => 'EGOS MONOD 150 - 2021',
+                'description' => "Egos Monod 150 - Model 2021 Cache price 19500 pounds - special discount for a limited time 2550 pounds on cash sale only Price after discount 16950 Specifications Climb angle: 15 degrees to 20 degrees with constant torque Front brake: Oil pressure disc (Bumper) Rear brake: drum type Battery Battery Acid + Lead Battery Capacity: 7 Ah Battery voltage 12 V Engine type: Latest version CVT 150cc GY7 Engine Power: 8.3 kW (11.19 HP) Engine torque: 10.78 Nm at 6500 rpm Tail light: 35 W Headlight Front LED: Yes Alarm: Yes Remote Control: Yes MP3: Yes USB: Yes Front Wind Deflector: Yes Body Size: (L*W*H): 1760*68*1050mm Wheelbase: 1260mm Size Wheel: 3.5-10 Payload: 150 kg Seat height: 780 mm Double rear assist, dual front shock assist. Colors: blue - white - black - red",
+                'price' => '16950',
+                'image' => '800_60ef6d0388a63.jpg',
+                'category_id' => '2',
+                'subsub_category_id' => null
+            ],[
+                'name' => 'EGOS AMID 200 – 2021',
+                'description' => "المواصفات:
+                زاوية التسلق: 15 درجة إلى 20 درجة بعزم ثابت
+                الفرامل الأمامية: قرص بضغط الزيت (باكم)
+                الفرامل الخلفية: قرص بضغط الزيت (باكم)
+                نوع البطارية بطارية حمض + الرصاص
+                سعة البطارية: 7 أو 9 أمبير
+                جهد البطارية 12 فولت
+                نوع المحرك: أحدث إصدار محرك CVT 175cc GY7
+                قوة المحرك: 9,3 كيلو واط (12,53 حصان)
+                عزم المحرك: 11,70 نيوتن متر عند 6500 دورة في الدقيقة
+                ضوء الذيل (الفانوس الخلفى) 35 واط و55 واط
+                المصباح الأمامى LED: نعم
+                إنذار: نعم
+                جهاز التحكم عن بعد: نعم
+                إم بى 3: نعم
+                يو إس بى: نعم
+                واقى رياح أمامي: نعم
+                حجم الجسم: (طول*عرض*إرتفاع): 1960*690*1100مم
+                قاعدة العجلات: 1260 ملم
+                حجم العجلة: 120-70-12
+                إطارات 60% مطاط 40% كربون بعمر إفتراضى 30000 كيلومتر.
+                جنوط ألومنيوم مجهزة للطرق الغير ممهدة.
+                الحمولة: 150 كجم
+                ارتفاع المقعد: 780 ملم
+                مساعدخلفي مزدوج ،
+                مساعد صدمات أمامي هيدروليكى مزدوج .
+                الألوان: بنى – أبيض – أسود - أصفر",
+                'price' => '21950',
+                'image' => '800_60f2e39e467e1.png',
+                'category_id' => '2',
+                'subsub_category_id' => null
+            ],[
+                'name' => 'EGOS FORCE 200 - 2021',
+                'description' => "Egos Force 200 - 2021 model, cache price 28700 pounds - special discount for a limited time on the cache only 3750 pounds price after discount 24950 Climbing angle: 15 degrees or 20 degrees Front brake: oil pressure disc Rear brake: oil pressure disc Battery type Acid + lead battery Battery capacity: 7 or 9 Ah Battery voltage 12 V Engine type: Latest version CVT 175cc GY7 Engine Power: 9.3 kW (12.53 hp) Engine torque: 11.70 Nm at 6500 rpm LED tail light : Yes Headlight LED: Yes Alarm: Yes Remote Control: Yes MP3: Yes Front Wind Deflector: Yes Body Size: (L*W*H): 2010*780*1100 mm Wheelbase: 1283 mm Wheel Size: 130-60-13 Payload: 150 kg Seat height: 810 mm Double rear assist, dual front shock assist. Colors: blue - gray - white - orange - yellow",
+                'price' => '24950',
+                'image' => '800_60f2ca93bc924.jpg',
+                'category_id' => '2',
+                'subsub_category_id' => null
+            ],[
+                'name' => 'EGOS CRUISER 200 – 2021',
+                'description' => "Egos Cruiser 200 - Model 2021 Cache price 33950 pounds - special discount for a limited time on the cache only 4450 pounds Price after discount 29500 Specifications Climb angle: 15 degrees to 20 degrees with fixed torque Front brakes: oil pressure disc Rear brakes: oil pressure disc (PACM) Battery Type Lead Acid Battery Battery Capacity: 7 or 9 Ah Battery Voltage 12V Engine Type: Latest Version CVT 175cc GY7 Engine Power: 9.3 kW (12.53 hp) Engine Torque: 11.70 Nm Meter at 6500 rpm Tail Light (Tail Lights) LED: Yes Headlight LED: Yes Alarm: Yes Remote Control: Yes MP3: Yes Front Windscreen: Yes Body Size: (L*W*H): 1960*880*2110mm Wheelbase: 1285mm Wheel Size: 130-60-13 Payload: 150kg Seat Height: 810mm Double Auxiliary Rear.",
+                'price' => '29500',
+                'image' => '800_60f2e50d93ba7.png',
+                'category_id' => '2',
+                'subsub_category_id' => null
+            ],[
+                'name' => 'EGOS TITAN 200 – 2021 MODEL',
+                'description' => "Egos Titan 200 - 2021 model, cache price 39750 pounds - special discount for a limited time on cash only 4800 pounds price after discount 34950 Specifications Climbing angle: 15 degrees to 20 degrees with fixed torque Front brakes: oil pressure disc Rear brake: oil pressure disc (PACM) Battery Type Lead Acid Battery Battery Capacity: 7 or 9 Ah Battery Voltage 12V Engine Type: Latest Version CVT 175cc GY7 Engine Air Cooled. Engine power: 9.3 kW (12.53 hp) Engine torque: 11.70 Nm at 6500 rpm Tail light (rear lantern) LED: Yes Headlight LED: Yes Alarm: Yes Remote control: Yes MP3: Yes Front windscreen: Yes Body size: (L*W*H): 2240*810*2110 mm Wheelbase: 1285 mm Wheel size: 130-60-13 Payload: 150 kg Seat height: 800 mm Double Auxiliary Rear . Dual front shock assist. Colors: black - brown * black - white * black",
+                'price' => '34950',
+                'image' => '800_60f2e600d4fc9.png',
+                'category_id' => '2',
+                'subsub_category_id' => null
+            ],[
+                'name' => 'IRON JIM',
+                'description' => '',
+                'price' => '275',
+                'image' => '800_60f2ea4818151.jpg',
+                'category_id' => '6',
+                'subsub_category_id' => null
+            ],[
+                'name' => 'AQLA',
+                'description' => '',
+                'price' => '150',
+                'image' => '800_60f2ea74b2c3c.jpg',
+                'category_id' => '6',
+                'subsub_category_id' => null
+            ],[
+                'name' => 'CHINESE CAR HOLDER',
+                'description' => 'Chinese car holder for a load of 2 bikes of all sizes, easy to disassemble and install, equipped with rubber bases to not hurt the car',
+                'price' => '500',
+                'image' => '800_60f04e4d03e98.jpg',
+                'category_id' => '7',
+                'subsub_category_id' => null
             ]
             
         ]);

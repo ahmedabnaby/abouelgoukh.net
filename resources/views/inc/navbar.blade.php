@@ -22,12 +22,12 @@
                                   <a class="nolink">Categories</a>
                                   <ul class="submenu">
                                     <li><a href="{{route('bicycles')}}">Bicycles</a></li>
-                                    <li><a href="#">Petrol Scooter</a></li>
+                                    <li><a href="{{route('scooters')}}">Petrol Scooter</a></li>
                                     <li><a href="{{route('accessories')}}">Accessories</a></li>
-                                    <li><a href="#">Kids scooter</a></li>
-                                    <li><a href="#">Sport</a></li>
-                                    <li><a href="#">Toys</a></li>
-                                    <li><a href="#">Bicycle Car Holder</a></li>
+                                    <li><a href="{{route('kids_scooter')}}">Kids scooter</a></li>
+                                    <li><a href="{{route('sports')}}">Sport</a></li>
+                                    <li><a href="{{route('toys')}}">Toys</a></li>
+                                    <li><a href="{{route('car_holders')}}">Bicycle Car Holder</a></li>
                                   </ul>
                                 </div>
                                 <div class="col-md-8 image-container">
@@ -192,12 +192,12 @@
                             <div class="col-md-4">
                               <ul class="submenu">
                                 <li><a href={{route('bicycles')}}>Bicycles</a></li>
-                                <li><a href="#">Petrol Scooter</a></li>
+                                <li><a href="{{route('scooters')}}">Petrol Scooter</a></li>
                                 <li><a href="{{route('accessories')}}">Accessories</a></li>
-                                <li><a href="#">Kids scooter</a></li>
-                                <li><a href="#">Sport</a></li>
-                                <li><a href="#">Toys</a></li>
-                                <li><a href="#">Bicycle Car Holder</a></li>
+                                <li><a href="{{route('kids_scooter')}}">Kids scooter</a></li>
+                                <li><a href="{{route('sports')}}">Sport</a></li>
+                                <li><a href="{{route('toys')}}">Toys</a></li>
+                                <li><a href="{{route('car_holders')}}">Bicycle Car Holder</a></li>
                               </ul>
                             </div>
                           </div>
