@@ -21,7 +21,7 @@
                     <button class="btn">Shop All Sale</button>
                 </div>
                 <video autoplay loop muted id="myVideo">
-                    <source src="assets/videos/Abulajoukh.mkv" type="video/mp4" />
+                    <source src="{{asset('assets/videos/Abulajoukh.mkv')}}" type="video/mp4" />
                   </video>
                   <div class="bg">
                   </div>
@@ -77,92 +77,92 @@
             }">
                 <div class="product-default inner-quickview inner-icon center-details">
                     <figure>
-                        <a href="#">
+                        <a href="{{route('bicycles')}}">
                             <img src="assets/images/abouelgoukh/800_610d57021404d.png">
                         </a>
-                        <a href="#" class="btn-quickview" title="Quick View">Quick View</a> 
+                        <a href="{{route('bicycles')}}" class="btn-quickview" title="Quick View">Quick View</a> 
                     </figure>
                     <div class="product-details">
                         <h2 class="product-title">
-                            <a href="#">Bicycles</a>
+                            <a href="{{route('bicycles')}}">Bicycles</a>
                         </h2>
                     </div><!-- End .product-details -->
                 </div>  
                 <div class="product-default inner-quickview inner-icon center-details">
                     <figure>
-                        <a href="#">
+                        <a href="{{route('scooters')}}">
                             <img src="assets/images/abouelgoukh/800_60f2e2db467fa.jpg"  style="padding:35px;">
                         </a>
-                        <a href="#" class="btn-quickview" title="Quick View">Quick View</a> 
+                        <a href="{{route('scooters')}}" class="btn-quickview" title="Quick View">Quick View</a> 
                     </figure>
                     <div class="product-details">
                         <h2 class="product-title">
-                            <a href="#">Petrol Scooter</a>
+                            <a href="{{route('scooters')}}">Petrol Scooter</a>
                         </h2>
                     </div><!-- End .product-details -->
                 </div>       
                 <div class="product-default inner-quickview inner-icon center-details">
                     <figure>
-                        <a href="#">
+                        <a href="{{route('accessories')}}">
                             <img src="assets/images/abouelgoukh/800_60f041c5ce2b7.jpg">
                         </a>
-                        <a href="#" class="btn-quickview" title="Quick View">Quick View</a> 
+                        <a href="{{route('accessories')}}" class="btn-quickview" title="Quick View">Quick View</a> 
                     </figure>
                     <div class="product-details">
                         <h2 class="product-title">
-                            <a href="#">Accessories</a>
+                            <a href="{{route('accessories')}}">Accessories</a>
                         </h2>
                     </div><!-- End .product-details -->
                 </div>      
                 <div class="product-default inner-quickview inner-icon center-details">
                     <figure>
-                        <a href="#">
+                        <a href="{{route('kids_scooter')}}">
                             <img src="assets/images/abouelgoukh/800_610d967fc8a82.png" style="padding:35px;">
                         </a>
-                        <a href="#" class="btn-quickview" title="Quick View">Quick View</a> 
+                        <a href="{{route('kids_scooter')}}" class="btn-quickview" title="Quick View">Quick View</a> 
                     </figure>
                     <div class="product-details">
                         <h2 class="product-title">
-                            <a href="#">Kids scooter</a>
+                            <a href="{{route('kids_scooter')}}">Kids scooter</a>
                         </h2>
                     </div><!-- End .product-details -->
                 </div>      
                 <div class="product-default inner-quickview inner-icon center-details" style="padding:40px;">
                     <figure>
-                        <a href="#">
+                        <a href="{{route('sports')}}">
                             <img src="assets/images/abouelgoukh/800_610c3b2691786.jpg">
                         </a>
-                        <a href="#" class="btn-quickview" title="Quick View">Quick View</a> 
+                        <a href="{{route('sports')}}" class="btn-quickview" title="Quick View">Quick View</a> 
                     </figure>
                     <div class="product-details">
                         <h2 class="product-title">
-                            <a href="#">Sport</a>
+                            <a href="{{route('sports')}}">Sport</a>
                         </h2>
                     </div><!-- End .product-details -->
                 </div>      
                 <div class="product-default inner-quickview inner-icon center-details">
                     <figure>
-                        <a href="#">
+                        <a href="{{route('toys')}}">
                             <img src="assets/images/abouelgoukh/800_610d956133c54.png">
                         </a>
-                        <a href="#" class="btn-quickview" title="Quick View">Quick View</a> 
+                        <a href="{{route('toys')}}" class="btn-quickview" title="Quick View">Quick View</a> 
                     </figure>
                     <div class="product-details">
                         <h2 class="product-title">
-                            <a href="#">Toys</a>
+                            <a href="{{route('toys')}}">Toys</a>
                         </h2>
                     </div><!-- End .product-details -->
                 </div>      
                 <div class="product-default inner-quickview inner-icon center-details">
                     <figure>
-                        <a href="#">
+                        <a href="{{route('car_holders')}}">
                             <img src="assets/images/abouelgoukh/800_610c3b9a7702b.jpg">
                         </a>
-                        <a href="#" class="btn-quickview" title="Quick View">Quick View</a> 
+                        <a href="{{route('car_holders')}}" class="btn-quickview" title="Quick View">Quick View</a> 
                     </figure>
                     <div class="product-details">
                         <h2 class="product-title">
-                            <a href="#">Bicycle Car Holder</a>
+                            <a href="{{route('car_holders')}}">Bicycle Car Holder</a>
                         </h2>
                     </div><!-- End .product-details -->
                 </div>                
@@ -259,13 +259,13 @@
                 
                 <div class="product-default inner-quickview inner-icon center-details">
                     <figure>
-                        <a href="#">
+                        <a href="{{route('accessories.show',$product->id)}}">
                             <img src="{{asset('assets/images/abouelgoukh/accessories/'.$product->image)}}">
                         </a>
                         <div class="btn-icon-group">
                             <button class="btn-icon btn-add-cart" data-toggle="modal" data-target="#addCartModal"><i class="icon-bag"></i></button>
                         </div>
-                        <a href="#" class="btn-quickview" title="Quick View">Quick View</a> 
+                        <a href="{{route('accessories.show',$product->id)}}" class="btn-quickview" title="Quick View">Quick View</a> 
                     </figure>
                     <div class="product-details">
                         <div class="category-wrap">
@@ -274,7 +274,7 @@
                             </div>
                         </div>
                         <h2 class="product-title">
-                            <a href="#">{{$product->name}}</a>
+                            <a href="{{route('accessories.show',$product->id)}}">{{$product->name}}</a>
                         </h2>
                         <div class="ratings-container">
                             <div class="product-ratings">
