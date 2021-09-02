@@ -89,4 +89,14 @@ class ProductsController extends Controller
     {
         return view('products.bicycles')->with('bicycles',Products::all());
     }
+    public function accessories()
+    {
+        return view('products.accessories')->with('accessories',Products::all());
+    }
+    public function show_accessories($id)
+    {
+        $accessory = Products::findOrFail($id);
+        $accessories = Products::all();
+        return view('products.show_accessories')->withProduct($accessory)->withAccessories($accessories);
+    }
 }

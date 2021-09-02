@@ -23,7 +23,7 @@
                                   <ul class="submenu">
                                     <li><a href="{{route('bicycles')}}">Bicycles</a></li>
                                     <li><a href="#">Petrol Scooter</a></li>
-                                    <li><a href="#">Accessories</a></li>
+                                    <li><a href="{{route('accessories')}}">Accessories</a></li>
                                     <li><a href="#">Kids scooter</a></li>
                                     <li><a href="#">Sport</a></li>
                                     <li><a href="#">Toys</a></li>
@@ -193,7 +193,7 @@
                               <ul class="submenu">
                                 <li><a href={{route('bicycles')}}>Bicycles</a></li>
                                 <li><a href="#">Petrol Scooter</a></li>
-                                <li><a href="#">Accessories</a></li>
+                                <li><a href="{{route('accessories')}}">Accessories</a></li>
                                 <li><a href="#">Kids scooter</a></li>
                                 <li><a href="#">Sport</a></li>
                                 <li><a href="#">Toys</a></li>
