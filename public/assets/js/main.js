@@ -451,7 +451,7 @@
       });
 
       //QuickView Popup
-      $('body').on('click', 'a.btn-quickview', function (e) {
+      $('body').on('click', 'a.btn-quickvsiew', function (e) {
         e.preventDefault();
         Porto.ajaxLoading();
         var ajaxUrl = $(this).attr('href');

@@ -15,3 +15,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'App\Http\Controllers\ProductsController@index')->name('home');
 Route::get('/bicycles', 'App\Http\Controllers\PagesController@bicycles')->name('bicycles');
+Route::get('/bicycles_under_13', 'App\Http\Controllers\PagesController@bicycles_under_13')->name('bicycles13');

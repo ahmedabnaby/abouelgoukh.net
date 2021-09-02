@@ -10,4 +10,8 @@ class PagesController extends Controller
     {
         return view('pages.bicycles');
     }
+    public function bicycles_under_13()
+    {
+        return view('pages.bicycles_under_13');
+    }
 }

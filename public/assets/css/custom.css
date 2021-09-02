@@ -37,7 +37,17 @@ min-height: 100%;
 .my-float2{
 	margin-top:15px;
 }
+.float2:hover{
+	color: #000;
+}
+.my-float2:hover{
+	color: #000;
+}
 .product-title
 {
 	font-weight: 700 !important;
+}
+.bike_padding
+{
+	padding: 35px;
 }

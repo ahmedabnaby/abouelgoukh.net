@@ -12,22 +12,38 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-10">
-                <div class="category-banner mb-2">
-                    <div class="container">
-                        <div class="content-left">
-                            <span>EXTRA</span>
-                            <h2>20% OFF</h2>
-                            <h4 class="cross-txt">BIKES</h4>
+                <div class="boxed-slider owl-carousel owl-carousel-lazy owl-theme owl-theme-light">
+                    <div class="category-slide">
+                        <div class="slide-bg owl-lazy"  data-src="assets/images/abouelgoukh/2000_60d26f433c2bf.jpg"></div><!-- End .slide-bg -->
+                        <div class="banner boxed-slide-content offset-1">
+                            <h2 class="banner-subtitle" style="color: white;">check out over <span>200+</span></h2>
+                            <h1 class="banner-title" style="color: white;">
+                                INCREDIBLE deals
+                            </h1>
+                            <a href="#" class="btn btn-primary">Shop Now</a>
+                        </div><!-- End .home-slide-content -->
+                    </div><!-- End .home-slide -->
+
+                    <div class="category-slide" style="background-color: white;">
+                        <div class="category-banner mb-2">
+                            <div class="container">
+                                <div class="content-left">
+                                    <span>EXTRA</span>
+                                    <h2>20% OFF</h2>
+                                    <h4 class="cross-txt">BIKES</h4>
+                                </div>
+                                <div class="content-center">
+                                    <img src="assets/images/abouelgoukh/800_610d57021404d.png" class="bike_padding">
+                                </div>
+                                <div class="content-right">
+                                    <p>Summer Sale</p>
+                                    <button class="btn">Shop All Sale</button>
+                                </div>
+                            </div>
                         </div>
-                        <div class="content-center">
-                            <img src="assets/images/abouelgoukh/800_610d57021404d.png" class="bike_padding">
-                        </div>
-                        <div class="content-right">
-                            <p>Summer Sale</p>
-                            <button class="btn">Shop All Sale</button>
-                        </div>
-                    </div>
-                </div>
+                    </div><!-- End .home-slide -->
+                </div><!-- End .home-slider -->
+
             
 
                 <div class="row row-sm">
@@ -35,18 +51,18 @@
                         <div class="product-default inner-quickview inner-icon">
                             <figure>
                                 <a href="#">
-                                    <img src="assets/images/abouelgoukh/800_5e4dda4e0df9a.jpg">
+                                    <img src="assets/images/abouelgoukh/800_61192bc4bd562.jpg">
                                 </a>
                                 <a href="#" class="btn-quickview" title="Quick View">View</a> 
                             </figure>
                             <div class="product-details">
                                 <div class="category-wrap">
                                     <div class="category-list">
-                                        <a href="#" class="product-category">Bicycles</a>
+                                        <a href="#" class="product-category">Bicycles under the age of 13</a>
                                     </div>
                                 </div>
                                 <h2 class="product-title">
-                                    <a href="#">Mountain Bikes</a>
+                                    <a href="#">24 '' Steps</a>
                                 </h2>
                             </div><!-- End .product-details -->
                         </div>
@@ -61,18 +77,18 @@
                         <div class="product-default inner-quickview inner-icon">
                             <figure>
                                 <a href="#">
-                                    <img src="assets/images/abouelgoukh/800_5cdc41fe125ca.jpg">
+                                    <img src="assets/images/abouelgoukh/800_611185d130d1a.jpg">
                                 </a>
                                 <a href="#" class="btn-quickview" title="Quick View">View</a> 
                             </figure>
                             <div class="product-details">
                                 <div class="category-wrap">
                                     <div class="category-list">
-                                        <a href="#" class="product-category">Bicycles</a>
+                                        <a href="#" class="product-category">Bicycles under the age of 13</a>
                                     </div>
                                 </div>
                                 <h2 class="product-title">
-                                    <a href="#">Racing Bikes</a>
+                                    <a href="#">20 '' Bikes</a>
                                 </h2>
                             </div><!-- End .product-details -->
                         </div>
@@ -82,18 +98,18 @@
                         <div class="product-default inner-quickview inner-icon">
                             <figure>
                                 <a href="#">
-                                    <img src="assets/images/abouelgoukh/800_5ebbee66d545d.jpg">
+                                    <img src="assets/images/abouelgoukh/800_61117a9b331b6.jpg">
                                 </a>
                                 <a href="#" class="btn-quickview" title="Quick View">View</a> 
                             </figure>
                             <div class="product-details">
                                 <div class="category-wrap">
                                     <div class="category-list">
-                                        <a href="#" class="product-category">Bicycles</a>
+                                        <a href="#" class="product-category">Bicycles under the age of 13</a>
                                     </div>
                                 </div>
                                 <h2 class="product-title">
-                                    <a href="#">Hybird Bikes</a>
+                                    <a href="#">16-Inch Bikes</a>
                                 </h2>
                             </div><!-- End .product-details -->
                         </div>
@@ -102,19 +118,19 @@
                     <div class="col-6 col-md-4 col-xl-3">
                         <div class="product-default inner-quickview inner-icon">
                             <figure>
-                                <a href="{{route('bicycles13')}}">
-                                    <img src="assets/images/abouelgoukh/800_5fd8f7febbbcc.jpg">
+                                <a href="#">
+                                    <img src="assets/images/abouelgoukh/800_611170591de36.jpg">
                                 </a>
-                                <a href="{{route('bicycles13')}}" class="btn-quickview" title="Quick View">View</a> 
+                                <a href="#" class="btn-quickview" title="Quick View">View</a> 
                             </figure>
                             <div class="product-details">
                                 <div class="category-wrap">
                                     <div class="category-list">
-                                        <a href="#" class="product-category">Bicycles</a>
+                                        <a href="#" class="product-category">Bicycles under the age of 13</a>
                                     </div>
                                 </div>
                                 <h2 class="product-title">
-                                    <a href="{{route('bicycles13')}}">Bicycles under the age of 13</a>
+                                    <a href="#">12-Inch Bikes</a>
                                 </h2>
                             </div><!-- End .product-details -->
                         </div>
@@ -135,7 +151,7 @@
                                     <li><a href="#">Mountain Bikes</a></li>
                                     <li><a href="#">Racing Bikes</a></li>
                                     <li><a href="#">Hybird Bikes</a></li>
-                                    <li><a href="{{route('bicycles13')}}">Bicycles under the age of 13</a></li>
+                                    <li><a href="#">Bicycles under the age of 13</a></li>
                                 </ul>
                             </div><!-- End .widget-body -->
                         </div><!-- End .collapse -->
