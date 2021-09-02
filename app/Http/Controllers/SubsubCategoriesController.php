@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\SubsubCategories;
+use App\Models\Products;
 use Illuminate\Http\Request;
 
 class SubsubCategoriesController extends Controller
@@ -44,9 +45,10 @@ class SubsubCategoriesController extends Controller
      * @param  \App\Models\SubsubCategories  $subsubCategories
      * @return \Illuminate\Http\Response
      */
-    public function show(SubsubCategories $subsubCategories)
+    public function show($id)
     {
-        //
+        $sub_sub_categories = Products::where('subsub_category_id',$id)->get();
+        return view('pages.show_bicycles')->withSubsubcategories($sub_sub_categories)->withSubsubcategoryid($id);  
     }
 
     /**

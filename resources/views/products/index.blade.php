@@ -260,7 +260,7 @@
                 <div class="product-default inner-quickview inner-icon center-details">
                     <figure>
                         <a href="#">
-                            <img src="{{$product->image}}">
+                            <img src="{{asset('assets/images/abouelgoukh/accessories/'.$product->image)}}">
                         </a>
                         <div class="btn-icon-group">
                             <button class="btn-icon btn-add-cart" data-toggle="modal" data-target="#addCartModal"><i class="icon-bag"></i></button>

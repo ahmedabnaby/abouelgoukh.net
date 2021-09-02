@@ -80,10 +80,10 @@
                     <div class="col-6 col-md-4 col-xl-3">
                         <div class="product-default inner-quickview inner-icon">
                             <figure>
-                                <a href="#">
+                                <a href="{{route('subsub_categories.show',$subcategory->id)}}">
                                     <img src="{{asset('assets/images/abouelgoukh/'.$subcategory->image)}}">
                                 </a>
-                                <a href="#" class="btn-quickview" title="Quick View">View</a> 
+                                <a href="{{route('subsub_categories.show',$subcategory->id)}}" class="btn-quickview" title="Quick View">View</a> 
                             </figure>
                             <div class="product-details">
                                 <div class="category-wrap">
@@ -92,7 +92,7 @@
                                     </div>
                                 </div>
                                 <h2 class="product-title">
-                                    <a href="#">{{$subcategory->name}}</a>
+                                    <a href="{{route('subsub_categories.show',$subcategory->id)}}">{{$subcategory->name}}</a>
                                 </h2>
                             </div>
                         </div>

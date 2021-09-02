@@ -19,175 +19,218 @@ class ProductsSeeder extends Seeder
                 'description' => 'Helmet for children to protect the child from shocks in the head area, suitable from the age of 5 to 10 years, the color is red',
                 'price' => '95',
                 'image' => '800_60f041c5ce2b7.jpg',
-                'category_id' => '3'
+                'category_id' => '3',
+                'subsub_category_id' => null
             ],[
                 'name' => 'USB BACK LIGHT',
                 'description' => 'Bicycle rear light, its purpose: so that people behind you can see you in dark places Lighting power: 15 days Supports charging: USB',
                 'price' => '50',
                 'image' => '800_60ec669dc701c.jpg',
-                'category_id' => '3'
+                'category_id' => '3',
+                'subsub_category_id' => null
             ],[
                 'name' => 'SMALL PROTECTION KIT',
                 'description' => 'Protective set 2 child hand protectors 2 elbow protectors 2 knee protectors',
                 'price' => '75',
                 'image' => '800_60ec6746c7de2.jpg',
-                'category_id' => '3'
+                'category_id' => '3',
+                'subsub_category_id' => null
             ],[
                 'name' => 'GUANTE',
                 'description' => 'Foam gloves, color: multi',
                 'price' => '50',
                 'image' => '800_60f042659cf89.jpg',
-                'category_id' => '3'
+                'category_id' => '3',
+                'subsub_category_id' => null
             ],[
                 'name' => 'SILICON HEADLIGHT',
                 'description' => 'Front light operated by batteries: AAA, suitable for children"s bikes',
                 'price' => '45',
                 'image' => '800_60ef105588085.jpg',
-                'category_id' => '3'
+                'category_id' => '3',
+                'subsub_category_id' => null
             ],[
                 'name' => 'BIG PROTECTION KIT',
                 'description' => 'Protective kit 2 hand guards 2 elbow guards 2 knee guards',
                 'price' => '95',
                 'image' => '800_60f053bd3d483.jpg',
-                'category_id' => '3'
+                'category_id' => '3',
+                'subsub_category_id' => null
             ],[
                 'name' => 'SERVICE BELL',
                 'description' => 'American bell made of aluminum',
                 'price' => '95',
                 'image' => '800_60ef150897da5.jpg',
-                'category_id' => '3'
+                'category_id' => '3',
+                'subsub_category_id' => null
             ],[
                 'name' => 'BIKE MOBILE HOLDER',
                 'description' => 'A mobile holder that can be used for bicycles and motorcycles, suitable for all sizes of mobile phones',
                 'price' => '75',
                 'image' => '800_60ef471d9b331.jpg',
-                'category_id' => '3'
+                'category_id' => '3',
+                'subsub_category_id' => null
             ],[
                 'name' => 'FRONT + REAR LIGHT',
                 'description' => 'Front + rear light, battery operated, suitable for children"s bikesدراج',
                 'price' => '35',
                 'image' => '800_60ef48ab38d1b.jpg',
-                'category_id' => '3'
+                'category_id' => '3',
+                'subsub_category_id' => null
             ],[
                 'name' => 'BICYCLE COVER',
                 'description' => 'Adopt Terylene material, with sunscreen and rainproof function, sturdy and durable, high quality, excellent durability, suitable for bicycle, motorcycle, electric car, etc., a perfect choice for your outdoor activities. Specifications: Color: Gray Material: Terylene Weight: 373g Product size: 210 * 100cm Package size: 30 * 25.5 * 3cm Package List: 1 * Bicycle Dust Cover',
                 'price' => '135',
                 'image' => '800_60f03ebcb8acd.jpg',
-                'category_id' => '3'
+                'category_id' => '3',
+                'subsub_category_id' => null
             ],[
                 'name' => 'SIRENA 1 VOTE',
                 'description' => 'Battery operated 2 batteries: AAA',
                 'price' => '35',
                 'image' => '800_60f0572f2e9a1.jpg',
-                'category_id' => '3'
+                'category_id' => '3',
+                'subsub_category_id' => null
             ],[
                 'name' => 'USB FLASHLIGHT',
                 'description' => 'Scout with 5 different sounds 3 levels of lighting Works with charging Easy to disassemble and install',
                 'price' => '150',
                 'image' => '800_60f058569ca03.jpg',
-                'category_id' => '3'
+                'category_id' => '3',
+                'subsub_category_id' => null
             ],[
                 'name' => '120CM KEY LOCK',
                 'description' => 'Metal lock from the inside length 120 cm 2 computer key with holder for the lock to be needed when moving the bike to another place',
                 'price' => '75',
                 'image' => '800_60f05998caecc.jpg',
-                'category_id' => '3'
+                'category_id' => '3',
+                'subsub_category_id' => null
             ],[
                 'name' => '120 CM NUMBER LOCK',
                 'description' => 'Lock numbers length 120 cm It can be set to any number at any time 5 digits Equipped with a lock holder for his need when moving the bike to another place',
                 'price' => '95',
                 'image' => '800_60f05a76d2e09.jpg',
-                'category_id' => '3'
+                'category_id' => '3',
+                'subsub_category_id' => null
             ],[
                 'name' => 'COUNTER BLOWER',
                 'description' => 'A blower equipped with an air pressure gauge + a ball needle + a connection to inflate the floats',
                 'price' => '250',
                 'image' => '800_60f05d094af4e.jpg',
-                'category_id' => '3'
+                'category_id' => '3',
+                'subsub_category_id' => null
             ],[
                 'name' => 'SMALL BLOWER',
                 'description' => 'Blower used to inflate bicycles ball buoys',
                 'price' => '50',
                 'image' => '800_60f05e2720dc3.jpg',
-                'category_id' => '3'
+                'category_id' => '3',
+                'subsub_category_id' => null
             ],[
                 'name' => 'L . HELMET',
                 'description' => 'Large helmet suitable for an age greater than ten years, blue color',
                 'price' => '250',
                 'image' => '800_60f071e0901f1.jpg',
-                'category_id' => '3'
+                'category_id' => '3',
+                'subsub_category_id' => null
             ],[
                 'name' => 'L . HELMET',
                 'description' => 'Large helmet suitable for an age greater than ten years, white color',
                 'price' => '250',
                 'image' => '800_60f07680927f6.jpg',
-                'category_id' => '3'
+                'category_id' => '3',
+                'subsub_category_id' => null
             ],[
                 'name' => 'BIG BLOWER',
                 'description' => 'Big bike pump',
                 'price' => '100',
                 'image' => '800_60f077391e2a1.jpg',
-                'category_id' => '3'
+                'category_id' => '3',
+                'subsub_category_id' => null
             ],[
                 'name' => 'SMALL BLOWER',
                 'description' => 'It is suitable for all types of bikes. It is installed in the bike. It can be used for the ball + buoy. Length 28 cm',
                 'price' => '165',
                 'image' => '800_60f078850bdce.jpg',
-                'category_id' => '3'
+                'category_id' => '3',
+                'subsub_category_id' => null
             ],[
                 'name' => 'SMALL BLOWER',
                 'description' => 'It is suitable for all types of bikes. It is installed in the bike. It can be used for the ball + buoy. Length 30 cm',
                 'price' => '185',
                 'image' => '800_60f078d717628.jpg',
-                'category_id' => '3'
+                'category_id' => '3',
+                'subsub_category_id' => null
             ],[
                 'name' => 'BOTTLE',
                 'description' => 'Plastic Bicycle Bottle 650 ml',
                 'price' => '40',
                 'image' => '800_60f07a09b38e1.jpg',
-                'category_id' => '3'
+                'category_id' => '3',
+                'subsub_category_id' => null
             ],[
                 'name' => 'MOBILE BAG',
                 'description' => 'A bag for mobile on the bike suitable for all types of mobile has side pockets to keep keys, money, etc....',
                 'price' => '125',
                 'image' => '800_60f07affea33c.jpg',
-                'category_id' => '3'
+                'category_id' => '3',
+                'subsub_category_id' => null
             ],[
                 'name' => 'NUMBER LOCK 180 CM',
                 'description' => 'American Servas brand 180 cm 4 numbers and can be set to any number chosen',
                 'price' => '395',
                 'image' => '800_60f0804675a48.jpg',
-                'category_id' => '3'
+                'category_id' => '3',
+                'subsub_category_id' => null
             ],[
                 'name' => 'BACK LIGHT 100 DAYS',
                 'description' => 'Rear light, red light only, illumination strength is 100 days',
                 'price' => '100',
                 'image' => '800_60f089d3b4010.jpg',
-                'category_id' => '3'
+                'category_id' => '3',
+                'subsub_category_id' => null
             ],[
                 'name' => '125-DAY REAR LIGHT',
                 'description' => 'Rear light red light + white luminous power 125 days',
                 'price' => '125',
                 'image' => '800_60f089cac7bb8.jpg',
-                'category_id' => '3'
+                'category_id' => '3',
+                'subsub_category_id' => null
             ],[
                 'name' => 'SCOUT WITH BATTERIES',
                 'description' => 'Scout 3 levels of lighting, siren 5 sounds, works on batteries, comes with free batteries',
                 'price' => '75',
                 'image' => '800_60f2e74d3d95c.jpg',
-                'category_id' => '3'
+                'category_id' => '3',
+                'subsub_category_id' => null
             ],[
                 'name' => 'SCOUT WITH BATTERIES',
                 'description' => 'Scout 3 levels of lighting, siren 5 sounds, works on batteries, comes with free batteries',
                 'price' => '75',
                 'image' => '800_60f2e74d3d95c.jpg',
-                'category_id' => '3'
+                'category_id' => '3',
+                'subsub_category_id' => null,
             ],[
                 'name' => 'Bike size 24 brand Kisto',
                 'description' => 'Bike 24 Kisto Front Auxiliary Disc Brake Front + Rear 21 Speed Metal Type Iron',
                 'price' => '2750',
+                'image' => '800_61192bc4bd562.jpg',
+                'category_id' => '1',
+                'subsub_category_id' => '3'
+            ],[
+                'name' => '24 TRINX CITY BIKE',
+                'description' => "Trinx bike, size 24, girls' bike, metal type: iron, with parts made of aluminum, suitable from 10 to 14 years old",
+                'price' => '2650',
                 'image' => '800_611bef2a2e993.jpg',
-                'category_id' => '1'
+                'category_id' => '1',
+                'subsub_category_id' => '3'
+            ],[
+                'name' => 'HADOR BIKE 24',
+                'description' => "Bicycle size 24, brand Hador, color orange, model steer, made of aluminum, 21 saddles, brand a2, front tire, easy to remove and install",
+                'price' => '3250',
+                'image' => '800_611d4313c1dcd.jpg',
+                'category_id' => '1',
+                'subsub_category_id' => '3'
             ]
             
         ]);

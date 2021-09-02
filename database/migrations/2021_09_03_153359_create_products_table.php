@@ -17,13 +17,13 @@ class CreateProductsTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->unsignedBigInteger('category_id');
-            $table->unsignedBigInteger('subsub_category_id')->nullable();
             $table->string('image');
             $table->string('image2')->nullable();
             $table->string('image3')->nullable();
             $table->string('image4')->nullable();
             $table->text('description');
             $table->integer('price');
+            $table->unsignedBigInteger('subsub_category_id')->nullable();
             // $table->integer('old_price')->nullable();
             $table->timestamps();
 

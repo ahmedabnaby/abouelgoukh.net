@@ -12,9 +12,9 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', 'App\Http\Controllers\ProductsController@index')->name('home');
 Route::get('/bicycles', 'App\Http\Controllers\PagesController@bicycles')->name('bicycles');
-Route::get('/bicycles_under_13', 'App\Http\Controllers\PagesController@bicycles_under_13')->name('bicycles13');
 Route::resource('sub_categories','App\Http\Controllers\SubCategoriesController');
 Route::resource('subsub_categories','App\Http\Controllers\SubsubCategoriesController');
+Route::resource('products','App\Http\Controllers\ProductsController');
+Route::get('products/show/{id}{sub_sub_category_id}','App\Http\Controllers\ProductsController@show')->name('products.show');
