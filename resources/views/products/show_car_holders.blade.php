@@ -89,13 +89,13 @@
                                         
                                     <div class="product-default left-details product-widget">
                                         <figure>
-                                            <a href="{{route('car_holders.show',$car_holder->id)}}">
+                                            <a href="{{route('car_holders.show',$carholder->id)}}">
                                                 <img src="{{asset('assets/images/abouelgoukh/car_holders/'.$carholder->image)}}">
                                             </a>
                                         </figure>
                                         <div class="product-details">
                                             <h2 class="product-title">
-                                                <a href="{{route('car_holders.show',$car_holder->id)}}">{{$carholder->name}}</a>
+                                                <a href="{{route('car_holders.show',$carholder->id)}}">{{$carholder->name}}</a>
                                             </h2>
                                             <div class="ratings-container">
                                                 <div class="product-ratings">
