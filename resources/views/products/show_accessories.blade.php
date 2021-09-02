@@ -51,17 +51,19 @@
                                 <div class="product-desc">
                                     <p>{{$product->description}}</p>
                                 </div><!-- End .product-desc -->
+                                
+                            <form action="{{route('cart.add',$product->id)}}" method="get">
 
                                 <div class="product-single-qty">
-                                    <input class="horizontal-quantity form-control" type="text">
+                                    <input class="horizontal-quantity form-control" name="quantity" value="1" type="text">
                                 </div><!-- End .product-single-qty -->
 
                                 <div class="product-action product-all-icons">
-                                    <a href="cart.html" class="paction add-cart" title="Add to Cart">
+                                    <button type="submit" style="cursor: pointer;" class="paction add-cart">
                                         Add to Bag
-                                    </a>
+                                    </button>
                                 </div><!-- End .product-action -->
-
+                            </form>
                             </div><!-- End .product-single-details -->
                         </div><!-- End .col-lg-7 -->
                     </div><!-- End .row -->
@@ -86,13 +88,13 @@
                                         
                                     <div class="product-default left-details product-widget">
                                         <figure>
-                                            <a href="product.html">
+                                            <a href="{{route('accessories.show',$accessory->id)}}">
                                                 <img src="{{asset('assets/images/abouelgoukh/accessories/'.$accessory->image)}}">
                                             </a>
                                         </figure>
                                         <div class="product-details">
                                             <h2 class="product-title">
-                                                <a href="product.html">{{$accessory->name}}</a>
+                                                <a href="{{route('accessories.show',$accessory->id)}}">{{$accessory->name}}</a>
                                             </h2>
                                             <div class="ratings-container">
                                                 <div class="product-ratings">

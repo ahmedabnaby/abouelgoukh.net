@@ -232,6 +232,139 @@ class ProductsSeeder extends Seeder
                 'category_id' => '1',
                 'subsub_category_id' => '3'
             ],[
+                'name' => 'BICYCLE 20 BRAND ZOOM',
+                'description' => "Bicycle 20 brand Zoom iron color black in red in blue speeds Shimano brand 21 speed front assistant to absorb bumps and shocks front + rear disc brakes for ages from 7 to 9 years",
+                'price' => '2500',
+                'image' => '800_611185d130d1a.jpg',
+                'category_id' => '1',
+                'subsub_category_id' => '4'
+            ],[
+                'name' => 'BICYCLE 20 BRAND ZOOM',
+                'description' => "Bicycle 20 brand Zoom color black in green in blue Iron Shimano brand speeds 21 speed front assistant to absorb bumps and shocks front + rear disc brakes for ages from 7 to 9 years",
+                'price' => '2500',
+                'image' => '800_6111866ada328.jpg',
+                'category_id' => '1',
+                'subsub_category_id' => '4'
+            ],[
+                'name' => 'BICYCLE 20 BRAND TOTEM',
+                'description' => "Bicycle 20 brand Zoom aluminum color blue Shimano brand speeds 21 speed front assist + rear to absorb bumps and shocks Balance brakes suitable for ages from 7 to 9 years",
+                'price' => '2650',
+                'image' => '800_611187851f4ed.jpg',
+                'category_id' => '1',
+                'subsub_category_id' => '4'
+            ],[
+                'name' => 'BICYCLE 20 BRAND TOTEM',
+                'description' => "Bicycle 20 brand most iron color black F green 21 speed front + rear to absorb bumps and shocks Balance brakes suitable for age from 7 to 9 years",
+                'price' => '1950',
+                'image' => '800_61191efaa2d3e.jpg',
+                'category_id' => '1',
+                'subsub_category_id' => '4'
+            ],[
+                'name' => '20 RODEO BIKE',
+                'description' => "Rodeo Bike 20 brand Mini Rider bike, black in green, Taiwanese brand from China factories",
+                'price' => '2430',
+                'image' => '800_61192187bb477.jpg',
+                'category_id' => '1',
+                'subsub_category_id' => '4'
+            ],[
+                'name' => '20 RODEO BIKE',
+                'description' => "Rodeo Bike Brand Hummer 20 bike, light blue color, Taiwanese brand, from China factories",
+                'price' => '2490',
+                'image' => '800_611923d4701ee.jpg',
+                'category_id' => '1',
+                'subsub_category_id' => '4'
+            ],[
+                'name' => '20 RODEO BIKE',
+                'description' => "Bicycle 20 brand Rodeo Bike Model Chita The color is black, blue and pink, a Taiwanese brand from China factories Specifications: Metal type: Auxiliary iron: Yes Speeds: No Brake type: Front disc only Suitable for ages from 7 to 9 years",
+                'price' => '2490',
+                'image' => '800_611924906fc1d.jpg',
+                'category_id' => '1',
+                'subsub_category_id' => '4'
+            ],[
+                'name' => '20 RODEO BIKE',
+                'description' => "Bicycle 20 brand Rodeo Bike Model Chita The color is black, blue and pink, a Taiwanese brand from China factories Specifications: Metal type: Auxiliary iron: Yes Speeds: No Brake type: Front disc only Suitable for ages from 7 to 9 years",
+                'price' => '2490',
+                'image' => '800_611924906fc1d.jpg',
+                'category_id' => '1',
+                'subsub_category_id' => '4'
+            ],[
+                'name' => 'BICYCLE SIZE 16 BRAND KARKURA',
+                'description' => "Children's bike, size 16, color orange, suitable from 4 years to 7 years old",
+                'price' => '1450',
+                'image' => '800_61117a9b331b6.jpg',
+                'category_id' => '1',
+                'subsub_category_id' => '5'
+            ],[
+                'name' => 'BICYCLE SIZE 16 BRAND KARKURA',
+                'description' => "Children's bike, size 16, black and red, suitable from 4 to 7 years old",
+                'price' => '1450',
+                'image' => '800_61117df429d5c.jpg',
+                'category_id' => '1',
+                'subsub_category_id' => '5'
+            ],[
+                'name' => 'FERRARI BIKE SIZE 16',
+                'description' => "Children's bike, size 16, red and black, Ferrari model, suitable from 4 years old to 7 years old",
+                'price' => '1450',
+                'image' => '800_611180e983226.jpg',
+                'category_id' => '1',
+                'subsub_category_id' => '5'
+            ],[
+                'name' => 'BIKE SIZE 16 BRAND REDO BIKE',
+                'description' => "Children's bike size 16, black and green, hot speed model, suitable from 4 to 7 years old",
+                'price' => '1790',
+                'image' => '800_611183c5110ac.jpg',
+                'category_id' => '1',
+                'subsub_category_id' => '5'
+            ],[
+                'name' => 'AERO BIKE SIZE 16',
+                'description' => "Children's bike, size 16, orange in black, suitable from 4 to 7 years old",
+                'price' => '1450',
+                'image' => '800_61117f3de3f31.jpg',
+                'category_id' => '1',
+                'subsub_category_id' => '5'
+            ],[
+                'name' => 'BICYCLE SIZE 12 BARBIE',
+                'description' => "Children's bike, size 12, pink, model Barbie, suitable from 3 years to 5 years old",
+                'price' => '1250',
+                'image' => '800_611170591de36.jpg',
+                'category_id' => '1',
+                'subsub_category_id' => '6'
+            ],[
+                'name' => 'FERRARI 12 BIKE',
+                'description' => "Kids bike size 12 yellow color Ferrari model suitable from 3 years to 5 years old",
+                'price' => '1250',
+                'image' => '800_6111722488a9f.jpg',
+                'category_id' => '1',
+                'subsub_category_id' => '6'
+            ],[
+                'name' => 'BIKE SIZE 12 REDO BIKE',
+                'description' => "Children's bike, size 12, the Taiwanese Rideau Bike brand, orange in black, model Iron Man, suitable from 3 to 5 years old",
+                'price' => '1650',
+                'image' => '800_6111727e56608.jpg',
+                'category_id' => '1',
+                'subsub_category_id' => '6'
+            ],[
+                'name' => 'FERRARI 12 BIKE',
+                'description' => "Children's bike, size 12, red color, Ferrari model, suitable from 3 to 5 years old",
+                'price' => '1250',
+                'image' => '800_611176d48c833.jpg',
+                'category_id' => '1',
+                'subsub_category_id' => '6'
+            ],[
+                'name' => 'BIKE SIZE 12 REDO BIKE',
+                'description' => "Children's bike size 12, Taiwanese Rideau Bike brand, color A, model BX, suitable from 3 to 5 years old",
+                'price' => '1650',
+                'image' => '800_6111776a0d75e.jpg',
+                'category_id' => '1',
+                'subsub_category_id' => '6'
+            ],[
+                'name' => 'BALANCE BIKE FOR DRIVING LESSONS',
+                'description' => "Balance bike for children's education, size 12, suitable from 4 to 6 years old",
+                'price' => '895',
+                'image' => '800_611178f1e4d9b.jpg',
+                'category_id' => '1',
+                'subsub_category_id' => '6'
+            ],[
                 'name' => 'EGOS KELLY 150 - 2021',
                 'description' => "Egos Kelly 150 - 2021 model, cash price 22450 pounds - special discount for a limited time 2950 pounds on cash sale only Price after discount 19500 specifications Climbing angle: 15 degrees to 20 degrees with fixed torque Front brake: Oil pressure disc Rear brake: Drum Battery type Lead acid battery Battery capacity: 7 Ah Battery voltage 12V Engine type: Latest version CVT 150cc GY7 Engine power: 8.3 kW (11.19 HP) Engine torque: 10.78 Nm At 6500 rpm LED Tail Light: Yes LED Headlight: Yes Alarm: Yes Remote Control: Yes MP3: Yes Front Windscreen: Yes Body Size: (L*W*H): 1890*68*1100mm Wheelbase: 1278 mm Wheel size: 3.5-10 or 90-90-10 Payload: 150 kg Seat height: 810 mm Double rear assist, dual front shock assist.",
                 'price' => '19500',

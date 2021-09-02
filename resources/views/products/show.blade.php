@@ -52,16 +52,18 @@
                                     <p>{{$product->description}}</p>
                                 </div><!-- End .product-desc -->
 
-                                <div class="product-single-qty">
-                                    <input class="horizontal-quantity form-control" type="text">
-                                </div><!-- End .product-single-qty -->
+                                <form action="{{route('cart.add',$product->id)}}" method="get">
 
-                                <div class="product-action product-all-icons">
-                                    <a href="cart.html" class="paction add-cart" title="Add to Cart">
-                                        Add to Bag
-                                    </a>
-                                </div><!-- End .product-action -->
-
+                                    <div class="product-single-qty">
+                                        <input class="horizontal-quantity form-control" name="quantity" value="1" type="text">
+                                    </div><!-- End .product-single-qty -->
+    
+                                    <div class="product-action product-all-icons">
+                                        <button type="submit" style="cursor: pointer;" class="paction add-cart">
+                                            Add to Bag
+                                        </button>
+                                    </div><!-- End .product-action -->
+                                </form>
                             </div><!-- End .product-single-details -->
                         </div><!-- End .col-lg-7 -->
                     </div><!-- End .row -->
@@ -86,13 +88,13 @@
                                         
                                     <div class="product-default left-details product-widget">
                                         <figure>
-                                            <a href="product.html">
+                                            <a href="{{route('products.show',['id'=>$product->id,'sub_sub_category_id'=>$subcategory])}}">
                                                 <img src="{{asset('assets/images/abouelgoukh/bicycles/'.$subcategory->image)}}">
                                             </a>
                                         </figure>
                                         <div class="product-details">
                                             <h2 class="product-title">
-                                                <a href="product.html">{{$subcategory->name}}</a>
+                                                <a href="{{route('products.show',['id'=>$product->id,'sub_sub_category_id'=>$subcategory])}}">{{$subcategory->name}}</a>
                                             </h2>
                                             <div class="ratings-container">
                                                 <div class="product-ratings">

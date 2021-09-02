@@ -79,62 +79,47 @@
                 <div class="dropdown cart-dropdown">
                     <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
                         <i class="minicart-icon"></i>
-                        <span class="cart-count">2</span>
+                        <span class="cart-count">
+                            {{Cart::getContent()->count()}}
+                        </span>
                     </a>
 
+                    <div style="display: none;">{{$cartItems =  \Cart::getContent()}}</div>
                     <div class="dropdown-menu" >
                         <div class="dropdownmenu-wrapper">
                             <div class="dropdown-cart-header">
-                                <span>2 Items</span>
+                                <span>{{Cart::getContent()->count()}} Items</span>
 
-                                <a href="#">View Cart</a>
                             </div><!-- End .dropdown-cart-header -->
                             <div class="dropdown-cart-products">
+                                @foreach ($cartItems as $cartItem)
                                 <div class="product">
                                     <div class="product-details">
                                         <h4 class="product-title">
-                                            <a href="#">Woman Ring</a>
+                                            <a href="#">{{$cartItem->name}}</a>
                                         </h4>
 
                                         <span class="cart-product-info">
-                                            <span class="cart-product-qty">1</span>
-                                            x $99.00
+                                            <span class="cart-product-qty">{{$cartItem->quantity}}</span>
+                                            x {{$cartItem->price}} EGP
                                         </span>
                                     </div><!-- End .product-details -->
 
                                     <figure class="product-image-container">
                                         <a href="#" class="product-image">
-                                            <img src="{{asset('assets/images/products/cart/product-1.jpg')}}" alt="product">
+                                            <img src="{{asset('assets/images/abouelgoukh/all/'.$cartItem->attributes->image)}}" alt="product">
                                         </a>
-                                        <a href="#" class="btn-remove" title="Remove Product"><i class="icon-retweet"></i></a>
+                                        <a href="{{route('cart.destroy',$cartItem->id)}}" class="btn-remove" title="Remove Product"><i class="icon-retweet"></i></a>
                                     </figure>
                                 </div><!-- End .product -->
+                                @endforeach
 
-                                <div class="product">
-                                    <div class="product-details">
-                                        <h4 class="product-title">
-                                            <a href="#">Woman Necklace</a>
-                                        </h4>
-
-                                        <span class="cart-product-info">
-                                            <span class="cart-product-qty">1</span>
-                                            x $35.00
-                                        </span>
-                                    </div><!-- End .product-details -->
-
-                                    <figure class="product-image-container">
-                                        <a href="#" class="product-image">
-                                            <img src="{{asset('assets/images/products/cart/product-2.jpg')}}" alt="product">
-                                        </a>
-                                        <a href="#" class="btn-remove" title="Remove Product"><i class="icon-retweet"></i></a>
-                                    </figure>
-                                </div><!-- End .product -->
                             </div><!-- End .cart-product -->
 
                             <div class="dropdown-cart-total">
                                 <span>Total</span>
 
-                                <span class="cart-total-price">$134.00</span>
+                                <span class="cart-total-price">{{\Cart::getTotal()}} EGP</span>
                             </div><!-- End .dropdown-cart-total -->
 
                             <div class="dropdown-cart-action">

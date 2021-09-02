@@ -92,7 +92,7 @@
                             <div class="widget-body">
                                 <div class="product-intro">
                                     @foreach ($car_holders as $car_holder)
-                                    @if ($car_holder->category_id === 6)
+                                    @if ($car_holder->category_id === 7)
                                         
                                     <div class="product-default left-details product-widget">
                                         <figure>

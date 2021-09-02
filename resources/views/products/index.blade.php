@@ -1,6 +1,5 @@
 @extends('layouts.app')
 @section('content')
-
 <main class="home main">
     <div class="top-slider owl-carousel owl-theme" data-toggle="owl" data-owl-options="{
         'items' : 1,
@@ -263,7 +262,12 @@
                             <img src="{{asset('assets/images/abouelgoukh/accessories/'.$product->image)}}">
                         </a>
                         <div class="btn-icon-group">
-                            <button class="btn-icon btn-add-cart" data-toggle="modal" data-target="#addCartModal"><i class="icon-bag"></i></button>
+                                
+                            <form action="{{route('cart.add',$product->id)}}" method="get">
+                                <input type="hidden" name="quantity" value="1">
+                            <button class="btn-icon btn-add-cart" type="submit" data-toggle="modal" data-target="#addCartModal"><i class="icon-bag"></i></button>
+                        </form>
+
                         </div>
                         <a href="{{route('accessories.show',$product->id)}}" class="btn-quickview" title="Quick View">Quick View</a> 
                     </figure>
