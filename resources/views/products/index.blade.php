@@ -19,7 +19,7 @@
                     <h3 class="mb-2 mb-lg-8">Summer Sale</h3>
                     <button class="btn">Shop All Sale</button>
                 </div>
-                <video autoplay loop muted id="myVideo">
+                <video playsinline autoplay muted loop id="myVideo">
                     <source src="{{asset('assets/videos/Abulajoukh.mkv')}}" type="video/mp4" />
                   </video>
                   <div class="bg">
@@ -255,7 +255,8 @@
                 }
             }">
             @foreach ($products as $product)
-                
+                @if ($product->category_id === '3')
+                    
                 <div class="product-default inner-quickview inner-icon center-details">
                     <figure>
                         <a href="{{route('accessories.show',$product->id)}}">
@@ -292,6 +293,8 @@
                         </div><!-- End .price-box -->
                     </div><!-- End .product-details -->
                 </div>
+                @endif
+
             @endforeach
 
             </div>

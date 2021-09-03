@@ -74,21 +74,48 @@
             <div class="row row-sm">
                 <div class="col-md-6 col-lg-3">
                     <img src="{{asset('assets/images/abouelgoukh/logo.png')}}">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipis.</p>
+                    <p>Contact Info.</p>
                     <div class="social-link">
                         <h3 class="link-title">QUESTIONS?</h3>
-                        <a href="#">1-888-123-456</a>
+                        <a href="tel:+201017074766">+20 101-707-4766</a>
                     </div>
                 </div>
+                <div class="col-md-4">
+                    <h2 class="light-title">Contact <strong>Details</strong></h2>
+    
+                    <div class="contact-info">
+                        <div>
+                            <i class="icon-phone"></i>
+                            <p><a href="tel:+201017074766">01017074766 - Rehab 1 - the old market, shop No. -175</a></p>
+                            <p><a href="tel:+201000481726">01000481726 - Al Rehab 2 - Eastern Market</a></p>
+                            <p><a href="tel:+201005446710">01005446710 - Madinaty - Arabesque Mall</a></p>
+                            <p><a href="tel:+201020787000">01020787000 - Maadi - El Lasilky Street شارع</a></p>
+                        </div>
+                        <div class="mt-3">
+                            <i class="icon-mail-alt"></i>
+                            <p class="mt-5"><a href="mailto:abouelgoukhonline@gmail.com">abouelgoukhonline@gmail.com</a></p>
+                        </div>
+                        <div class="mt-3">
+                            <i class="icon-clock"></i>
+                            <p class="mt-5">Mon-Fri - 08: 00-19: 00</p>
+                        </div>
+                    </div><!-- End .contact-info -->
+                </div><!-- End .col-md-4 -->
                 <div class="col-md-6 col-lg-3">
                     <div class="widget">
-                        <h3 class="widget-title">Account</h3>
+                        <h3 class="widget-title">Abou El-Goukh</h3>
                         <div class="widget-content row row-sm">
                             <ul class="col-xl-6">
-                                <li><a href="my-account.html">My Account</a></li>
-                                <li><a href="#">Track Your Order</a></li>
-                                <li><a href="#">Payment Methods</a></li>
-                                <li><a href="#">Shipping Guide</a></li>
+                                <li>
+                                    <a href="{{route('home')}}">Home</a>
+                                </li>
+                                <li>
+                                    <a href="{{route('bicycles')}}">A-Store</a>
+                                  </li>
+            
+            
+                                <li><a href="{{route('about')}}">Abou El-Goukh</a></li>
+                                <li><a href="{{route('contact')}}">Contact Us</a></li>
                             </ul>
                             <ul class="col-xl-6">
                                 <li><a href="#">FAQs</a></li>
@@ -98,40 +125,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="widget">
-                        <h3 class="widget-title">About</h3>
-                        <div class="widget-content row row-sm">
-                            <ul class="col-xl-6">
-                                <li><a href="about.html">About Porto</a></li>
-                                <li><a href="#">Our Guarantees</a></li>
-                                <li><a href="#">Terms And Conditions</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
-                            </ul>
-                            <ul class="col-xl-6">
-                                <li><a href="#">Return Policy</a></li>
-                                <li><a href="#">Intellectual Property Claims</a></li>
-                                <li><a href="#">Site Map</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="widget">
-                        <h3 class="widget-title">Features</h3>
-                        <div class="widget-content">
-                            <ul>
-                                <li><a href="#">Powerful Admin Panel</a></li>
-                                <li><a href="#">Mobile & Retina Optimized</a></li>
-                                <li><a href="#">Super Fast Magento Theme</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
     <div class="footer-bottom container">
-        <p>Porto eCommerce. © 2020. All Rights Reserved</p>
+        <p>Copyright © 2021 All rights reserved</p>
     </div>
 </footer><!-- End .footer -->
