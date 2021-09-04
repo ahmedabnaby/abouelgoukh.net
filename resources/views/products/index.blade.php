@@ -9,7 +9,7 @@
         'autoplay': true
     }">
 
-        {{-- <div class="home-slide">
+        <div class="home-slide">
             <div class="slide-content flex-column flex-lg-row">
                 <img src="assets/images/slider/slide1.png" class="mx-auto mr-lg-0 py-5" alt="slide image">
                 <div class="content-right order-first order-lg-1 mx-auto py-5">
@@ -19,13 +19,13 @@
                     <h3 class="mb-2 mb-lg-8">Summer Sale</h3>
                     <button class="btn">Shop All Sale</button>
                 </div>
-                <video playsinline autoplay muted loop id="myVideo">
+                <video autoplay loop muted playsinline id="myVideo">
                     <source src="{{asset('assets/videos/Abulajoukh.mkv')}}" type="video/mp4" />
                   </video>
                   <div class="bg">
                   </div>
             </div>
-        </div> --}}
+        </div>
         <div class="home-slide">
             <div class="slide-content flex-column flex-lg-row">
                 <div class="content-left mx-auto mr-lg-0 py-5">
