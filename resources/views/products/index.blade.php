@@ -9,7 +9,7 @@
         'autoplay': true
     }">
 
-        <div class="home-slide">
+        {{-- <div class="home-slide">
             <div class="slide-content flex-column flex-lg-row">
                 <img src="assets/images/slider/slide1.png" class="mx-auto mr-lg-0 py-5" alt="slide image">
                 <div class="content-right order-first order-lg-1 mx-auto py-5">
@@ -25,7 +25,7 @@
                   <div class="bg">
                   </div>
             </div>
-        </div>
+        </div> --}}
         <div class="home-slide">
             <div class="slide-content flex-column flex-lg-row">
                 <div class="content-left mx-auto mr-lg-0 py-5">
