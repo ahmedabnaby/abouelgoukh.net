@@ -20,7 +20,7 @@
                     <button class="btn">Shop All Sale</button>
                 </div>
                 <video autoplay loop muted playsinline id="myVideo">
-                    <source src="{{asset('assets/videos/Abulajoukh.mkv')}}" type="video/mp4" />
+                    <source src="{{asset('assets/videos/aboelgoukh.mp4')}}" type="video/mp4" />
                   </video>
                   <div class="bg">
                   </div>
