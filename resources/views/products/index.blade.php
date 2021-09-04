@@ -19,8 +19,8 @@
                     <h3 class="mb-2 mb-lg-8">Summer Sale</h3>
                     <button class="btn">Shop All Sale</button>
                 </div>
-                <video autoplay loop muted playsinline id="myVideo">
-                    <source src="{{asset('assets/videos/aboelgoukh.mp4')}}" type="video/mp4" />
+                <video autoplay loop muted playsinline preload="auto" id="myVideo">
+                    <source src="{{asset('assets/videos/abouelgoukh-Abulajoukh.mp4')}}" type="video/mp4" />
                   </video>
                   <div class="bg">
                   </div>
