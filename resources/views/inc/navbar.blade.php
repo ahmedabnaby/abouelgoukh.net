@@ -31,7 +31,7 @@
                                   </ul>
                                 </div>
                                 <div class="col-md-8 image-container">
-                                  <img src="{{asset('assets/images/abouelgoukh/2000_60d26f433c2bf.jpg')}}" />
+                                  <img src="{{asset('assets/images/abouelgoukh/Electric.jpg')}}" />
                                 </div>
                               </div>
                             </div>

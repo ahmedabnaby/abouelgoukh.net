@@ -6,12 +6,12 @@
         'margin' : 0,
         'nav': true,
         'dots': false,
-        'autoplay': false
+        'autoplay': true
     }">
 
-        <div class="home-slide">
+        {{-- <div class="home-slide">
             <div class="slide-content flex-column flex-lg-row">
-                {{-- <img src="assets/images/slider/slide1.png" class="mx-auto mr-lg-0 py-5" alt="slide image"> --}}
+                <img src="assets/images/slider/slide1.png" class="mx-auto mr-lg-0 py-5" alt="slide image">
                 <div class="content-right order-first order-lg-1 mx-auto py-5">
                     <span>EXTRA</span>
                     <h2>20% OFF</h2>
@@ -25,7 +25,7 @@
                   <div class="bg">
                   </div>
             </div>
-        </div>
+        </div> --}}
         <div class="home-slide">
             <div class="slide-content flex-column flex-lg-row">
                 <div class="content-left mx-auto mr-lg-0 py-5">
@@ -39,17 +39,29 @@
                     <img src="assets/images/slider/slide2.png" class="slide-img1" alt="slide image">
                     <div class="image-info mt-2 mt-lg-6 flex-column flex-sm-row">
                         <div class="info-left">
-                            <h4>only <span><sup>$</sup>399<sup>99</sup></span></h4>
+                            <h4>only <span>2500 <sup>EGP</sup></span></h4>
                         </div>
                         <div class="info-right">
                             <h4>Start Shopping Right Now</h4>
-                            <p>*Get Plus Discount Buying Package</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="home-slide">
+            <div class="slide-content flex-column flex-lg-row">
+                <img src="assets/images/abouelgoukh/imageonline-co-lightenimage.png" class="slider_img mx-auto mr-lg-0 py-5" alt="slide image">
+                <div class="content-right order-first order-lg-1 mx-auto py-5">
+                    <span>EXTRA</span>
+                    <h2>20% OFF</h2>
+                    <h4 class="cross-txt">BIKES</h4>
+                    <h3 class="mb-2 mb-lg-8">Summer Sale</h3>
+                    <button class="btn">Shop All Sale</button>
+                </div>
+            </div>
+        </div>
     </div>
+
 
     <div class="container">
         <section class="product-panel">
