@@ -6,12 +6,12 @@
         'margin' : 0,
         'nav': true,
         'dots': false,
-        'autoplay': true
+        'autoplay': false
     }">
 
-        {{-- <div class="home-slide">
+        <div class="home-slide">
             <div class="slide-content flex-column flex-lg-row">
-                <img src="assets/images/slider/slide1.png" class="mx-auto mr-lg-0 py-5" alt="slide image">
+                {{-- <img src="assets/images/slider/slide1.png" class="mx-auto mr-lg-0 py-5" alt="slide image"> --}}
                 <div class="content-right order-first order-lg-1 mx-auto py-5">
                     <span>EXTRA</span>
                     <h2>20% OFF</h2>
@@ -25,7 +25,7 @@
                   <div class="bg">
                   </div>
             </div>
-        </div> --}}
+        </div>
         <div class="home-slide">
             <div class="slide-content flex-column flex-lg-row">
                 <div class="content-left mx-auto mr-lg-0 py-5">
