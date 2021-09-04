@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col">
                 <video controls playsinline id="myVideo" style="padding:25px;">
-                    <source src="{{asset('assets/videos/Abulajoukh.mkv')}}" type="video/mp4" />
+                    <source src="{{asset('assets/videos/aboelgoukh.mp4')}}" type="video/mp4" />
                   </video>
             </div>
         </div>
