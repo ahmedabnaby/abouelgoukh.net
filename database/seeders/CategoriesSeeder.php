@@ -28,6 +28,8 @@ class CategoriesSeeder extends Seeder
                 'name' => 'Toys'
             ],[
                 'name' => 'Bicycle Car Holder'
+            ],[
+                'name' => 'Beach Buggy'
             ]
             ]);
     }

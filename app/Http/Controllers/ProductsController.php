@@ -137,4 +137,14 @@ class ProductsController extends Controller
         $car_holders = Products::all();
         return view('products.show_car_holders')->withProduct($car_holder)->withCarholders($car_holders);
     }
+    public function buggy()
+    {
+        return view('products.buggies')->with('buggies',Products::all());
+    }
+    public function show_buggy($id)
+    {
+        $buggy = Products::findOrFail($id);
+        $buggies = Products::all();
+        return view('products.show_buggies')->withProduct($buggy)->withBuggies($buggies);
+    }
 }
