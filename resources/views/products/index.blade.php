@@ -177,7 +177,19 @@
                         </h2>
                     </div><!-- End .product-details -->
                 </div>                
-
+                <div class="product-default inner-quickview inner-icon center-details">
+                    <figure>
+                        <a href="{{route('buggy')}}">
+                            <img src="assets/images/abouelgoukh/buggy13.jpeg">
+                        </a>
+                        <a href="{{route('buggy')}}" class="btn-quickview" title="Quick View">Quick View</a> 
+                    </figure>
+                    <div class="product-details">
+                        <h2 class="product-title">
+                            <a href="{{route('buggy')}}">Beach Buggy</a>
+                        </h2>
+                    </div><!-- End .product-details -->
+                </div>  
             </div>
         </section>
 
