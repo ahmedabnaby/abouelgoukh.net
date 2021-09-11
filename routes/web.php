@@ -18,7 +18,7 @@ Route::get('/contact', 'App\Http\Controllers\PagesController@contact')->name('co
 Route::resource('sub_categories','App\Http\Controllers\SubCategoriesController');
 Route::resource('subsub_categories','App\Http\Controllers\SubsubCategoriesController');
 Route::resource('products','App\Http\Controllers\ProductsController');
-Route::get('products/show/{id}{sub_sub_category_id}','App\Http\Controllers\ProductsController@show')->name('products.show');
+Route::get('bicycles/show/{id}/{sub_sub_category_id}','App\Http\Controllers\ProductsController@show')->name('products.show');
 Route::get('/bicycles', 'App\Http\Controllers\PagesController@bicycles')->name('bicycles');
 
 Route::get('/accessories', 'App\Http\Controllers\ProductsController@accessories')->name('accessories');

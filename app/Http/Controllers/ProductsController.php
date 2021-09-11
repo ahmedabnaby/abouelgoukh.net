@@ -45,10 +45,10 @@ class ProductsController extends Controller
      * @param  \App\Models\Products  $products
      * @return \Illuminate\Http\Response
      */
-    public function show($id,$sub_sub_category_id)
+    public function show($id)
     {
         $product = Products::findOrFail($id);
-        $sub_sub_categories = Products::where('subsub_category_id',$sub_sub_category_id)->get();
+        $sub_sub_categories = SubsubCategories::all();
         return view('products.show')->withProduct($product)->withSubsubcategories($sub_sub_categories);
     }
 

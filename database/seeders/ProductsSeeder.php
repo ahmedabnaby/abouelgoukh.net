@@ -299,8 +299,8 @@ class ProductsSeeder extends Seeder
                 'description' => 'Bike 24 Kisto Front Auxiliary Disc Brake Front + Rear 21 Speed Metal Type Iron',
                 'price' => '2750',
                 'image' => '800_61192bc4bd562.jpg',
-                'image2' => '',
-                'image3' => '',
+                'image2' => '2000_61192bc3eb912.jpg',
+                'image3' => '2000_61192bc02ffa0.jpg',
                 'image4' => '',
                 'category_id' => '1',
                 'subsub_category_id' => '3'
@@ -319,8 +319,8 @@ class ProductsSeeder extends Seeder
                 'description' => "Bicycle size 24, brand Hador, color orange, model steer, made of aluminum, 21 saddles, brand a2, front tire, easy to remove and install",
                 'price' => '3250',
                 'image' => '800_611d4313c1dcd.jpg',
-                'image2' => '',
-                'image3' => '',
+                'image2' => '2000_611d431379c37.jpg',
+                'image3' => '800_611d431309ce1.jpg',
                 'image4' => '',
                 'category_id' => '1',
                 'subsub_category_id' => '3'

@@ -21,9 +21,18 @@
                                     <div class="product-item">
                                         <img class="product-single-image" src="{{asset('assets/images/abouelgoukh/bicycles/'.$product->image)}}" data-zoom-image="{{asset('assets/images/abouelgoukh/bicycles/'.$product->image)}}"/>
                                     </div>
+                                    @if (($product->image2 && $product->image3) != '')
+                                        
+
                                     <div class="product-item">
-                                        <img class="product-single-image" src="{{asset('assets/images/abouelgoukh/bicycles/'.$product->image)}}" data-zoom-image="{{asset('assets/images/abouelgoukh/bicycles/'.$product->image)}}"/>
+                                        <img class="product-single-image" src="{{asset('assets/images/abouelgoukh/bicycles/'.$product->image2)}}" data-zoom-image="{{asset('assets/images/abouelgoukh/bicycles/'.$product->image2)}}"/>
                                     </div>
+                                    <div class="product-item">
+                                        <img class="product-single-image" src="{{asset('assets/images/abouelgoukh/bicycles/'.$product->image3)}}" data-zoom-image="{{asset('assets/images/abouelgoukh/bicycles/'.$product->image3)}}"/>
+                                    </div>
+                                    @else
+                                        <div class="display:none;"></div>
+                                    @endif
                                 </div>
                                 <!-- End .product-single-carousel -->
                                 <span class="prod-full-screen">
@@ -34,9 +43,18 @@
                                 <div class="col-3 owl-dot">
                                     <img src="{{asset('assets/images/abouelgoukh/bicycles/'.$product->image)}}"/>
                                 </div>
+                                @if (($product->image2 && $product->image3) != '')
+                                    
+     
                                 <div class="col-3 owl-dot">
-                                    <img src="{{asset('assets/images/abouelgoukh/bicycles/'.$product->image)}}"/>
+                                    <img src="{{asset('assets/images/abouelgoukh/bicycles/'.$product->image2)}}"/>
                                 </div>
+                                <div class="col-3 owl-dot">
+                                    <img src="{{asset('assets/images/abouelgoukh/bicycles/'.$product->image3)}}"/>
+                                </div>
+                                @else
+                                    <div class="display:none;"></div>
+                                @endif
                             </div>
                         </div><!-- End .col-lg-5 -->
 
@@ -85,28 +103,28 @@
                             <div class="widget-body">
                                 <div class="product-intro">
                                     @foreach ($subsubcategories as $subcategory)
-                                        
+                                        @if ($subcategory->id !== 1 && $subcategory->id !==2 )
+                                            
                                     <div class="product-default left-details product-widget">
                                         <figure>
-                                            <a href="{{route('products.show',['id'=>$product->id,'sub_sub_category_id'=>$subcategory])}}">
+                                            <a href="{{route('subsub_categories.show',$subcategory->id)}}">
                                                 <img src="{{asset('assets/images/abouelgoukh/bicycles/'.$subcategory->image)}}">
                                             </a>
                                         </figure>
                                         <div class="product-details">
                                             <h2 class="product-title">
-                                                <a href="{{route('products.show',['id'=>$product->id,'sub_sub_category_id'=>$subcategory])}}">{{$subcategory->name}}</a>
-                                            </h2>
+                                                <a href="{{route('subsub_categories.show',$subcategory->id)}}">{{$subcategory->name}}</a>
+                                            </h2>           
                                             <div class="ratings-container">
                                                 <div class="product-ratings">
                                                     <span class="ratings" style="width:100%"></span><!-- End .ratings -->
                                                     <span class="tooltiptext tooltip-top"></span>
                                                 </div><!-- End .product-ratings -->
                                             </div><!-- End .product-container -->
-                                            <div class="price-box">
-                                                <span class="product-price">{{$subcategory->price}} EGP</span>
-                                            </div><!-- End .price-box -->
                                         </div><!-- End .product-details -->
                                     </div>
+                                    @endif
+
                                     @endforeach
 
                                 </div>
