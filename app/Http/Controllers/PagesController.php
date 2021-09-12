@@ -15,4 +15,10 @@ class PagesController extends Controller
     {
         return view('pages.contact');
     }
+    public function read()
+    {
+        $filename = 'New ecar portfolio Presentation.pdf';
+        $pathToFile = storage_path($filename);
+        return response()->file($pathToFile);
+    }
 }

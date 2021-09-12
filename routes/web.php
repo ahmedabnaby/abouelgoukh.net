@@ -21,6 +21,7 @@ Route::resource('sub_categories','App\Http\Controllers\SubCategoriesController')
 Route::resource('subsub_categories','App\Http\Controllers\SubsubCategoriesController');
 Route::resource('products','App\Http\Controllers\ProductsController');
 
+Route::get('/read', 'App\Http\Controllers\PagesController@read');
 
 Route::get('bicycles/show/{id}/{sub_sub_category_id}','App\Http\Controllers\ProductsController@show')->name('products.show');
 Route::get('/bicycles', 'App\Http\Controllers\ProductsController@bicycles_index')->name('bicycles');
