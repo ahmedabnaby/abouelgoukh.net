@@ -653,7 +653,7 @@ class ProductsSeeder extends Seeder
             ],[
                 'name' => 'iTank Single-Battery',
                 'description' => '',
-                'price' => '0.00',
+                'price' => '0',
                 'image' => '1.jpeg',                
                 'image2' => '11.jpeg',
                 'image3' => '',
@@ -663,7 +663,7 @@ class ProductsSeeder extends Seeder
             ],[
                 'name' => 'iLark',
                 'description' => '',
-                'price' => '0.00',
+                'price' => '0',
                 'image' => '2.jpeg',                
                 'image2' => '22.jpeg',
                 'image3' => '',
@@ -673,7 +673,7 @@ class ProductsSeeder extends Seeder
             ],[
                 'name' => 'iTank Dual-Battery',
                 'description' => '',
-                'price' => '0.00',
+                'price' => '0',
                 'image' => '3.jpeg',                
                 'image2' => '33.jpeg',
                 'image3' => '',
@@ -683,7 +683,7 @@ class ProductsSeeder extends Seeder
             ],[
                 'name' => 'iTango HO',
                 'description' => '',
-                'price' => '0.00',
+                'price' => '0',
                 'image' => '4.jpeg',                
                 'image2' => '44.jpeg',
                 'image3' => '',
