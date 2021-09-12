@@ -49,7 +49,7 @@ class SubCategoriesController extends Controller
     {
         $sub_category_name = SubCategories::where('id',$id)->get();
         $sub_category = SubsubCategories::where('sub_category_id',$id)->get();
-        return view('pages.show')->withSubcategories($sub_category)->withSubcategoryname($sub_category_name);  
+        return view('products.bicycles.sub_categories.show')->withSubcategories($sub_category)->withSubcategoryname($sub_category_name);  
     }
 
     /**

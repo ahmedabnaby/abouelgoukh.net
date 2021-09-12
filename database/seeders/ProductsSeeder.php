@@ -285,16 +285,6 @@ class ProductsSeeder extends Seeder
                 'category_id' => '3',
                 'subsub_category_id' => null
             ],[
-                'name' => 'SCOUT WITH BATTERIES',
-                'description' => 'Scout 3 levels of lighting, siren 5 sounds, works on batteries, comes with free batteries',
-                'price' => '75',
-                'image' => '800_60f2e74d3d95c.jpg',
-                'image2' => '',
-                'image3' => '',
-                'image4' => '',
-                'category_id' => '3',
-                'subsub_category_id' => null,
-            ],[
                 'name' => 'Bike size 24 brand Kisto',
                 'description' => 'Bike 24 Kisto Front Auxiliary Disc Brake Front + Rear 21 Speed Metal Type Iron',
                 'price' => '2750',
@@ -659,6 +649,46 @@ class ProductsSeeder extends Seeder
                 'image3' => 'buggy33.jpeg',
                 'image4' => '',
                 'category_id' => '8',
+                'subsub_category_id' => null
+            ],[
+                'name' => 'iTank Single-Battery',
+                'description' => '',
+                'price' => '0.00',
+                'image' => '1.jpeg',                
+                'image2' => '11.jpeg',
+                'image3' => '',
+                'image4' => '',
+                'category_id' => '9',
+                'subsub_category_id' => null
+            ],[
+                'name' => 'iLark',
+                'description' => '',
+                'price' => '0.00',
+                'image' => '2.jpeg',                
+                'image2' => '22.jpeg',
+                'image3' => '',
+                'image4' => '',
+                'category_id' => '9',
+                'subsub_category_id' => null
+            ],[
+                'name' => 'iTank Dual-Battery',
+                'description' => '',
+                'price' => '0.00',
+                'image' => '3.jpeg',                
+                'image2' => '33.jpeg',
+                'image3' => '',
+                'image4' => '',
+                'category_id' => '9',
+                'subsub_category_id' => null
+            ],[
+                'name' => 'iTango HO',
+                'description' => '',
+                'price' => '0.00',
+                'image' => '4.jpeg',                
+                'image2' => '44.jpeg',
+                'image3' => '',
+                'image4' => '',
+                'category_id' => '9',
                 'subsub_category_id' => null
             ]
             

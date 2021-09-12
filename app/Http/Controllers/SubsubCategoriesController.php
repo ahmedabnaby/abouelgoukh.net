@@ -48,7 +48,7 @@ class SubsubCategoriesController extends Controller
     public function show($id)
     {
         $sub_sub_categories = Products::where('subsub_category_id',$id)->get();
-        return view('pages.show_bicycles')->withSubsubcategories($sub_sub_categories)->withSubsubcategoryid($id);  
+        return view('products.bicycles.subsub_categories.show_bicycles')->withSubsubcategories($sub_sub_categories)->withSubsubcategoryid($id);  
     }
 
     /**

@@ -15,11 +15,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'App\Http\Controllers\ProductsController@index')->name('home');
 Route::get('/abouelgoukh', 'App\Http\Controllers\PagesController@abouelgoukh')->name('about');
 Route::get('/contact', 'App\Http\Controllers\PagesController@contact')->name('contact');
+
+
 Route::resource('sub_categories','App\Http\Controllers\SubCategoriesController');
 Route::resource('subsub_categories','App\Http\Controllers\SubsubCategoriesController');
 Route::resource('products','App\Http\Controllers\ProductsController');
+
+
 Route::get('bicycles/show/{id}/{sub_sub_category_id}','App\Http\Controllers\ProductsController@show')->name('products.show');
-Route::get('/bicycles', 'App\Http\Controllers\PagesController@bicycles')->name('bicycles');
+Route::get('/bicycles', 'App\Http\Controllers\ProductsController@bicycles_index')->name('bicycles');
 
 Route::get('/accessories', 'App\Http\Controllers\ProductsController@accessories')->name('accessories');
 Route::get('/accessories/show_accessories/{id}','App\Http\Controllers\ProductsController@show_accessories')->name('accessories.show');
@@ -38,6 +42,10 @@ Route::get('/car_holders/show_car_holders/{id}','App\Http\Controllers\ProductsCo
 
 Route::get('/buggy', 'App\Http\Controllers\ProductsController@buggy')->name('buggy');
 Route::get('/buggy/show_buggy/{id}','App\Http\Controllers\ProductsController@show_buggy')->name('buggy.show');
+
+Route::get('/electric_scooter', 'App\Http\Controllers\ProductsController@electric_scooter')->name('electric_scooter');
+Route::get('/electric_scooter/show_electric_scooter/{id}','App\Http\Controllers\ProductsController@show_electric_scooter')->name('electric_scooter.show');
+
 
 Route::get('/add-to-cart/{product}', 'App\Http\Controllers\CartController@addToCart')->name('cart.add');
 // Route::get('/cart','App\Http\Controllers\CartController@cart')->name('cart');

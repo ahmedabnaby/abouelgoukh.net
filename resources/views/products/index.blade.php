@@ -190,6 +190,19 @@
                         </h2>
                     </div><!-- End .product-details -->
                 </div>  
+                <div class="product-default inner-quickview inner-icon center-details">
+                    <figure>
+                        <a href="{{route('electric_scooter')}}">
+                            <img src="assets/images/abouelgoukh/44.jpeg">
+                        </a>
+                        <a href="{{route('electric_scooter')}}" class="btn-quickview" title="Quick View">Quick View</a> 
+                    </figure>
+                    <div class="product-details">
+                        <h2 class="product-title">
+                            <a href="{{route('electric_scooter')}}">3-Wheel Electric Scooter</a>
+                        </h2>
+                    </div><!-- End .product-details -->
+                </div>  
             </div>
         </section>
 

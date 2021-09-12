@@ -15,7 +15,7 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     
     
-    <script type="text/javascript">
+    {{-- <script type="text/javascript">
         WebFontConfig = {
             google: { families: [ 'Open+Sans:300,400,600,700,800','Poppins:300,400,500,600,700' ] }
         };
@@ -25,7 +25,7 @@
             wf.async = true;
             s.parentNode.insertBefore(wf, s);
         })(document);
-    </script>
+    </script> --}}
     
     <!-- Plugins CSS File -->
     <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">

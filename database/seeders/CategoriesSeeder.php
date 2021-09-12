@@ -30,6 +30,8 @@ class CategoriesSeeder extends Seeder
                 'name' => 'Bicycle Car Holder'
             ],[
                 'name' => 'Beach Buggy'
+            ],[
+                'name' => '3-Wheel Electric Scooter'
             ]
             ]);
     }
