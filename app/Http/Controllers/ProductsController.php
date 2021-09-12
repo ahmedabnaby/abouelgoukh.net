@@ -178,4 +178,11 @@ class ProductsController extends Controller
         $electric_scooters = Products::all();
         return view('products.electric_scooters.show_electric_scooters')->withProduct($electric_scooter)->withElectricscooters($electric_scooters);
     }
+
+    public function e_car()
+    {
+        $filename = 'New ecar portfolio Presentation.pdf';
+        $pathToFile = storage_path($filename);
+        return response()->file($pathToFile);
+    }
 }

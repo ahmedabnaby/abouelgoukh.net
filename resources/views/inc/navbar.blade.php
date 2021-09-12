@@ -30,6 +30,7 @@
                                     <li><a href="{{route('car_holders')}}">Bicycle Car Holder</a></li>
                                     <li><a href="{{route('buggy')}}">Beach Buggy</a></li>
                                     <li><a href="{{route('electric_scooter')}}">3-Wheel Electric Scooter</a></li>
+                                    <li><a href="{{route('e_car')}}" target="_blank">E-Cars</a></li>
                                   </ul>
                                 </div>
                                 <div class="col-md-8 image-container">
@@ -187,6 +188,7 @@
                                 <li><a href="{{route('car_holders')}}">Bicycle Car Holder</a></li>
                                 <li><a href="{{route('buggy')}}">Beach Buggy</a></li>
                                 <li><a href="{{route('electric_scooter')}}">3-Wheel Electric Scooter</a></li>
+                                <li><a href="{{route('e_car')}}" target="_blank">E-Cars</a></li>
                               </ul>
                             </div>
                           </div>

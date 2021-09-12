@@ -203,6 +203,19 @@
                         </h2>
                     </div><!-- End .product-details -->
                 </div>  
+                <div class="product-default inner-quickview inner-icon center-details">
+                    <figure>
+                        <a href="{{route('e_car')}}" target="_blank">
+                            <img src="assets/images/abouelgoukh/e_car.png">
+                        </a>
+                        <a href="{{route('e_car')}}" class="btn-quickview" target="_blank" title="Quick View">Quick View</a> 
+                    </figure>
+                    <div class="product-details">
+                        <h2 class="product-title">
+                            <a href="{{route('e_car')}}" target="_blank">E-Cars</a>
+                        </h2>
+                    </div><!-- End .product-details -->
+                </div>  
             </div>
         </section>
 
