@@ -12,7 +12,13 @@
     </nav>
 
     <div class="container">
+        @if($errors->any())
+        <div class="alert alert-success alert-intro" role="alert">
+            {{$errors->first()}}
+        </div><!-- End .alert -->
 
+        <div class="mb-4"></div><!-- margin -->
+        @endif
         <div class="row">
             <div class="col-lg-4">
                 <div class="order-summary">
@@ -120,7 +126,7 @@
                             <div class="form-group required-field">
                                 <label>Phone Number </label>
                                 <div class="form-control-tooltip">
-                                    <input type="tel" name="phone" class="form-control" required>
+                                    <input type="number" name="phone" class="form-control" required>
                                     {{-- <span class="input-tooltip" data-toggle="tooltip" title="For delivery questions." data-placement="right"><i class="icon-question-circle"></i></span> --}}
                                 </div><!-- End .form-control-tooltip -->
                             </div><!-- End .form-group -->

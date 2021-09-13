@@ -61,6 +61,8 @@ class PagesController extends Controller
         ]);
         
         \Cart::clear();
-            return redirect()->route('orders')->with('success',"Payment done!, Thankyou ;)");
+        // return redirect()->back()->withSuccess(['Hoooray! Your Order Has Been Submitted! ', 'The Message']);
+        return redirect()->back()->withErrors(['Hoooray! Your Order Has Been Submitted!', 'The Message']);
+
     }
 }

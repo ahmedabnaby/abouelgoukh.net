@@ -19,8 +19,12 @@ Route::get('/checkout', 'App\Http\Controllers\PagesController@checkout')->name('
 Route::post('/payment','App\Http\Controllers\PagesController@payment')->name('payment');
 Route::get('/cash','App\Http\Controllers\PagesController@cash')->name('cash');
 Route::resource('orders','App\Http\Controllers\OrdersController');
-Route::get('/orders','App\Http\Controllers\OrdersController@index')->name('orders');
+Route::get('/orders','App\Http\Controllers\OrdersController@index')->name('orders')->middleware('role');
 
+Route::get('/admin','App\Http\Controllers\AdminController@login_view')->name('login_view');
+Route::post('admin-login','App\Http\Controllers\AdminController@admin_login')->name('admin_login');
+Route::get('logout', '\App\Http\Controllers\AdminController@logout')->middleware('role');
+Route::get('dashboard', 'App\Http\Controllers\AdminController@dashboard')->name('dashboard')->middleware('role');
 
 
 Route::resource('sub_categories','App\Http\Controllers\SubCategoriesController');
