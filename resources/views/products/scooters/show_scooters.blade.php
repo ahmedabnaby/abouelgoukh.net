@@ -45,7 +45,7 @@
                                 <h1 class="product-title">{{$product->name}}</h1>
 
                                 <div class="price-box">
-                                    <span class="product-price">{{$product->price}} EGP</span>
+                                    <span class="product-price">{{number_format($product->price)}} EGP</span>
                                 </div><!-- End .price-box -->
 
                                 <div class="product-desc">
@@ -104,7 +104,7 @@
                                                 </div><!-- End .product-ratings -->
                                             </div><!-- End .product-container -->
                                             <div class="price-box">
-                                                <span class="product-price">{{$scooter->price}} EGP</span>
+                                                <span class="product-price">{{number_format($scooter->price)}} EGP</span>
                                             </div><!-- End .price-box -->
                                         </div><!-- End .product-details -->
                                     </div>

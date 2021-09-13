@@ -65,7 +65,7 @@
                                     <a href="{{route('buggy.show',$buggy->id)}}">{{$buggy->name}}</a>
                                 </h2>
                                 <h2 class="product-price">
-                                    <h3>{{$buggy->price}} EGP</h3>
+                                    <h3>{{number_format($buggy->price)}} EGP</h3>
                                 </h2>
                             </div>
                         </div>
@@ -111,7 +111,7 @@
                                                 </div><!-- End .product-ratings -->
                                             </div><!-- End .product-container -->
                                             <div class="price-box">
-                                                <span class="product-price">{{$buggy->price}} EGP</span>
+                                                <span class="product-price">{{number_format($buggy->price)}} EGP</span>
                                             </div><!-- End .price-box -->
                                         </div><!-- End .product-details -->
                                     </div>

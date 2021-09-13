@@ -65,7 +65,7 @@
                                     <a href="{{route('scooters.show',$scooter->id)}}">{{$scooter->name}}</a>
                                 </h2>
                                 <h2 class="product-price">
-                                    <h3>{{$scooter->price}} EGP</h3>
+                                    <h3>{{number_format($scooter->price)}} EGP</h3>
                                 </h2>
                             </div>
                         </div>

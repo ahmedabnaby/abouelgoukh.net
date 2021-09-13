@@ -65,7 +65,7 @@
                                     <a href="{{route('car_holders.show',$car_holder->id)}}">{{$car_holder->name}}</a>
                                 </h2>
                                 <h2 class="product-price">
-                                    <h3>{{$car_holder->price}} EGP</h3>
+                                    <h3>{{$number_format(car_holder->price)}} EGP</h3>
                                 </h2>
                             </div>
                         </div>
@@ -111,7 +111,7 @@
                                                 </div><!-- End .product-ratings -->
                                             </div><!-- End .product-container -->
                                             <div class="price-box">
-                                                <span class="product-price">{{$car_holder->price}} EGP</span>
+                                                <span class="product-price">{{$number_format(car_holder->price})} EGP</span>
                                             </div><!-- End .price-box -->
                                         </div><!-- End .product-details -->
                                     </div>

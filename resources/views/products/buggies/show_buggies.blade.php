@@ -43,9 +43,13 @@
                                 <div class="col-3 owl-dot">
                                     <img src="{{asset('assets/images/abouelgoukh/buggy/'.$product->image2)}}"/>
                                 </div>
+                                @if ($product->image3 != '')
                                 <div class="col-3 owl-dot">
                                     <img src="{{asset('assets/images/abouelgoukh/buggy/'.$product->image3)}}"/>
                                 </div>
+                                @else
+                                <div style="display: none;"></div>
+                            @endif
                                 @if ($product->image4 != '')
                                 <div class="col-3 owl-dot">
                                     <img src="{{asset('assets/images/abouelgoukh/buggy/'.$product->image4)}}"/>
@@ -62,7 +66,7 @@
                                 <h1 class="product-title">{{$product->name}}</h1>
 
                                 <div class="price-box">
-                                    <span class="product-price">{{$product->price}} EGP</span>
+                                    <span class="product-price">{{number_format($product->price)}} EGP</span>
                                 </div><!-- End .price-box -->
 
                                 <div class="product-desc">
@@ -121,7 +125,7 @@
                                                 </div><!-- End .product-ratings -->
                                             </div><!-- End .product-container -->
                                             <div class="price-box">
-                                                <span class="product-price">{{$buggy->price}} EGP</span>
+                                                <span class="product-price">{{number_format($buggy->price)}} EGP</span>
                                             </div><!-- End .price-box -->
                                         </div><!-- End .product-details -->
                                     </div>

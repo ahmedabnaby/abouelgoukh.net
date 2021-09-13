@@ -65,7 +65,7 @@
                                     <a href="{{route('electric_scooter.show',$electric_scooter->id)}}">{{$electric_scooter->name}}</a>
                                 </h2>
                                 <h2 class="product-price">
-                                    <h3>{{$electric_scooter->price}} EGP</h3>
+                                    <h3>{{number_format($electric_scooter->price)}} EGP</h3>
                                 </h2>
                             </div>
                         </div>
@@ -111,7 +111,7 @@
                                                 </div><!-- End .product-ratings -->
                                             </div><!-- End .product-container -->
                                             <div class="price-box">
-                                                <span class="product-price">{{$electric_scooter->price}} EGP</span>
+                                                <span class="product-price">{{number_format($electric_scooter->price)}} EGP</span>
                                             </div><!-- End .price-box -->
                                         </div><!-- End .product-details -->
                                     </div>

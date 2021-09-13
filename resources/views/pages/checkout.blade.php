@@ -48,10 +48,10 @@
                                             <span class="product-qty">Qty: {{$cartItem->quantity}}</span>
                                         </div>
                                     </td>
-                                    <td class="price-col">{{$cartItem->price}} EGP</td>
+                                    <td class="price-col">{{number_format($cartItem->price)}} EGP</td>
                                 </tr>
                                 <tr>
-                                <td>Total Price: <span class="cart-total-price float-right" style="font-weight: 900;">{{\Cart::getTotal()}} EGP</span></td>
+                                <td>Total Price: <span class="cart-total-price float-right" style="font-weight: 900;">{{number_format(\Cart::getTotal())}} EGP</span></td>
                                 </tr>
                                 @endforeach
                             </tbody>    

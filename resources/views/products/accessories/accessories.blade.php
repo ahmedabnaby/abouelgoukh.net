@@ -65,7 +65,7 @@
                                     <a href="{{route('accessories.show',$accessory->id)}}">{{$accessory->name}}</a>
                                 </h2>
                                 <h2 class="product-price">
-                                    <h3>{{$accessory->price}} EGP</h3>
+                                    <h3>{{number_format($accessory->price)}} EGP</h3>
                                 </h2>
                             </div>
                         </div>
@@ -110,7 +110,7 @@
                                                 </div><!-- End .product-ratings -->
                                             </div><!-- End .product-container -->
                                             <div class="price-box">
-                                                <span class="product-price">{{$accessory->price}} EGP</span>
+                                                <span class="product-price">{{number_format($accessory->price)}} EGP</span>
                                             </div><!-- End .price-box -->
                                         </div><!-- End .product-details -->
                                     </div>

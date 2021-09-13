@@ -57,11 +57,11 @@
                                                     <a href="product.html">{{$item['name'] }}</a>
                                                 </h2>
                                             </td>
-                                            <td class="product-title">{{$item['price'] }} EGP</td>
+                                            <td class="product-title">{{number_format($item['price'])}} EGP</td>
                                             <td class="product-title">
                                                 <span>{{$item['quantity'] }}<span>
                                             </td>
-                                            <td class="product-title">{{$item['price']*$item['quantity'] }} EGP</td>
+                                            <td class="product-title">{{number_format($item['price']*$item['quantity'])}} EGP</td>
                                             <td class="product-title">
                                                     {{$order['name'] }}
                                             </td>

@@ -65,7 +65,7 @@
                                     <a href="{{route('products.show',['id'=>$product->id,'sub_sub_category_id'=>$subsubcategoryid])}}">{{$product->name}}</a>
                                 </h2>
                                 <h2 class="product-price">
-                                    <h3>{{$product->price}} EGP</h3>
+                                    <h3>{{number_format($product->price)}} EGP</h3>
                                 </h2>
                             </div>
                         </div>
