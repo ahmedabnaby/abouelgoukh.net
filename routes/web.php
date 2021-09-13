@@ -15,6 +15,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'App\Http\Controllers\ProductsController@index')->name('home');
 Route::get('/abouelgoukh', 'App\Http\Controllers\PagesController@abouelgoukh')->name('about');
 Route::get('/contact', 'App\Http\Controllers\PagesController@contact')->name('contact');
+Route::get('/checkout', 'App\Http\Controllers\PagesController@checkout')->name('checkout');
+Route::post('/payment','App\Http\Controllers\PagesController@payment')->name('payment');
+Route::get('/cash','App\Http\Controllers\PagesController@cash')->name('cash');
+Route::resource('orders','App\Http\Controllers\OrdersController');
+Route::get('/orders','App\Http\Controllers\OrdersController@index')->name('orders');
+
 
 
 Route::resource('sub_categories','App\Http\Controllers\SubCategoriesController');

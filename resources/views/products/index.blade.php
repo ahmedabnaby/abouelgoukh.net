@@ -1,11 +1,11 @@
 @extends('layouts.app')
 @section('content')
 <main class="home main">
-    <div class="top-slider owl-carousel owl-theme" data-toggle="owl" data-owl-options="{
+    <div class="top-slider owl-carousel owl-theme pb-5" data-toggle="owl" data-owl-options="{
         'items' : 1,
         'margin' : 0,
         'nav': true,
-        'dots': false,
+        'dots': true,
         'autoplay': false
     }">
 
