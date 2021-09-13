@@ -22,7 +22,7 @@ class CreateProductsTable extends Migration
             $table->string('image3')->nullable();
             $table->string('image4')->nullable();
             $table->text('description');
-            $table->integer('price');
+            $table->string('price');
             $table->unsignedBigInteger('subsub_category_id')->nullable();
             // $table->integer('old_price')->nullable();
             $table->timestamps();

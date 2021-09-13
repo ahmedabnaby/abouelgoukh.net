@@ -1,6 +1,10 @@
+html
+{
+	scroll-behavior: smooth;
+}
 .logo img
 {
-    width: 100%;
+    width: 75%;
 }
 
 #myVideo 
@@ -51,4 +55,11 @@ min-height: 100%;
 .bike_padding
 {
 	padding: 35px;
+}
+
+.product_details_edited
+{
+	/* position: absolute;
+	top: 350px !important;
+	left: 35% !important; */
 }

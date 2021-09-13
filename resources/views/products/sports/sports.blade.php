@@ -5,7 +5,7 @@
         <div class="container">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href={{route('home')}}>Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Bicycles</li>
+                <li class="breadcrumb-item active" aria-current="page">Sports</li>
             </ol>
         </div>
     </nav>
@@ -36,7 +36,7 @@
                                     <img src="{{asset('assets/images/abouelgoukh/800_610d57021404d.png')}}" class="bike_padding">
                                 </div>
                                 <div class="content-right">
-                                    <p>Summer Sale</p>
+                                    <p>Sale</p>
                                     <button class="btn">Shop All Sale</button>
                                 </div>
                             </div>

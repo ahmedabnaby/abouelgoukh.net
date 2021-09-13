@@ -16,8 +16,8 @@
                     <span>EXTRA</span>
                     <h2>20% OFF</h2>
                     <h4 class="cross-txt">BIKES</h4>
-                    <h3 class="mb-2 mb-lg-8">Summer Sale</h3>
-                    <button class="btn">Shop All Sale</button>
+                    <h3 class="mb-2 mb-lg-8">Sale</h3>
+                    <button type="button" class="btn">Get into it</button>
                 </div>
                 <video autoplay loop muted playsinline preload="auto" id="myVideo">
                     <source src="{{asset('assets/videos/video.mp4')}}" type="video/mp4" />
@@ -32,8 +32,8 @@
                     <span>EXTRA</span>
                     <h2>20% OFF</h2>
                     <h4 class="cross-txt">BIKES</h4>
-                    <h3 class="mb-2 mb-lg-8">Summer Sale</h3>
-                    <button class="btn">Shop All Sale</button>
+                    <h3 class="mb-2 mb-lg-8">Special Sale</h3>
+                    <a href="#categories" class="btn btn-dark">Shop All Sale</a>
                 </div>
                 <div class="image-container mx-auto py-5">
                     <img src="assets/images/slider/slide2.png" class="slide-img1" alt="slide image">
@@ -55,8 +55,8 @@
                     <span>EXTRA</span>
                     <h2>20% OFF</h2>
                     <h4 class="cross-txt">BIKES</h4>
-                    <h3 class="mb-2 mb-lg-8">Summer Sale</h3>
-                    <button class="btn">Shop All Sale</button>
+                    <h3 class="mb-2 mb-lg-8">Special Sale</h3>
+                    <a href="#categories" class="btn btn-dark">Shop All Sale</a>
                 </div>
             </div>
         </div>
@@ -66,7 +66,7 @@
     <div class="container">
         <section class="product-panel">
             <div class="section-title">
-                <h2>Categories</h2>
+                <h2 id="categories">Categories</h2>
             </div>
             <div class="owl-carousel owl-theme" data-toggle="owl" data-owl-options="{
                 'margin': 4,
@@ -86,14 +86,14 @@
                     }
                 }
             }">
-                <div class="product-default inner-quickview inner-icon center-details">
+                <div class="product-default inner-quickview inner-icon center-details" id="category1">
                     <figure>
                         <a href="{{route('bicycles')}}">
-                            <img src="assets/images/abouelgoukh/800_610d57021404d.png">
+                            <img src="assets/images/abouelgoukh/Untitled design.png">
                         </a>
                         <a href="{{route('bicycles')}}" class="btn-quickview" title="Quick View">Quick View</a> 
                     </figure>
-                    <div class="product-details">
+                    <div class="product-details product_details_edited">
                         <h2 class="product-title">
                             <a href="{{route('bicycles')}}">Bicycles</a>
                         </h2>
@@ -106,7 +106,7 @@
                         </a>
                         <a href="{{route('scooters')}}" class="btn-quickview" title="Quick View">Quick View</a> 
                     </figure>
-                    <div class="product-details">
+                    <div class="product-details product_details_edited">
                         <h2 class="product-title">
                             <a href="{{route('scooters')}}">Petrol Scooter</a>
                         </h2>
@@ -119,7 +119,7 @@
                         </a>
                         <a href="{{route('accessories')}}" class="btn-quickview" title="Quick View">Quick View</a> 
                     </figure>
-                    <div class="product-details">
+                    <div class="product-details product_details_edited">
                         <h2 class="product-title">
                             <a href="{{route('accessories')}}">Accessories</a>
                         </h2>
@@ -132,20 +132,20 @@
                         </a>
                         <a href="{{route('kids_scooter')}}" class="btn-quickview" title="Quick View">Quick View</a> 
                     </figure>
-                    <div class="product-details">
+                    <div class="product-details product_details_edited">
                         <h2 class="product-title">
                             <a href="{{route('kids_scooter')}}">Kids scooter</a>
                         </h2>
                     </div><!-- End .product-details -->
                 </div>      
-                <div class="product-default inner-quickview inner-icon center-details" style="padding:40px;">
+                <div class="product-default inner-quickview inner-icon center-details">
                     <figure>
                         <a href="{{route('sports')}}">
-                            <img src="assets/images/abouelgoukh/800_610c3b2691786.jpg">
+                            <img src="assets/images/abouelgoukh/sports.png">
                         </a>
                         <a href="{{route('sports')}}" class="btn-quickview" title="Quick View">Quick View</a> 
                     </figure>
-                    <div class="product-details">
+                    <div class="product-details product_details_edited">
                         <h2 class="product-title">
                             <a href="{{route('sports')}}">Sport</a>
                         </h2>
@@ -158,7 +158,7 @@
                         </a>
                         <a href="{{route('toys')}}" class="btn-quickview" title="Quick View">Quick View</a> 
                     </figure>
-                    <div class="product-details">
+                    <div class="product-details product_details_edited">
                         <h2 class="product-title">
                             <a href="{{route('toys')}}">Toys</a>
                         </h2>
@@ -171,7 +171,7 @@
                         </a>
                         <a href="{{route('car_holders')}}" class="btn-quickview" title="Quick View">Quick View</a> 
                     </figure>
-                    <div class="product-details">
+                    <div class="product-details product_details_edited">
                         <h2 class="product-title">
                             <a href="{{route('car_holders')}}">Bicycle Car Holder</a>
                         </h2>
@@ -180,11 +180,11 @@
                 <div class="product-default inner-quickview inner-icon center-details">
                     <figure>
                         <a href="{{route('buggy')}}">
-                            <img src="assets/images/abouelgoukh/buggy13.jpeg">
+                            <img src="assets/images/abouelgoukh/buggy.png">
                         </a>
                         <a href="{{route('buggy')}}" class="btn-quickview" title="Quick View">Quick View</a> 
                     </figure>
-                    <div class="product-details">
+                    <div class="product-details product_details_edited">
                         <h2 class="product-title">
                             <a href="{{route('buggy')}}">Beach Buggy</a>
                         </h2>
@@ -193,11 +193,11 @@
                 <div class="product-default inner-quickview inner-icon center-details">
                     <figure>
                         <a href="{{route('electric_scooter')}}">
-                            <img src="assets/images/abouelgoukh/44.jpeg">
+                            <img src="assets/images/abouelgoukh/3_wheel.png">
                         </a>
                         <a href="{{route('electric_scooter')}}" class="btn-quickview" title="Quick View">Quick View</a> 
                     </figure>
-                    <div class="product-details">
+                    <div class="product-details product_details_edited">
                         <h2 class="product-title">
                             <a href="{{route('electric_scooter')}}">3-Wheel Electric Scooter</a>
                         </h2>
@@ -210,7 +210,7 @@
                         </a>
                         <a href="{{route('e_car')}}" class="btn-quickview" target="_blank" title="Quick View">Quick View</a> 
                     </figure>
-                    <div class="product-details">
+                    <div class="product-details product_details_edited">
                         <h2 class="product-title">
                             <a href="{{route('e_car')}}" target="_blank">E-Cars</a>
                         </h2>
@@ -274,7 +274,7 @@
                 <h2>get ready</h2>
                 <div class="mb-1">
                     <h3 class="align-middle d-inline">20% Off</h3>
-                    <a href="#" class="btn">Shop All Sale</a>
+                    <a href="#category1" class="btn">Shop All Sale</a>
                 </div>
                 <h4 class="cross-txt">bikes</h4>
             </div>
@@ -322,7 +322,7 @@
                         </div>
                         <a href="{{route('accessories.show',$product->id)}}" class="btn-quickview" title="Quick View">Quick View</a> 
                     </figure>
-                    <div class="product-details">
+                    <div class="product-details product_details_edited">
                         <div class="category-wrap">
                             <div class="category-list">
                                 <a href="#" class="product-category">{{$product->category}}</a>
@@ -354,14 +354,14 @@
             <div class="col-sm-6">
                 <div class="row row-sm home-banner4-white">
                     <div class="col-md-4">
-                        <span>Summer Sale</span>
+                        <span>Sale</span>
                         <h3>20% OFF</h3>
                     </div>
                     <div class="col-md-4 d-flex align-items-center">
                         <img class="banner-image" src="assets/images/banners/banner4.jpg" alt="banner">
                     </div>
                     <div class="col-md-4 d-flex align-items-center justify-content-center">
-                        <button class="btn">shop all sale</button>
+                    <a href="#category1" class="btn btn-primary">Shop All Sale</a>
                     </div>
                 </div>
             </div>
@@ -375,7 +375,7 @@
                         <img class="banner-image" src="assets/images/banners/banner5.jpg" alt="banner">
                     </div>
                     <div class="col-md-4 d-flex align-items-center justify-content-center">
-                        <button class="btn">shop all sale</button>
+                    <a href="#category1" class="btn btn-dark">Shop All Sale</a>
                     </div>
                 </div>
             </div>

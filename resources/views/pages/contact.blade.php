@@ -2,14 +2,7 @@
 @section('content')
     
 <main class="main">
-    <div class="container">
-        <nav aria-label="breadcrumb" class="breadcrumb-nav">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Contact us</li>
-            </ol>
-        </nav>
-    </div>
+
         
     </nav><div class="page-header">
         <div class="container">

@@ -36,7 +36,7 @@
                                     <img src="{{asset('assets/images/abouelgoukh/800_610d57021404d.png')}}" class="bike_padding">
                                 </div>
                                 <div class="content-right">
-                                    <p>Summer Sale</p>
+                                    <p>Sale</p>
                                     <button class="btn">Shop All Sale</button>
                                 </div>
                             </div>
@@ -59,7 +59,7 @@
                 <div class="sidebar-wrapper">
                     <div class="widget">
                         <h3 class="widget-title">
-                            <a data-toggle="collapse" href="#widget-body-2" role="button" aria-expanded="true" aria-controls="widget-body-2">Kids Scooters</a>
+                            <a data-toggle="collapse" href="#widget-body-2" role="button" aria-expanded="true" aria-controls="widget-body-2">Toys</a>
                         </h3>
 
                         <div class="collapse show" id="widget-body-2">

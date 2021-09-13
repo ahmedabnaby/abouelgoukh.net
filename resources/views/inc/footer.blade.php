@@ -44,31 +44,7 @@
         </div>
     </div>
 
-    <div class="footer-top">
-        <div class="container">
-            <div class="newsletter-widget">
-                <i class="icon-envolope"></i>
 
-                <div class="newsletter-info">
-                    <h3>Get Special Offers and Savings</h3>
-                    <p>Get all the latest information on Events, Sales and Offers.</p>
-                </div>
-
-                <form action="#" method="get">
-                    <div class="submit-wrapper">
-                        <input type="search" class="form-control" name="q" id="q" placeholder="Enter Your E-mail Address..." required="">
-                        <button class="btn" type="submit">Sign Up</button>
-                    </div><!-- End .header-search-wrapper -->
-                </form>
-            </div>
-
-            <div class="social-icons">
-                <a href="#" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
-                <a href="#" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-        </div>
-    </div>
     <div class="footer-middle">
         <div class="container">
             <div class="row row-sm">
@@ -81,9 +57,9 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <h2 class="light-title">Contact <strong>Details</strong></h2>
+                    <h2 class="light-title text-left">Contact <strong>Details</strong></h2>
     
-                    <div class="contact-info">
+                    <div class="contact-info text-left">
                         <div>
                             <i class="icon-phone"></i>
                             <p><a href="tel:+201017074766">01017074766 - Rehab 1 - the old market, shop No. -175</a></p>
@@ -101,30 +77,6 @@
                         </div>
                     </div><!-- End .contact-info -->
                 </div><!-- End .col-md-4 -->
-                <div class="col-md-6 col-lg-3">
-                    <div class="widget">
-                        <h3 class="widget-title">Abou El-Goukh</h3>
-                        <div class="widget-content row row-sm">
-                            <ul class="col-xl-6">
-                                <li>
-                                    <a href="{{route('home')}}">Home</a>
-                                </li>
-                                <li>
-                                    <a href="{{route('bicycles')}}">A-Store</a>
-                                  </li>
-            
-            
-                                <li><a href="{{route('about')}}">Abou El-Goukh</a></li>
-                                <li><a href="{{route('contact')}}">Contact Us</a></li>
-                            </ul>
-                            <ul class="col-xl-6">
-                                <li><a href="#">FAQs</a></li>
-                                <li><a href="#">Product Support</a></li>
-                                <li><a href="#">Privacy</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>

@@ -140,7 +140,7 @@
             <div class="service-widget">
                 <i class="service-icon icon-shipping"></i>
                 <div class="service-content">
-                    <h3 class="service-title">free shipping & return</h3>
+                    <h3 class="service-title">local shipping</h3>
                 </div>
             </div>
         </div>
@@ -148,7 +148,7 @@
             <div class="service-widget">
                 <i class="service-icon icon-money"></i>
                 <div class="service-content">
-                    <h3 class="service-title">money back guarantee</h3>
+                    <h3 class="service-title">value for money</h3>
                 </div>
             </div>
         </div>
@@ -156,7 +156,7 @@
             <div class="service-widget">
                 <i class="service-icon icon-support"></i>
                 <div class="service-content">
-                    <h3 class="service-title">online support 24/7</h3>
+                    <h3 class="service-title">online support</h3>
                 </div>
             </div>
         </div>
