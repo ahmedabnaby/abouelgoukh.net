@@ -14,6 +14,7 @@ class Orders extends Model
         'city',
         'email',
         'phone',
-        'current_date'
+        'current_date',
+        'method'
     ];
 }

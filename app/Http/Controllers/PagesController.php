@@ -35,7 +35,8 @@ class PagesController extends Controller
                 'street' => request('street'),
                 'city' => request('city'),
                 'phone' => request('phone'),
-                'current_date' => request('current_date')
+                'current_date' => request('current_date'),
+                'method' => 'cash'
                   );
             $order = collect($data);
             Session::push('order', $order);
@@ -59,7 +60,8 @@ class PagesController extends Controller
             'city' => $order['city'],
             'email' => $order['email'],
             'phone' => $order['phone'],
-            'current_date' => $order['current_date']
+            'current_date' => $order['current_date'],
+            'method' => 'cash'
         ]);
         
         \Cart::clear();
@@ -79,6 +81,22 @@ class PagesController extends Controller
         $getPaymentKeyMob = PayMob::getPaymentKeyPaymob($integration_id,$authPayMob->token,$amount_cents,$makeOrder->id);
         $getPaymentKeyMobToken=$getPaymentKeyMob->token;
         $url = 'https://accept.paymob.com/api/acceptance/iframes/'.$iframe_id.'?payment_token='.$getPaymentKeyMobToken;
+
+        $orders=Session::get('order');
+        // dd($orders);
+        foreach ($orders as $order);
+        Orders::create([
+            'cart' => base64_encode(serialize(\Cart::getContent())),
+            'name' => $order['name'],
+            'street' => $order['street'],
+            'city' => $order['city'],
+            'email' => $order['email'],
+            'phone' => $order['phone'],
+            'current_date' => $order['current_date'],
+            'method' => 'card'
+        ]);
+        
+        \Cart::clear();
         return redirect()->away($url);
 
     }

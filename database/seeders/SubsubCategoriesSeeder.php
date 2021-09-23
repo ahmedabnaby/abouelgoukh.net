@@ -16,11 +16,11 @@ class SubsubCategoriesSeeder extends Seeder
         \DB::table('subsub_categories')->insert([
             [
                 'name' => "26 '' bikes",
-                'image' => 'noImageColor.jpg',
+                'image' => 'x.png',
                 'sub_category_id' => '1'
             ],[
                 'name' => '29-Inch Bicycles',
-                'image' => 'noImageColor.jpg',
+                'image' => 'bycycles.jpg',
                 'sub_category_id' => '1'
             ],[
                 'name' => "24 '' Steps",

@@ -40,6 +40,7 @@
                                             <th class="price-col">Address</th>
                                             <th class="qty-col">Phone Number</th>
                                             <th class="qty-col">Email</th>
+                                            <th class="qty-col">Payment Method</th>
                                         </tr>
                                     </thead>
                             @foreach ($orders as $order)
@@ -70,6 +71,7 @@
                                                 <span>{{$order['phone'] }}<span>
                                             </td>
                                             <td class="product-title">{{$order['email']}} </td>
+                                            <td class="product-title">{{$order['method']}} </td>
             
                                         </tr>
                                         @endforeach
