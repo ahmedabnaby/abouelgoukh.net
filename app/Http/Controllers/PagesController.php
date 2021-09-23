@@ -287,7 +287,7 @@ class PagesController extends Controller
         try{
             $getPaymentKeyMob = get_object_vars($getPaymentKeyMob);
             $payment_token = $getPaymentKeyMob['token'];
-            dd("DONE");
+            // dd("DONE");
             $url = 'https://accept.paymob.com/api/acceptance/iframes/'.$iframe_id.'?payment_token='.$payment_token;
             }catch (\Exception $e) {
 
