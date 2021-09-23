@@ -276,7 +276,7 @@ class PagesController extends Controller
             
             try{
                 $getPaymentKeyMob = $this->getPaymentKeyPaymob($integration_id,$token,$amount_cents,$makeOrder->id);
-                dd($getPaymentKeyMob);
+                // dd($getPaymentKeyMob);
         }catch (\Exception $e) {
             
             return $e->getMessage();
