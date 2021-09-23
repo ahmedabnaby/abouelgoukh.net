@@ -192,6 +192,62 @@ class PagesController extends Controller
         return $order;
     }
 
+        /**
+     * Get payment key to load iframe on paymob servers
+     *
+     * @param  string  $token
+     * @param  int  $amount_cents
+     * @param  int  $order_id
+     * @param  string  $email
+     * @param  string  $fname
+     * @param  string  $lname
+     * @param  int  $phone
+     * @param  string  $city
+     * @param  string  $country
+     * @return array
+     */
+    public function getPaymentKeyPaymob(
+        $integration_id,
+        $token,
+        $amount_cents,
+        $order_id,
+        $email   = 'null',
+        $fname   = 'null',
+        $lname   = 'null',
+        $phone   = 'null',
+        $city    = 'null',
+        $country = 'null'
+    ) {
+      // Request body
+      $json = [
+          'auth_token'   => $token,
+          'amount_cents' => $amount_cents,
+          'expiration'   => 36000,
+          'order_id'     => $order_id,
+          "billing_data" => [
+              "email"        => $email,
+              "first_name"   => $fname,
+              "last_name"    => $lname,
+              "phone_number" => $phone,
+              "city"         => $city,
+              "country"      => $country,
+              'street'       => 'null',
+              'building'     => 'null',
+              'floor'        => 'null',
+              'apartment'    => 'null'
+          ],
+          'currency'            => 'EGP',
+          'card_integration_id' => $integration_id
+      ];
+
+      // Send curl
+      $payment_key = $this->cURL(
+          'https://accept.paymobsolutions.com/api/acceptance/payment_keys',
+          $json
+      );
+
+      return $payment_key;
+  }
 
     public function card()
     {
@@ -212,15 +268,15 @@ class PagesController extends Controller
                 $token = $authPayMob['token'];
                 $amount_cents = \Cart::getTotal() * 100;
                 $makeOrder = $this->makeOrderPaymob($token, $amount_cents, false ,[]);
-                dd($makeOrder);
-        }catch (\Exception $e) {
+            }catch (\Exception $e) {
+                
+                return $e->getMessage();
+            }
             
-            return $e->getMessage();
-        }
-        
-        
-        try{
-            $getPaymentKeyMob = PayMob::getPaymentKeyPaymob($integration_id,$token,$amount_cents,$makeOrder->id);
+            
+            try{
+                $getPaymentKeyMob = $this->getPaymentKeyPaymob($integration_id,$token,$amount_cents,$makeOrder->id);
+                dd($getPaymentKeyMob);
         }catch (\Exception $e) {
             
             return $e->getMessage();
