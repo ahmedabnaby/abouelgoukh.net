@@ -11,15 +11,8 @@
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.54",
         "laravel/sanctum": "^2.11",
-        "laravel/tinker": "^2.5",
-        "baklysystems/laravel-paymob": "dev-master"
+        "laravel/tinker": "^2.5"
     },
-    "repositories" : [
-        {
-            "type": "vcs",
-            "url": "https://github.com/AhmedRamadan30/laravel-paymob"
-        }
-    ],
     "require-dev": {
         "facade/ignition": "^2.5",
         "fakerphp/faker": "^1.9.1",

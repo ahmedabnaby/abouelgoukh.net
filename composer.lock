@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3012d67e165a81f17567dac92bc92a6e",
+    "content-hash": "cc03ee5dd3fdb6f8d9fce795e7b8b9ae",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -61,69 +61,6 @@
                 "source": "https://github.com/asm89/stack-cors/tree/v2.0.3"
             },
             "time": "2021-03-11T06:42:03+00:00"
-        },
-        {
-            "name": "baklysystems/laravel-paymob",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/AhmedRamadan30/laravel-paymob.git",
-                "reference": "7eb1e0f2dd3dc061090b05993e8daf52d58efc54"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/AhmedRamadan30/laravel-paymob/zipball/7eb1e0f2dd3dc061090b05993e8daf52d58efc54",
-                "reference": "7eb1e0f2dd3dc061090b05993e8daf52d58efc54",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4"
-            },
-            "default-branch": true,
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "BaklySystems\\PayMob\\PayMobServiceProvider"
-                    ],
-                    "aliases": {
-                        "PayMob": "BaklySystems\\PayMob\\Facades\\PayMob"
-                    }
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "BaklySystems\\PayMob\\": "src/"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Mohamed Abdul-Fattah",
-                    "email": "csmohamed8@gmail.com"
-                },
-                {
-                    "name": "Mostafa El Bakly",
-                    "email": "elbakly@gmail.com"
-                }
-            ],
-            "description": "Laravel PayMob online payment gateway package",
-            "homepage": "https://github.com/baklysystems/laravel-paymob",
-            "keywords": [
-                "egypt",
-                "gateway",
-                "laravel",
-                "online",
-                "payment",
-                "paymob",
-                "php"
-            ],
-            "support": {
-                "source": "https://github.com/AhmedRamadan30/laravel-paymob/tree/master"
-            },
-            "time": "2021-08-26T09:08:25+00:00"
         },
         {
             "name": "brick/math",
@@ -7930,9 +7867,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "baklysystems/laravel-paymob": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
