@@ -93,12 +93,33 @@ class PagesController extends Controller
 
             return $e->getMessage();
         }
+
+
         // $cartItems =  \Cart::getContentForPayment();
         $amount_cents = \Cart::getTotal() * 100;
-        $makeOrder = PayMob::makeOrderPaymob($authPayMob->token, $amount_cents, false ,[]);
-        $getPaymentKeyMob = PayMob::getPaymentKeyPaymob($integration_id,$authPayMob->token,$amount_cents,$makeOrder->id);
-        $getPaymentKeyMobToken=$getPaymentKeyMob->token;
-        $url = 'https://accept.paymob.com/api/acceptance/iframes/'.$iframe_id.'?payment_token='.$getPaymentKeyMobToken;
+        try{
+            $makeOrder = PayMob::makeOrderPaymob($authPayMob->token, $amount_cents, false ,[]);
+        }catch (\Exception $e) {
+
+            return $e->getMessage();
+        }
+
+
+        try{
+            $getPaymentKeyMob = PayMob::getPaymentKeyPaymob($integration_id,$authPayMob->token,$amount_cents,$makeOrder->id);
+        }catch (\Exception $e) {
+
+            return $e->getMessage();
+        }
+
+        try{
+            $getPaymentKeyMobToken=$getPaymentKeyMob->token;
+            $url = 'https://accept.paymob.com/api/acceptance/iframes/'.$iframe_id.'?payment_token='.$getPaymentKeyMobToken;
+            }catch (\Exception $e) {
+
+            return $e->getMessage();
+        }
+
 
         $orders=Session::get('order');
         // dd($orders);
