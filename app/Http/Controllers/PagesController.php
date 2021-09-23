@@ -84,7 +84,7 @@ class PagesController extends Controller
     }
     public function card()
     {
-        $api_key = env("PAYMOB_API_KEY", "");
+        $api_key = env("PAYMOB_API_KEY", "ZXlKMGVYQWlPaUpLVjFRaUxDSmhiR2NpT2lKSVV6VXhNaUo5LmV5SnVZVzFsSWpvaWFXNXBkR2xoYkNJc0luQnliMlpwYkdWZmNHc2lPakV5TnpZeE9Dd2lZMnhoYzNNaU9pSk5aWEpqYUdGdWRDSjkuX29HVlRFSjA3dUFLenF1SXVLTXJYeS1fUC1Qd3BSV05aTWxRWERZczBlOVlXelpKd0FxWGZ4TTJueENrT1A3LXNia3h1S0h4MGQ4bE5FdzNyd3VkUlE=");
         $integration_id = env("INTEGRATION_ID", "");
         $iframe_id = env("IFRAME_ID", "");
         try{
