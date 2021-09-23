@@ -72,7 +72,7 @@
                             <tbody>
                                 <tr>
                                     <td class="product-col">
-                                        <input type="radio" id="card" name="method" value="card" required>
+                                        <input type="radio" id="card" name="method" value="card">
                                         <label for="card" class="ml-3" style="margin-top:-1px;">
                                             Credit / Debit card 
                                         </label>
@@ -97,23 +97,23 @@
                     <div id="new-checkout-address" class="show">
                             <div class="form-group required-field">
                                 <label>Full Name </label>
-                                <input type="text" name="name" class="form-control" required>
+                                <input type="text" name="name" class="form-control">
                             </div><!-- End .form-group -->
 
                             <div class="form-group required-field">
                                 <label>Email </label>
-                                <input type="email" name="email" class="form-control" required>
+                                <input type="email" name="email" class="form-control">
                             </div><!-- End .form-group -->
 
                             <div class="form-group required-field">
                                 <label>Street Address </label>
-                                <input type="text" name="street" class="form-control" required>
+                                <input type="text" name="street" class="form-control">
                             </div><!-- End .form-group -->
 
                             <div class="form-group required-field">
                                 <label>State/Province</label>
                                 <div class="select-custom">
-                                    <select class="form-control" name="city" required>
+                                    <select class="form-control" name="city">
                                         <option value="rehab">Al-Rehab</option>
                                         <option value="madinaty">Madinaty</option>
                                         <option value="nasrcity">Nasr City</option>
@@ -126,7 +126,7 @@
                             <div class="form-group required-field">
                                 <label>Phone Number </label>
                                 <div class="form-control-tooltip">
-                                    <input type="number" name="phone" class="form-control" required>
+                                    <input type="number" name="phone" class="form-control">
                                     {{-- <span class="input-tooltip" data-toggle="tooltip" title="For delivery questions." data-placement="right"><i class="icon-question-circle"></i></span> --}}
                                 </div><!-- End .form-control-tooltip -->
                             </div><!-- End .form-group -->

@@ -18,6 +18,7 @@ Route::get('/contact', 'App\Http\Controllers\PagesController@contact')->name('co
 Route::get('/checkout', 'App\Http\Controllers\PagesController@checkout')->name('checkout');
 Route::post('/payment','App\Http\Controllers\PagesController@payment')->name('payment');
 Route::get('/cash','App\Http\Controllers\PagesController@cash')->name('cash');
+Route::get('/card','App\Http\Controllers\PagesController@card')->name('card');
 Route::resource('orders','App\Http\Controllers\OrdersController');
 Route::get('/orders','App\Http\Controllers\OrdersController@index')->name('orders')->middleware('role');
 

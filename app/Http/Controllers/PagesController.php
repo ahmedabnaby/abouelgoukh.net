@@ -7,6 +7,8 @@ use App\Models\SubCategories;
 use App\Models\Orders;
 use Session;
 
+use BaklySystems\PayMob\Facades\PayMob;
+
 class PagesController extends Controller
 {
     public function abouelgoukh()
@@ -63,6 +65,21 @@ class PagesController extends Controller
         \Cart::clear();
         // return redirect()->back()->withSuccess(['Hoooray! Your Order Has Been Submitted! ', 'The Message']);
         return redirect()->back()->withErrors(['Hoooray! Your Order Has Been Submitted!', 'The Message']);
+
+    }
+    public function card()
+    {
+        $api_key = env("PAYMOB_API_KEY", "");
+        $integration_id = env("INTEGRATION_ID", "");
+        $iframe_id = env("IFRAME_ID", "");
+        $authPayMob = PayMob::authPaymob($api_key);
+        // $cartItems =  \Cart::getContentForPayment();
+        $amount_cents = \Cart::getTotal() * 100;
+        $makeOrder = PayMob::makeOrderPaymob($authPayMob->token, $amount_cents, false ,[]);
+        $getPaymentKeyMob = PayMob::getPaymentKeyPaymob($integration_id,$authPayMob->token,$amount_cents,$makeOrder->id);
+        $getPaymentKeyMobToken=$getPaymentKeyMob->token;
+        $url = 'https://accept.paymob.com/api/acceptance/iframes/'.$iframe_id.'?payment_token='.$getPaymentKeyMobToken;
+        return redirect()->away($url);
 
     }
 }
