@@ -163,6 +163,36 @@ class PagesController extends Controller
     }
 
 
+        /**
+     * Register order to paymob servers
+     *
+     * @param  string  $token
+     * @param  int  $merchant_id
+     * @param  int  $amount_cents
+     * @param  int  $merchant_order_id
+     * @return array
+     */
+    public function makeOrderPaymob($token, $amount_cents, $delivery_needed,$items )
+    {
+        // Request body
+        $json = [
+            'auth_token'           => $token,
+            'delivery_needed'        => $delivery_needed,
+            'amount_cents'           => $amount_cents,
+            'currency'               => 'EGP',
+            'items'                  =>$items
+        ];
+
+        // Send curl
+        $order = $this->cURL(
+            'https://accept.paymobsolutions.com/api/ecommerce/orders',
+            $json
+        );
+
+        return $order;
+    }
+
+
     public function card()
     {
         $api_key = env("PAYMOB_API_KEY", "");
@@ -181,7 +211,7 @@ class PagesController extends Controller
                 $authPayMob = get_object_vars($authPayMob);
                 $token = $authPayMob['token'];
                 $amount_cents = \Cart::getTotal() * 100;
-                $makeOrder = PayMob::makeOrderPaymob($token, $amount_cents, false ,[]);
+                $makeOrder = $this->makeOrderPaymob($token, $amount_cents, false ,[]);
                 dd($makeOrder);
         }catch (\Exception $e) {
             
