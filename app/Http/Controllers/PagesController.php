@@ -97,10 +97,10 @@ class PagesController extends Controller
 
         // $cartItems =  \Cart::getContentForPayment();
         $amount_cents = \Cart::getTotal() * 100;
+        $authPayMob = get_object_vars($authPayMob);
+        $token = $authPayMob['token'];
 
         try{
-            $authPayMob = get_object_vars($authPayMob);
-            $token = $authPayMob['token'];
             $makeOrder = PayMob::makeOrderPaymob($token, $amount_cents, false ,[]);
         }catch (\Exception $e) {
 
@@ -109,15 +109,18 @@ class PagesController extends Controller
 
 
         try{
-            $getPaymentKeyMob = PayMob::getPaymentKeyPaymob($integration_id,$authPayMob->token,$amount_cents,$makeOrder->id);
+            $getPaymentKeyMob = PayMob::getPaymentKeyPaymob($integration_id,$token,$amount_cents,$makeOrder->id);
         }catch (\Exception $e) {
 
             return $e->getMessage();
         }
 
+        $getPaymentKeyMob = get_object_vars($getPaymentKeyMob);
+        $payment_token = $getPaymentKeyMob['token'];
+        // dd($payment_token);
+
         try{
-            $getPaymentKeyMobToken=$getPaymentKeyMob->token;
-            $url = 'https://accept.paymob.com/api/acceptance/iframes/'.$iframe_id.'?payment_token='.$getPaymentKeyMobToken;
+            $url = 'https://accept.paymob.com/api/acceptance/iframes/'.$iframe_id.'?payment_token='.$payment_token;
             }catch (\Exception $e) {
 
             return $e->getMessage();
