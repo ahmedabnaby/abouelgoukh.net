@@ -24,9 +24,6 @@ class AdminController extends Controller
             'email' => 'required',
             'password' => 'required',
         ]);
-   
-        // $credentials = $request->only('email', 'password');
-        // dd($credentials);
         $admin = \DB::table('admins')
         ->where('email',$request->input('email'))->where('password',$request->input('password'))
         ->first();
@@ -36,16 +33,6 @@ class AdminController extends Controller
             return redirect()->intended('dashboard');     
         }
             return redirect()->back()->withErrors(['Sorry, Invaild login credentials! ', 'The Message']);
-            // $wrong_credentials = "Sorry, Invaild login credentials!";
-            // $error =  Session::put('wrong_credentials', $wrong_credentials);        
-            // return redirect()->route("login_view")->withError($error);
-        // else
-        // {
-        //     // $wrong_credentials = "Sorry, Invaild login credentials!";
-        //     // $error =  Session::put('wrong_credentials', $wrong_credentials);
-        //     // return redirect()->route('login_view')->withSuccess($error);
-        // }
-  
     }
 
     public function logout(Request $request) {

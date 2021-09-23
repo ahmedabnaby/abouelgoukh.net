@@ -20,8 +20,7 @@ class CartController extends Controller
             ),
             'associatedModel' => $product
         ));
-        return redirect()->back();
-    }
+        return redirect()->back()->withErrors(['Hoorray Item(s) added to cart! ', 'The Message']);    }
 
     public function cart()
     {

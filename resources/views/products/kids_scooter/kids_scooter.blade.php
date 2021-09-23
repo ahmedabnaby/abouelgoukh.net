@@ -49,7 +49,7 @@
                 <div class="row row-sm">
 
 
-                    <h1 style="text-align: center;">There are no products in this category.</h1>
+                    <h1 style="text-align: center;">Stay tuned for new products.</h1>
 
                 </div><!-- End .row -->
 

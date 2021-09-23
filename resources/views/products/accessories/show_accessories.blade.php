@@ -11,6 +11,13 @@
     </nav>
 
     <div class="container">
+        @if($errors->any())
+        <div class="alert alert-success success-intro" role="alert">
+            {{$errors->first()}}
+        </div><!-- End .alert -->
+    
+        <div class="mb-4"></div><!-- margin -->
+        @endif
         <div class="row row-sm">
             <div class="col-lg-9 col-xl-10">
                 <div class="product-single-container product-single-default">
