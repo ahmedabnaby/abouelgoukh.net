@@ -83,6 +83,85 @@ class PagesController extends Controller
 
     }
 
+    /**
+     * Send POST cURL request to paymob servers.
+     *
+     * @param  string  $url
+     * @param  array  $json
+     * @return array
+     */
+    protected function cURL($url, $json)
+    {
+        // Create curl resource
+        $ch = curl_init($url);
+
+        // Request headers
+        $headers = array();
+        $headers[] = 'Content-Type: application/json';
+
+        // Return the transfer as a string
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($json));
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+
+        // $output contains the output string
+        $output = curl_exec($ch);
+
+        // Close curl resource to free up system resources
+        curl_close($ch);
+        return json_decode($output);
+    }
+
+    /**
+     * Send GET cURL request to paymob servers.
+     *
+     * @param  string  $url
+     * @return array
+     */
+    protected function GETcURL($url)
+    {
+        // Create curl resource
+        $ch = curl_init($url);
+
+        // Request headers
+        $headers = array();
+        $headers[] = 'Content-Type: application/json';
+
+        // Return the transfer as a string
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+
+        // $output contains the output string
+        $output = curl_exec($ch);
+
+        // Close curl resource to free up system resources
+        curl_close($ch);
+        return json_decode($output);
+    }
+
+
+    /**
+     * Request auth token from paymob servers.
+     *
+     * @return array
+     */
+    public function authPaymob($api_key)
+    {
+        // Request body
+        $json = [
+            'api_key' => $api_key,
+        ];
+
+        // Send curl
+        $auth = $this->cURL(
+            'https://accept.paymobsolutions.com/api/auth/tokens',
+            $json
+        );
+
+        return $auth;
+    }
+
 
     public function card()
     {
@@ -90,13 +169,10 @@ class PagesController extends Controller
         // dd($api_key);
         $integration_id = env("INTEGRATION_ID", "");
         $iframe_id = env("IFRAME_ID", "");
-        try{
-            $authPayMob = PayMob::authPaymob($api_key);
-            dd($authPayMob['api_key']);
-        }catch (\Exception $e) {
 
-            return $e->getMessage();
-        }
+            $authPayMob = $this->authPaymob($api_key);
+            dd($authPayMob);
+
 
 
         // $cartItems =  \Cart::getContentForPayment();
