@@ -171,16 +171,16 @@ class PagesController extends Controller
         $iframe_id = env("IFRAME_ID", "");
 
             $authPayMob = $this->authPaymob($api_key);
-            dd($authPayMob);
-
-
-
-        // $cartItems =  \Cart::getContentForPayment();
-
-
-        try{
-            $authPayMob = get_object_vars($authPayMob);
-            $token = $authPayMob['token'];
+            
+            
+            
+            // $cartItems =  \Cart::getContentForPayment();
+            
+            
+            try{
+                $authPayMob = get_object_vars($authPayMob);
+                $token = $authPayMob['token'];
+                dd($token);
             $amount_cents = \Cart::getTotal() * 100;
             $makeOrder = PayMob::makeOrderPaymob($token, $amount_cents, false ,[]);
         }catch (\Exception $e) {
