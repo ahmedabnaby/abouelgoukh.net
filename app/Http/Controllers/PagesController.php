@@ -98,7 +98,8 @@ class PagesController extends Controller
         // $cartItems =  \Cart::getContentForPayment();
         $amount_cents = \Cart::getTotal() * 100;
         try{
-            $token = $authPayMob->token;
+            $authPayMob = get_object_vars($authPayMob);
+            dd($authPayMob['token']);
             $makeOrder = PayMob::makeOrderPaymob($token, $amount_cents, false ,[]);
         }catch (\Exception $e) {
 
