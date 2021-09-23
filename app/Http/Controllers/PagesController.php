@@ -82,14 +82,17 @@ class PagesController extends Controller
         return redirect()->back()->withErrors(['Hoooray! Your Order Has Been Submitted!', 'The Message']);
 
     }
+
+
     public function card()
     {
         $api_key = env("PAYMOB_API_KEY", "");
-        dd($api_key);
+        // dd($api_key);
         $integration_id = env("INTEGRATION_ID", "");
         $iframe_id = env("IFRAME_ID", "");
         try{
             $authPayMob = PayMob::authPaymob($api_key);
+            dd($authPayMob);
         }catch (\Exception $e) {
 
             return $e->getMessage();
