@@ -87,7 +87,12 @@ class PagesController extends Controller
         $api_key = env("PAYMOB_API_KEY", "");
         $integration_id = env("INTEGRATION_ID", "");
         $iframe_id = env("IFRAME_ID", "");
-        $authPayMob = PayMob::authPaymob($api_key);
+        try{
+            $authPayMob = PayMob::authPaymob($api_key);
+        }catch (\Exception $e) {
+
+            return $e->getMessage();
+        }
         // $cartItems =  \Cart::getContentForPayment();
         $amount_cents = \Cart::getTotal() * 100;
         $makeOrder = PayMob::makeOrderPaymob($authPayMob->token, $amount_cents, false ,[]);
