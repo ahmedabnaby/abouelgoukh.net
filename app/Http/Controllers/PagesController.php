@@ -180,9 +180,9 @@ class PagesController extends Controller
             try{
                 $authPayMob = get_object_vars($authPayMob);
                 $token = $authPayMob['token'];
-                dd($token);
-            $amount_cents = \Cart::getTotal() * 100;
-            $makeOrder = PayMob::makeOrderPaymob($token, $amount_cents, false ,[]);
+                $amount_cents = \Cart::getTotal() * 100;
+                $makeOrder = PayMob::makeOrderPaymob($token, $amount_cents, false ,[]);
+                dd($makeOrder);
         }catch (\Exception $e) {
             
             return $e->getMessage();
