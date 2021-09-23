@@ -45,6 +45,19 @@ class PagesController extends Controller
         }
         else
         {
+            $data = array(
+                'cart' => base64_encode(serialize(\Cart::getContent())),
+                'name' => request('name'),
+                'email' => request('email'),
+                'street' => request('street'),
+                'city' => request('city'),
+                'phone' => request('phone'),
+                'current_date' => request('current_date'),
+                'method' => 'card'
+                  );
+            $order = collect($data);
+            Session::push('order', $order);
+
             return redirect()->action('App\Http\Controllers\PagesController@card');
         }
     }
