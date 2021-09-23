@@ -89,6 +89,7 @@ class PagesController extends Controller
         $iframe_id = env("IFRAME_ID", "");
         try{
             $authPayMob = PayMob::authPaymob($api_key);
+            dd($authPayMob);
         }catch (\Exception $e) {
 
             return $e->getMessage();
