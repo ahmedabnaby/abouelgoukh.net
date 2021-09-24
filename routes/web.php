@@ -17,6 +17,7 @@ Route::get('/abouelgoukh', 'App\Http\Controllers\PagesController@abouelgoukh')->
 Route::get('/contact', 'App\Http\Controllers\PagesController@contact')->name('contact');
 Route::get('/checkout', 'App\Http\Controllers\PagesController@checkout')->name('checkout');
 Route::post('/payment','App\Http\Controllers\PaymentController@payment')->name('payment');
+Route::post('/search','App\Http\Controllers\ProductsController@search')->name('search');
 
 
 Route::get('/cash','App\Http\Controllers\PaymentController@cash')->name('cash');

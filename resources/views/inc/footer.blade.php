@@ -81,6 +81,6 @@
         </div>
     </div>
     <div class="footer-bottom container">
-        <p>Copyright © 2021 All rights reserved</p>
+        <p>Copyright © 2021 All rights reserved - Powered by <a href="https://www.arotech-eg.com" target="_blank" style="color:#007bff;">Arotech</a></p>
     </div>
 </footer><!-- End .footer -->

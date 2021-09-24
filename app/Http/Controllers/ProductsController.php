@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Products;
+use App\Models\Categories;
 use App\Models\SubCategories;
 use App\Models\SubsubCategories;
 use Illuminate\Http\Request;
@@ -17,6 +18,49 @@ class ProductsController extends Controller
     public function index()
     {
         return view('products.index')->with('products',Products::all());
+    }
+
+    public function search(Request $request)
+    {
+        $category_id = $request->category;
+        // $category_name = Categories::where('id',$products[0]->category_id)->get('name');
+        if($category_id === '1')
+        {
+            return redirect()->route('bicycles');
+        }
+        if($category_id === '2')
+        {
+            return redirect()->route('scooters');
+        }
+        if($category_id === '3')
+        {
+            return redirect()->route('accessories');
+        }
+        if($category_id === '4')
+        {
+            return redirect()->route('kids_scooter');
+        }
+        if($category_id === '5')
+        {
+            return redirect()->route('sports');
+        }
+        if($category_id === '6')
+        {
+            return redirect()->route('toys');
+        }
+        if($category_id === '7')
+        {
+            return redirect()->route('car_holders');
+        }
+        if($category_id === '8')
+        {
+            return redirect()->route('buggy');
+        }
+        if($category_id === '9')
+        {
+            return redirect()->route('electric_scooter');
+        }
+        // return view("products.$result");
     }
 
     /**

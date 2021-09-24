@@ -591,7 +591,7 @@ class ProductsSeeder extends Seeder
                 'category_id' => '2',
                 'subsub_category_id' => null
             ],[
-                'name' => 'IRON JIM',
+                'name' => 'IRON GYM',
                 'description' => '',
                 'price' => '275',
                 'image' => '800_60f2ea4818151.jpg',

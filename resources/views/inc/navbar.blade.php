@@ -15,7 +15,7 @@
                             <a href="{{route('home')}}">Home</a>
                         </li>
                         <li>
-                            <a href="#">A-Store</a>
+                            <a href="#">Products</a>
                             <div class="megamenu">
                               <div class="row row-sm">
                                 <div class="col-md-4">
@@ -49,12 +49,16 @@
             <div class="header-right">
                 <div class="header-search">
                     <a href="#" class="search-toggle" role="button"><i class="icon-search-3"></i></a>
-                    <form action="#" method="get">
+                    <form action="{{route('search')}}" method="post">
+                        @csrf
                         <div class="header-search-wrapper">
-                            <input type="search" class="form-control" name="q" id="q" placeholder="I'm searching for..." required="">
-                            <div class="select-custom">
-                                <select id="cat" name="cat">
-                                    <option value="">All Categories</option>
+                            {{-- <input type="search" class="form-control" name="search_field" id="search_field" placeholder="I'm searching for..." /> --}}
+
+                            <div class="select-custom" style="border-radius: 30px 0px 0px 30px;">
+                                <select name="category" id="category" style="border-radius: 30px 0px 0px 30px;" >
+                                    @foreach ($categories as $category)
+                                        <option value={{$category->id}}>{{$category->name}}</option>
+                                    @endforeach
                                 </select>
                             </div><!-- End .select-custom -->
                             <button class="btn" type="submit"><i class="icon-search-3"></i></button>
@@ -158,7 +162,7 @@
                         <a href="{{route('home')}}">Home</a>
                     </li>
                     <li>
-                        <a href="#">A-Store</a>
+                        <a href="#">Products</a>
                         <div class="megamenu">
                           <div class="row row-sm">
                             <div class="col-md-4">
