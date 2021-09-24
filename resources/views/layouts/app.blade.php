@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <title>Abou El-Goukh</title>
 
     <meta name="keywords" content="HTML5 Template" />
-    <meta name="description" content="Aboualjoukh - Aboualjoukh Website">
-    <meta name="author" content="Aboualjoukh">
+    <meta name="description" content="AbouElGoukh - AbouElGoukh Website">
+    <meta name="author" content="AbouElGoukh">
         
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
