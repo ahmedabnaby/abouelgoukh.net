@@ -1,4 +1,10 @@
 @extends('layouts.app')
+@section('header')
+<title>Abou El Goukh - Products - Beach Buggies</title>
+<meta name="description" content="Abou El Goukh have been known for being one of the best suppliers in the beach buggies sector, with being an importer of buggies and motorcycles from Linhai & Segway">
+<meta name="keywords" content="Linhai, Segway, motorcycles, beach, buggies, beach buggies, cairo, egypt, elrehab, madinaty, maadi">
+<link rel="canonical" href="http://abouelgoukhstore.com/buggy" />
+@endsection
 @section('content')
 <main class="main">
     <nav aria-label="breadcrumb" class="breadcrumb-nav">

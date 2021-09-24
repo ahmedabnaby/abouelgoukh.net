@@ -1,4 +1,10 @@
 @extends('layouts.app')
+@section('header')
+<title>Abou El Goukh - Products - Bicycles</title>
+<meta name="description" content="Abou El Goukh is one of the best bicycle importers in Egypt especially Cairo, with many biking proucts from Hybrid bicycles to Mountain bikes to Kids bikes & toys">
+<meta name="keywords" content="bicycles, bikes, kids bicycles, cairo, egypt, madinaty, el rehab, maadi, ">
+<link rel="canonical" href="http://abouelgoukhstore.com/bicycles" />
+@endsection
 @section('content')
 <main class="main">
     <nav aria-label="breadcrumb" class="breadcrumb-nav">

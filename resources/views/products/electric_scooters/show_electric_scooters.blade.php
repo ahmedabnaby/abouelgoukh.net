@@ -1,4 +1,10 @@
 @extends('layouts.app')
+@section('header')
+<title>Abou El Goukh - Products - 3-Wheel Scooters</title>
+<meta name="description" content="Abou El Goukh is kown for 3-wheel scooters in Egypt. We supply the best iScooters in Cairo, like iTank, iLark, & iTango">
+<meta name="keywords" content="iTank, iLark, & iTango, iScooters, scooters, kids scooters, kids, cairo, egypt, madinaty, elrehab, maadi">
+<link rel="canonical" href="http://abouelgoukhstore.com/electric_scooter" />
+@endsection
 @section('content')
 <main class="main">
     <nav aria-label="breadcrumb" class="breadcrumb-nav">

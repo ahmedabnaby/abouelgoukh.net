@@ -1,4 +1,10 @@
 @extends('layouts.app')
+@section('header')
+<title>Abou El Goukh - Products - Petrol Scooters/Motorcycles</title>
+<meta name="description" content="Abou El Goukh is known for its speciallty in petrol scooters and motorcycles, We are known for our EGOS scooters & motorcycles with low prices. Abou El Goukh have many scooter products like EGOS Kelly, EGOS MONOD, EGOS TITAN, EGOS CRUISER, EGOS AMID, EGOS FORCE">
+<meta name="keywords" content="petrol scooters, motorcycles, Vesba, Fesba, EGOS Kelly, EGOS MONOD, EGOS TITAN, EGOS CRUISER, EGOS AMID, EGOS FORCE, madinaty, el rehab, maadi">
+<link rel="canonical" href="http://abouelgoukhstore.com/scooters" />
+@endsection
 @section('content')
 <main class="main">
     <nav aria-label="breadcrumb" class="breadcrumb-nav">

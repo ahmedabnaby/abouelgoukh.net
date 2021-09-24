@@ -1,4 +1,10 @@
 @extends('layouts.app')
+@section('header')
+<title>Abou El Goukh - Products - Bicycle Car Holders</title>
+<meta name="description" content="Abou El Goukh knows the importance of transportation of your bike, bicycles, & bike equipment so we also sell the essential products for transporting your bike & kids bikes.">
+<meta name="keywords" content="car holders, car holders for bikes, car holders for bicycles, Egypt, Cairo, elrehab, madinaty, maadi">
+<link rel="canonical" href="http://abouelgoukhstore.com/car_holders" />
+@endsection
 @section('content')
 <main class="main">
     <nav aria-label="breadcrumb" class="breadcrumb-nav">

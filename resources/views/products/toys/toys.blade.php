@@ -1,4 +1,10 @@
 @extends('layouts.app')
+@section('header')
+<title>Abou El Goukh - Products - Kid Toys</title>
+<meta name="description" content="Abou El Goukh is one of the many good suppliers of kids toys in Egypt, we are known for our many products for your kids happiness.">
+<meta name="keywords" content="toys, kids, kid toys, egypt, cairo, elrehab, madinaty, maadi">
+<link rel="canonical" href="http://abouelgoukhstore.com/toys" />
+@endsection
 @section('content')
 <main class="main">
     <nav aria-label="breadcrumb" class="breadcrumb-nav">

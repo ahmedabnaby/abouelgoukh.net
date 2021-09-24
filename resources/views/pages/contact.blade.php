@@ -1,4 +1,10 @@
 @extends('layouts.app')
+@section('header')
+<title>Abou El Goukh - Contact Us</title>
+<meta name="description" content="If you want to contact someone in Abou El Goukh. Visit this page and you will be supplied with a messaging form, mobile number, email, and store locations">
+<meta name="keywords" content="Abou El Goukh, Goukh, Egypt, cairo, maadi, madinaty, elrehab, messaging form, mobile number, email, and store locations">
+<link rel="canonical" href="http://abouelgoukhstore.com/contact" />
+@endsection
 @section('content')
     
 <main class="main">

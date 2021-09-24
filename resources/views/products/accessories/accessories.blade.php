@@ -1,4 +1,10 @@
 @extends('layouts.app')
+@section('header')
+<title>Abou El Goukh - Products - Bike Accessories</title>
+<meta name="description" content="As Abou El Goukh is one of the best Bike sellers in Egypt, we are known to supply our bicycles with best accessories like helmets, USB back lights, protection kits, gloves, bells, covers, sarina, bike locks, & bicycle wheel blowers ">
+<meta name="keywords" content="helmets, USB back lights, protection kits, gloves, bells, covers, sarina, bike locks, & bicycle wheel blowers, bike accessories, kid bicycle accessories, egypt, cairo, madinaty, el rehab, maadi">
+<link rel="canonical" href="http://abouelgoukhstore.com/accessories" />
+@endsection
 @section('content')
 <main class="main">
     <nav aria-label="breadcrumb" class="breadcrumb-nav">

@@ -1,4 +1,10 @@
 @extends('layouts.app')
+@section('header')
+<title>Abou El Goukh - Products - Kids Scooters</title>
+<meta name="description" content="Abou El Goukh is known for supplying the best equipment for kids. One of our best products is kids scooters.">
+<meta name="keywords" content="boys, girls, kids, scooters, kid toys, maadi, madinaty, elrehab">
+<link rel="canonical" href="http://abouelgoukhstore.com/kids-scooter" />
+@endsection
 @section('content')
 <main class="main">
     <nav aria-label="breadcrumb" class="breadcrumb-nav">

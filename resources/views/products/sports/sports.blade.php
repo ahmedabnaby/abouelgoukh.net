@@ -1,4 +1,10 @@
 @extends('layouts.app')
+@section('header')
+<title>Abou El Goukh - Products - Sports Equipment</title>
+<meta name="description" content="As we are in the sports niche, Abou El Goukh also supply some sports products like Iron Gym & Oqla for pull ups.">
+<meta name="keywords" content="Iron Gym, Oqla, Aqla, Sports at home, home, rehab, madinaty, maadi">
+<link rel="canonical" href="http://abouelgoukhstore.com/sports" />
+@endsection
 @section('content')
 <main class="main">
     <nav aria-label="breadcrumb" class="breadcrumb-nav">

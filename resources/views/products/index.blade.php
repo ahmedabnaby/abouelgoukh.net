@@ -1,4 +1,10 @@
 @extends('layouts.app')
+@section('header')
+<title>Abou El Goukh - Home</title>
+<meta name="description" content="Abou El Goukh Egypt founded our business in 1952. We started as importers of bicycles, bicycles parts , & accessories. We extended our business by adding fitness equipment category and now we have some of the best brands worldwide in our field.">
+<meta name="keywords" content="bicycles, egypt, scooters, bikes, sports, sports egypt, treadmill, beach, buggies, golf, cars, scooter, kids, toys, kids bikes, kid bicycles, electric scooter, fitness, equipment, cairo, elrehab, madinaty, el sherouk, maadi">
+<link rel="canonical" href="http://abouelgoukhstore.com" />
+@endsection
 @section('content')
 <main class="home main">
     <div class="top-slider owl-carousel owl-theme pb-5" data-toggle="owl" data-owl-options="{
