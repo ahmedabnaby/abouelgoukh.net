@@ -29,7 +29,7 @@
                                         <img class="product-single-image" src="{{asset('assets/images/abouelgoukh/sports/'.$product->image)}}" data-zoom-image="{{asset('assets/images/abouelgoukh/bicycles/'.$product->image)}}"/>
                                     </div>
                                     <div class="product-item">
-                                        <img class="product-single-image" src="{{asset('assets/images/abouelgoukh/sports/'.$product->image)}}" data-zoom-image="{{asset('assets/images/abouelgoukh/bicycles/'.$product->image)}}"/>
+                                        <img class="product-single-image" src="{{asset('assets/images/abouelgoukh/sports/'.$product->image2)}}" data-zoom-image="{{asset('assets/images/abouelgoukh/bicycles/'.$product->image2)}}"/>
                                     </div>
                                 </div>
                                 <!-- End .product-single-carousel -->
@@ -42,7 +42,7 @@
                                     <img src="{{asset('assets/images/abouelgoukh/sports/'.$product->image)}}"/>
                                 </div>
                                 <div class="col-3 owl-dot">
-                                    <img src="{{asset('assets/images/abouelgoukh/sports/'.$product->image)}}"/>
+                                    <img src="{{asset('assets/images/abouelgoukh/sports/'.$product->image2)}}"/>
                                 </div>
                             </div>
                         </div><!-- End .col-lg-5 -->

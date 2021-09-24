@@ -98,7 +98,7 @@
                                     <div class="product-default left-details product-widget">
                                         <figure>
                                             <a href="{{route('electric_scooter.show',$electric_scooter->id)}}">
-                                                <img src="{{asset('assets/images/abouelgoukh/electric_scooter/'.$electric_scooter->image)}}">
+                                                <img src="{{asset('assets/images/abouelgoukh/electric_scooter/'.$electric_scooter->image2)}}">
                                             </a>
                                         </figure>
                                         <div class="product-details">
