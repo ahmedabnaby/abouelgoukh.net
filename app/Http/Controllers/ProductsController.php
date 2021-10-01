@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Products;
 use App\Models\Categories;
 use App\Models\SubCategories;
-use App\Models\SubsubCategories;
 use Illuminate\Http\Request;
 
 class ProductsController extends Controller
@@ -93,8 +92,8 @@ class ProductsController extends Controller
     public function show($id)
     {
         $product = Products::findOrFail($id);
-        $sub_sub_categories = SubsubCategories::all();
-        return view('products.bicycles.show')->withProduct($product)->withSubsubcategories($sub_sub_categories);
+        $bicycles = Products::all();
+        return view('products.bicycles.show')->withProduct($product)->withBicycles($bicycles);
     }
 
     /**

@@ -32,12 +32,11 @@ Route::get('dashboard', 'App\Http\Controllers\AdminController@dashboard')->name(
 
 
 Route::resource('sub_categories','App\Http\Controllers\SubCategoriesController');
-Route::resource('subsub_categories','App\Http\Controllers\SubsubCategoriesController');
 Route::resource('products','App\Http\Controllers\ProductsController');
 
 Route::get('/e_car', 'App\Http\Controllers\ProductsController@e_car')->name('e_car');
 
-Route::get('bicycles/show/{id}/{sub_category_id}','App\Http\Controllers\ProductsController@show')->name('products.show');
+Route::get('bicycles/show/{id}','App\Http\Controllers\ProductsController@show')->name('bicycle.show');
 Route::get('/bicycles', 'App\Http\Controllers\ProductsController@bicycles_index')->name('bicycles');
 
 Route::get('/accessories', 'App\Http\Controllers\ProductsController@accessories')->name('accessories');

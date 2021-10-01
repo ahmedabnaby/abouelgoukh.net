@@ -15,6 +15,10 @@ class SubCategoriesSeeder extends Seeder
     {
         \DB::table('sub_categories')->insert([
             [
+                'name' => 'Kids Bikes',
+                'image' => 'assets/images/abouelgoukh/800_5fd8f7febbbcc.jpg',
+                'category_id' => '1'
+            ],[
                 'name' => 'Mountain Bikes',
                 'image' => 'assets/images/abouelgoukh/800_5e4dda4e0df9a.jpg',
                 'category_id' => '1'
@@ -25,10 +29,6 @@ class SubCategoriesSeeder extends Seeder
             ],[
                 'name' => 'Hybird Bikes',
                 'image' => 'assets/images/abouelgoukh/800_5ebbee66d545d.jpg',
-                'category_id' => '1'
-            ],[
-                'name' => 'Kids Bikes',
-                'image' => 'assets/images/abouelgoukh/800_5fd8f7febbbcc.jpg',
                 'category_id' => '1'
             ]
             ]);

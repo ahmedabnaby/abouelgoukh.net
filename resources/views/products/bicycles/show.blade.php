@@ -115,29 +115,31 @@
                         <div class="collapse show" id="widget-body-2">
                             <div class="widget-body">
                                 <div class="product-intro">
-                                    @foreach ($subsubcategories as $subcategory)
-                                        @if ($subcategory->id !== 1 && $subcategory->id !==2 )
-                                            
+                                    @foreach ($bicycles->take(32) as $bicycle)
+                                        @if ($bicycle->category_id === 1)
+                                        
                                     <div class="product-default left-details product-widget">
                                         <figure>
-                                            <a href="{{route('subsub_categories.show',$subcategory->id)}}">
-                                                <img src="{{asset('assets/images/abouelgoukh/bicycles/'.$subcategory->image)}}">
+                                            <a href="{{route('bicycle.show',$bicycle->id)}}">
+                                                <img src="{{asset('assets/images/abouelgoukh/bicycles/'.$bicycle->image)}}">
                                             </a>
                                         </figure>
                                         <div class="product-details">
                                             <h2 class="product-title">
-                                                <a href="{{route('subsub_categories.show',$subcategory->id)}}">{{$subcategory->name}}</a>
-                                            </h2>           
+                                                <a href="{{route('bicycle.show',$bicycle->id)}}">{{$bicycle->name}}</a>
+                                            </h2>
                                             <div class="ratings-container">
                                                 <div class="product-ratings">
                                                     <span class="ratings" style="width:100%"></span><!-- End .ratings -->
                                                     <span class="tooltiptext tooltip-top"></span>
                                                 </div><!-- End .product-ratings -->
                                             </div><!-- End .product-container -->
+                                            <div class="price-box">
+                                                <span class="product-price">{{number_format($bicycle->price)}} EGP</span>
+                                            </div><!-- End .price-box -->
                                         </div><!-- End .product-details -->
                                     </div>
                                     @endif
-
                                     @endforeach
 
                                 </div>

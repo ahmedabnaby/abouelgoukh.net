@@ -36,7 +36,7 @@
                                 <div class="content-left">
                                     <span>EXTRA</span>
                                     <h2>20% OFF</h2>
-                                    <h4 class="cross-txt">BIKwwwwwwwwwwwES</h4>
+                                    <h4 class="cross-txt">BIKES</h4>
                                 </div>
                                 <div class="content-center">
                                     <img src="{{asset('assets/images/abouelgoukh/800_610d57021404d.png')}}" class="bike_padding">
@@ -54,31 +54,34 @@
                 
                 <div class="row row-sm">
 
-        @if(count($subsubcategories)>0)
+        @if(count($bicycles)>0)
 
-                    @foreach ($subsubcategories as $product)
+                    @foreach ($bicycles as $subcategory)
   
                     <div class="col-6 col-md-4 col-xl-3">
                         <div class="product-default inner-quickview inner-icon">
                             <figure>
-                                <a href="{{route('products.show',['id'=>$product->id,'sub_sub_category_id'=>$subsubcategoryid])}}">
-                                    <img src="{{asset('assets/images/abouelgoukh/bicycles/'.$product->image)}}">
+                                <a href="{{route('bicycle.show',['id'=>$subcategory->id,'sub_category_id'=>'1'])}}">
+                                    
+                                    <img src="{{asset('assets/images/abouelgoukh/bicycles/'.$subcategory->image)}}">
                                 </a>
-                                <a href="{{route('products.show',['id'=>$product->id,'sub_sub_category_id'=>$subsubcategoryid])}}" class="btn-quickview" title="Quick View">View</a> 
+                                <a href="{{route('bicycle.show',['id'=>$subcategory->id,'sub_category_id'=>'1'])}}" class="btn-quickview" title="Quick View">View</a> 
                             </figure>
                             <div class="product-details">
+                                <div class="category-wrap">
+                                    <div class="category-list">
+                                        <a href="#" class="product-category">{{($subcategoryname[0]->name)}}</a>
+                                    </div>
+                                </div>
                                 <h2 class="product-title">
-                                    <a href="{{route('products.show',['id'=>$product->id,'sub_sub_category_id'=>$subsubcategoryid])}}">{{$product->name}}</a>
-                                </h2>
-                                <h2 class="product-price">
-                                    <h3>{{number_format($product->price)}} EGP</h3>
+                                    <a href="{{route('bicycle.show',['id'=>$subcategory->id,'sub_category_id'=>'1'])}}">{{$subcategory->name}}</a>
                                 </h2>
                             </div>
                         </div>
                     </div>
                     @endforeach
                     @else
-                    <h1>No Categories</h1>
+                    <h1>Our new collection is coming soon!</h1>
         @endif 
                 </div><!-- End .row -->
 
@@ -97,7 +100,7 @@
                                     <li><a href="#">Mountain Bikes</a></li>
                                     <li><a href="#">Racing Bikes</a></li>
                                     <li><a href="#">Hybird Bikes</a></li>
-                                    <li><a href="#">Bicycles under the age of 13</a></li>
+                                    <li><a href="#">Kids Bikes</a></li>
                                 </ul>
                             </div><!-- End .widget-body -->
                         </div><!-- End .collapse -->

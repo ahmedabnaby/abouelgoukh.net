@@ -293,7 +293,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '2000_61192bc02ffa0.jpg',
                 'image4' => '',
                 'category_id' => '1',
-                'sub_category_id' => '4'
+                'sub_category_id' => '1'
             ],[
                 'name' => '24 TRINX CITY BIKE',
                 'description' => "Trinx bike, size 24, girls' bike, metal type: iron, with parts made of aluminum, suitable from 10 to 14 years old",
@@ -303,7 +303,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '1',
-                'sub_category_id' => '4'
+                'sub_category_id' => '1'
             ],[
                 'name' => 'HADOR BIKE 24',
                 'description' => "Bicycle size 24, brand Hador, color orange, model steer, made of aluminum, 21 saddles, brand a2, front tire, easy to remove and install",
@@ -313,7 +313,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '800_611d431309ce1.jpg',
                 'image4' => '',
                 'category_id' => '1',
-                'sub_category_id' => '4'
+                'sub_category_id' => '1'
             ],[
                 'name' => 'BICYCLE 20 BRAND ZOOM',
                 'description' => "Bicycle 20 brand Zoom iron color black in red in blue speeds Shimano brand 21 speed front assistant to absorb bumps and shocks front + rear disc brakes for ages from 7 to 9 years",
@@ -323,7 +323,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '1',
-                'sub_category_id' => '4'
+                'sub_category_id' => '1'
             ],[
                 'name' => 'BICYCLE 20 BRAND ZOOM',
                 'description' => "Bicycle 20 brand Zoom color black in green in blue Iron Shimano brand speeds 21 speed front assistant to absorb bumps and shocks front + rear disc brakes for ages from 7 to 9 years",
@@ -333,7 +333,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '1',
-                'sub_category_id' => '4'
+                'sub_category_id' => '1'
             ],[
                 'name' => 'BICYCLE 20 BRAND TOTEM',
                 'description' => "Bicycle 20 brand Zoom aluminum color blue Shimano brand speeds 21 speed front assist + rear to absorb bumps and shocks Balance brakes suitable for ages from 7 to 9 years",
@@ -343,7 +343,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '1',
-                'sub_category_id' => '4'
+                'sub_category_id' => '1'
             ],[
                 'name' => 'BICYCLE 20 BRAND TOTEM',
                 'description' => "Bicycle 20 brand most iron color black F green 21 speed front + rear to absorb bumps and shocks Balance brakes suitable for age from 7 to 9 years",
@@ -353,7 +353,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '1',
-                'sub_category_id' => '4'
+                'sub_category_id' => '1'
             ],[
                 'name' => '20 RODEO BIKE',
                 'description' => "Rodeo Bike 20 brand Mini Rider bike, black in green, Taiwanese brand from China factories",
@@ -363,7 +363,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '1',
-                'sub_category_id' => '4'
+                'sub_category_id' => '1'
             ],[
                 'name' => '20 RODEO BIKE',
                 'description' => "Rodeo Bike Brand Hummer 20 bike, light blue color, Taiwanese brand, from China factories",
@@ -373,7 +373,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '1',
-                'sub_category_id' => '4'
+                'sub_category_id' => '1'
             ],[
                 'name' => '20 RODEO BIKE',
                 'description' => "Bicycle 20 brand Rodeo Bike Model Chita The color is black, blue and pink, a Taiwanese brand from China factories Specifications: Metal type: Auxiliary iron: Yes Speeds: No Brake type: Front disc only Suitable for ages from 7 to 9 years",
@@ -383,7 +383,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '1',
-                'sub_category_id' => '4'
+                'sub_category_id' => '1'
             ],[
                 'name' => '20 RODEO BIKE',
                 'description' => "Bicycle 20 brand Rodeo Bike Model Chita The color is black, blue and pink, a Taiwanese brand from China factories Specifications: Metal type: Auxiliary iron: Yes Speeds: No Brake type: Front disc only Suitable for ages from 7 to 9 years",
@@ -393,7 +393,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '1',
-                'sub_category_id' => '4'
+                'sub_category_id' => '1'
             ],[
                 'name' => 'BICYCLE SIZE 16 BRAND KARKURA',
                 'description' => "Children's bike, size 16, color orange, suitable from 4 years to 7 years old",
@@ -403,7 +403,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '1',
-                'sub_category_id' => '4'
+                'sub_category_id' => '1'
             ],[
                 'name' => 'BICYCLE SIZE 16 BRAND KARKURA',
                 'description' => "Children's bike, size 16, black and red, suitable from 4 to 7 years old",
@@ -413,7 +413,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '1',
-                'sub_category_id' => '4'
+                'sub_category_id' => '1'
             ],[
                 'name' => 'FERRARI BIKE SIZE 16',
                 'description' => "Children's bike, size 16, red and black, Ferrari model, suitable from 4 years old to 7 years old",
@@ -423,7 +423,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '1',
-                'sub_category_id' => '4'
+                'sub_category_id' => '1'
             ],[
                 'name' => 'BIKE SIZE 16 BRAND REDO BIKE',
                 'description' => "Children's bike size 16, black and green, hot speed model, suitable from 4 to 7 years old",
@@ -433,7 +433,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '1',
-                'sub_category_id' => '4'
+                'sub_category_id' => '1'
             ],[
                 'name' => 'AERO BIKE SIZE 16',
                 'description' => "Children's bike, size 16, orange in black, suitable from 4 to 7 years old",
@@ -443,7 +443,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '1',
-                'sub_category_id' => '4'
+                'sub_category_id' => '1'
             ],[
                 'name' => 'BICYCLE SIZE 12 BARBIE',
                 'description' => "Children's bike, size 12, pink, model Barbie, suitable from 3 years to 5 years old",
@@ -453,7 +453,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '1',
-                'sub_category_id' => '4'
+                'sub_category_id' => '1'
             ],[
                 'name' => 'FERRARI 12 BIKE',
                 'description' => "Kids bike size 12 yellow color Ferrari model suitable from 3 years to 5 years old",
@@ -463,7 +463,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '1',
-                'sub_category_id' => '4'
+                'sub_category_id' => '1'
             ],[
                 'name' => 'BIKE SIZE 12 REDO BIKE',
                 'description' => "Children's bike, size 12, the Taiwanese Rideau Bike brand, orange in black, model Iron Man, suitable from 3 to 5 years old",
@@ -473,7 +473,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '1',
-                'sub_category_id' => '4'
+                'sub_category_id' => '1'
             ],[
                 'name' => 'FERRARI 12 BIKE',
                 'description' => "Children's bike, size 12, red color, Ferrari model, suitable from 3 to 5 years old",
@@ -483,7 +483,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '1',
-                'sub_category_id' => '4'
+                'sub_category_id' => '1'
             ],[
                 'name' => 'BIKE SIZE 12 REDO BIKE',
                 'description' => "Children's bike size 12, Taiwanese Rideau Bike brand, color A, model BX, suitable from 3 to 5 years old",
@@ -493,7 +493,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '1',
-                'sub_category_id' => '4'
+                'sub_category_id' => '1'
             ],[
                 'name' => 'BALANCE BIKE FOR DRIVING LESSONS',
                 'description' => "Balance bike for children's education, size 12, suitable from 4 to 6 years old",
@@ -503,7 +503,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '1',
-                'sub_category_id' => '4'
+                'sub_category_id' => '1'
             ],[
                 'name' => 'EGOS KELLY 150 - 2021',
                 'description' => "Egos Kelly 150 - 2021 model, cash price 22450 pounds - special discount for a limited time 2950 pounds on cash sale only Price after discount 19500 specifications Climbing angle: 15 degrees to 20 degrees with fixed torque Front brake: Oil pressure disc Rear brake: Drum Battery type Lead acid battery Battery capacity: 7 Ah Battery voltage 12V Engine type: Latest version CVT 150cc GY7 Engine power: 8.3 kW (11.19 HP) Engine torque: 10.78 Nm At 6500 rpm LED Tail Light: Yes LED Headlight: Yes Alarm: Yes Remote Control: Yes MP3: Yes Front Windscreen: Yes Body Size: (L*W*H): 1890*68*1100mm Wheelbase: 1278 mm Wheel size: 3.5-10 or 90-90-10 Payload: 150 kg Seat height: 810 mm Double rear assist, dual front shock assist.",
