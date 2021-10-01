@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Products;
 use Session;
+use Alert;
 
 use Illuminate\Http\Request;
 
@@ -20,7 +21,9 @@ class CartController extends Controller
             ),
             'associatedModel' => $product
         ));
-        return redirect()->back()->withErrors(['Hoorray Item(s) added to cart! ', 'The Message']);    }
+        Alert::success('Cart updated.', "Added ".$product->name." to cart");
+        return redirect()->back();
+        }
 
     public function cart()
     {

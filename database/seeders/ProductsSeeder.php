@@ -23,7 +23,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '3',
-                'subsub_category_id' => null
+                'sub_category_id' => null
             ],[
                 'name' => 'USB BACK LIGHT',
                 'description' => 'Bicycle rear light, its purpose: so that people behind you can see you in dark places Lighting power: 15 days Supports charging: USB',
@@ -33,7 +33,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '3',
-                'subsub_category_id' => null
+                'sub_category_id' => null
             ],[
                 'name' => 'SMALL PROTECTION KIT',
                 'description' => 'Protective set 2 child hand protectors 2 elbow protectors 2 knee protectors',
@@ -43,7 +43,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '3',
-                'subsub_category_id' => null
+                'sub_category_id' => null
             ],[
                 'name' => 'GUANTE',
                 'description' => 'Foam gloves, color: multi',
@@ -53,7 +53,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '3',
-                'subsub_category_id' => null
+                'sub_category_id' => null
             ],[
                 'name' => 'SILICON HEADLIGHT',
                 'description' => 'Front light operated by batteries: AAA, suitable for children"s bikes',
@@ -63,7 +63,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '3',
-                'subsub_category_id' => null
+                'sub_category_id' => null
             ],[
                 'name' => 'BIG PROTECTION KIT',
                 'description' => 'Protective kit 2 hand guards 2 elbow guards 2 knee guards',
@@ -73,7 +73,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '3',
-                'subsub_category_id' => null
+                'sub_category_id' => null
             ],[
                 'name' => 'SERVICE BELL',
                 'description' => 'American bell made of aluminum',
@@ -83,7 +83,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '3',
-                'subsub_category_id' => null
+                'sub_category_id' => null
             ],[
                 'name' => 'BIKE MOBILE HOLDER',
                 'description' => 'A mobile holder that can be used for bicycles and motorcycles, suitable for all sizes of mobile phones',
@@ -93,7 +93,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '3',
-                'subsub_category_id' => null
+                'sub_category_id' => null
             ],[
                 'name' => 'FRONT + REAR LIGHT',
                 'description' => 'Front + rear light, battery operated, suitable for children"s bikesدراج',
@@ -103,7 +103,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '3',
-                'subsub_category_id' => null
+                'sub_category_id' => null
             ],[
                 'name' => 'BICYCLE COVER',
                 'description' => 'Adopt Terylene material, with sunscreen and rainproof function, sturdy and durable, high quality, excellent durability, suitable for bicycle, motorcycle, electric car, etc., a perfect choice for your outdoor activities. Specifications: Color: Gray Material: Terylene Weight: 373g Product size: 210 * 100cm Package size: 30 * 25.5 * 3cm Package List: 1 * Bicycle Dust Cover',
@@ -113,7 +113,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '3',
-                'subsub_category_id' => null
+                'sub_category_id' => null
             ],[
                 'name' => 'SIRENA 1 VOTE',
                 'description' => 'Battery operated 2 batteries: AAA',
@@ -123,7 +123,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '3',
-                'subsub_category_id' => null
+                'sub_category_id' => null
             ],[
                 'name' => 'USB FLASHLIGHT',
                 'description' => 'Scout with 5 different sounds 3 levels of lighting Works with charging Easy to disassemble and install',
@@ -133,7 +133,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '3',
-                'subsub_category_id' => null
+                'sub_category_id' => null
             ],[
                 'name' => '120CM KEY LOCK',
                 'description' => 'Metal lock from the inside length 120 cm 2 computer key with holder for the lock to be needed when moving the bike to another place',
@@ -143,7 +143,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '3',
-                'subsub_category_id' => null
+                'sub_category_id' => null
             ],[
                 'name' => '120 CM NUMBER LOCK',
                 'description' => 'Lock numbers length 120 cm It can be set to any number at any time 5 digits Equipped with a lock holder for his need when moving the bike to another place',
@@ -153,7 +153,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '3',
-                'subsub_category_id' => null
+                'sub_category_id' => null
             ],[
                 'name' => 'COUNTER BLOWER',
                 'description' => 'A blower equipped with an air pressure gauge + a ball needle + a connection to inflate the floats',
@@ -163,7 +163,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '3',
-                'subsub_category_id' => null
+                'sub_category_id' => null
             ],[
                 'name' => 'SMALL BLOWER',
                 'description' => 'Blower used to inflate bicycles ball buoys',
@@ -173,7 +173,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '3',
-                'subsub_category_id' => null
+                'sub_category_id' => null
             ],[
                 'name' => 'L . HELMET',
                 'description' => 'Large helmet suitable for an age greater than ten years, blue color',
@@ -183,7 +183,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '3',
-                'subsub_category_id' => null
+                'sub_category_id' => null
             ],[
                 'name' => 'L . HELMET',
                 'description' => 'Large helmet suitable for an age greater than ten years, white color',
@@ -193,7 +193,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '3',
-                'subsub_category_id' => null
+                'sub_category_id' => null
             ],[
                 'name' => 'BIG BLOWER',
                 'description' => 'Big bike pump',
@@ -203,7 +203,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '3',
-                'subsub_category_id' => null
+                'sub_category_id' => null
             ],[
                 'name' => 'SMALL BLOWER',
                 'description' => 'It is suitable for all types of bikes. It is installed in the bike. It can be used for the ball + buoy. Length 28 cm',
@@ -213,7 +213,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '3',
-                'subsub_category_id' => null
+                'sub_category_id' => null
             ],[
                 'name' => 'SMALL BLOWER',
                 'description' => 'It is suitable for all types of bikes. It is installed in the bike. It can be used for the ball + buoy. Length 30 cm',
@@ -223,7 +223,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '3',
-                'subsub_category_id' => null
+                'sub_category_id' => null
             ],[
                 'name' => 'BOTTLE',
                 'description' => 'Plastic Bicycle Bottle 650 ml',
@@ -233,7 +233,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '3',
-                'subsub_category_id' => null
+                'sub_category_id' => null
             ],[
                 'name' => 'MOBILE BAG',
                 'description' => 'A bag for mobile on the bike suitable for all types of mobile has side pockets to keep keys, money, etc....',
@@ -243,7 +243,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '3',
-                'subsub_category_id' => null
+                'sub_category_id' => null
             ],[
                 'name' => 'NUMBER LOCK 180 CM',
                 'description' => 'American Servas brand 180 cm 4 numbers and can be set to any number chosen',
@@ -253,7 +253,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '3',
-                'subsub_category_id' => null
+                'sub_category_id' => null
             ],[
                 'name' => 'BACK LIGHT 100 DAYS',
                 'description' => 'Rear light, red light only, illumination strength is 100 days',
@@ -263,7 +263,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '3',
-                'subsub_category_id' => null
+                'sub_category_id' => null
             ],[
                 'name' => '125-DAY REAR LIGHT',
                 'description' => 'Rear light red light + white luminous power 125 days',
@@ -273,7 +273,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '3',
-                'subsub_category_id' => null
+                'sub_category_id' => null
             ],[
                 'name' => 'SCOUT WITH BATTERIES',
                 'description' => 'Scout 3 levels of lighting, siren 5 sounds, works on batteries, comes with free batteries',
@@ -283,7 +283,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '3',
-                'subsub_category_id' => null
+                'sub_category_id' => null
             ],[
                 'name' => 'Bike size 24 brand Kisto',
                 'description' => 'Bike 24 Kisto Front Auxiliary Disc Brake Front + Rear 21 Speed Metal Type Iron',
@@ -293,7 +293,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '2000_61192bc02ffa0.jpg',
                 'image4' => '',
                 'category_id' => '1',
-                'subsub_category_id' => '3'
+                'sub_category_id' => '4'
             ],[
                 'name' => '24 TRINX CITY BIKE',
                 'description' => "Trinx bike, size 24, girls' bike, metal type: iron, with parts made of aluminum, suitable from 10 to 14 years old",
@@ -303,7 +303,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '1',
-                'subsub_category_id' => '3'
+                'sub_category_id' => '4'
             ],[
                 'name' => 'HADOR BIKE 24',
                 'description' => "Bicycle size 24, brand Hador, color orange, model steer, made of aluminum, 21 saddles, brand a2, front tire, easy to remove and install",
@@ -313,7 +313,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '800_611d431309ce1.jpg',
                 'image4' => '',
                 'category_id' => '1',
-                'subsub_category_id' => '3'
+                'sub_category_id' => '4'
             ],[
                 'name' => 'BICYCLE 20 BRAND ZOOM',
                 'description' => "Bicycle 20 brand Zoom iron color black in red in blue speeds Shimano brand 21 speed front assistant to absorb bumps and shocks front + rear disc brakes for ages from 7 to 9 years",
@@ -323,7 +323,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '1',
-                'subsub_category_id' => '4'
+                'sub_category_id' => '4'
             ],[
                 'name' => 'BICYCLE 20 BRAND ZOOM',
                 'description' => "Bicycle 20 brand Zoom color black in green in blue Iron Shimano brand speeds 21 speed front assistant to absorb bumps and shocks front + rear disc brakes for ages from 7 to 9 years",
@@ -333,7 +333,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '1',
-                'subsub_category_id' => '4'
+                'sub_category_id' => '4'
             ],[
                 'name' => 'BICYCLE 20 BRAND TOTEM',
                 'description' => "Bicycle 20 brand Zoom aluminum color blue Shimano brand speeds 21 speed front assist + rear to absorb bumps and shocks Balance brakes suitable for ages from 7 to 9 years",
@@ -343,7 +343,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '1',
-                'subsub_category_id' => '4'
+                'sub_category_id' => '4'
             ],[
                 'name' => 'BICYCLE 20 BRAND TOTEM',
                 'description' => "Bicycle 20 brand most iron color black F green 21 speed front + rear to absorb bumps and shocks Balance brakes suitable for age from 7 to 9 years",
@@ -353,7 +353,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '1',
-                'subsub_category_id' => '4'
+                'sub_category_id' => '4'
             ],[
                 'name' => '20 RODEO BIKE',
                 'description' => "Rodeo Bike 20 brand Mini Rider bike, black in green, Taiwanese brand from China factories",
@@ -363,7 +363,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '1',
-                'subsub_category_id' => '4'
+                'sub_category_id' => '4'
             ],[
                 'name' => '20 RODEO BIKE',
                 'description' => "Rodeo Bike Brand Hummer 20 bike, light blue color, Taiwanese brand, from China factories",
@@ -373,7 +373,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '1',
-                'subsub_category_id' => '4'
+                'sub_category_id' => '4'
             ],[
                 'name' => '20 RODEO BIKE',
                 'description' => "Bicycle 20 brand Rodeo Bike Model Chita The color is black, blue and pink, a Taiwanese brand from China factories Specifications: Metal type: Auxiliary iron: Yes Speeds: No Brake type: Front disc only Suitable for ages from 7 to 9 years",
@@ -383,7 +383,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '1',
-                'subsub_category_id' => '4'
+                'sub_category_id' => '4'
             ],[
                 'name' => '20 RODEO BIKE',
                 'description' => "Bicycle 20 brand Rodeo Bike Model Chita The color is black, blue and pink, a Taiwanese brand from China factories Specifications: Metal type: Auxiliary iron: Yes Speeds: No Brake type: Front disc only Suitable for ages from 7 to 9 years",
@@ -393,7 +393,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '1',
-                'subsub_category_id' => '4'
+                'sub_category_id' => '4'
             ],[
                 'name' => 'BICYCLE SIZE 16 BRAND KARKURA',
                 'description' => "Children's bike, size 16, color orange, suitable from 4 years to 7 years old",
@@ -403,7 +403,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '1',
-                'subsub_category_id' => '5'
+                'sub_category_id' => '4'
             ],[
                 'name' => 'BICYCLE SIZE 16 BRAND KARKURA',
                 'description' => "Children's bike, size 16, black and red, suitable from 4 to 7 years old",
@@ -413,7 +413,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '1',
-                'subsub_category_id' => '5'
+                'sub_category_id' => '4'
             ],[
                 'name' => 'FERRARI BIKE SIZE 16',
                 'description' => "Children's bike, size 16, red and black, Ferrari model, suitable from 4 years old to 7 years old",
@@ -423,7 +423,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '1',
-                'subsub_category_id' => '5'
+                'sub_category_id' => '4'
             ],[
                 'name' => 'BIKE SIZE 16 BRAND REDO BIKE',
                 'description' => "Children's bike size 16, black and green, hot speed model, suitable from 4 to 7 years old",
@@ -433,7 +433,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '1',
-                'subsub_category_id' => '5'
+                'sub_category_id' => '4'
             ],[
                 'name' => 'AERO BIKE SIZE 16',
                 'description' => "Children's bike, size 16, orange in black, suitable from 4 to 7 years old",
@@ -443,7 +443,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '1',
-                'subsub_category_id' => '5'
+                'sub_category_id' => '4'
             ],[
                 'name' => 'BICYCLE SIZE 12 BARBIE',
                 'description' => "Children's bike, size 12, pink, model Barbie, suitable from 3 years to 5 years old",
@@ -453,7 +453,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '1',
-                'subsub_category_id' => '6'
+                'sub_category_id' => '4'
             ],[
                 'name' => 'FERRARI 12 BIKE',
                 'description' => "Kids bike size 12 yellow color Ferrari model suitable from 3 years to 5 years old",
@@ -463,7 +463,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '1',
-                'subsub_category_id' => '6'
+                'sub_category_id' => '4'
             ],[
                 'name' => 'BIKE SIZE 12 REDO BIKE',
                 'description' => "Children's bike, size 12, the Taiwanese Rideau Bike brand, orange in black, model Iron Man, suitable from 3 to 5 years old",
@@ -473,7 +473,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '1',
-                'subsub_category_id' => '6'
+                'sub_category_id' => '4'
             ],[
                 'name' => 'FERRARI 12 BIKE',
                 'description' => "Children's bike, size 12, red color, Ferrari model, suitable from 3 to 5 years old",
@@ -483,7 +483,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '1',
-                'subsub_category_id' => '6'
+                'sub_category_id' => '4'
             ],[
                 'name' => 'BIKE SIZE 12 REDO BIKE',
                 'description' => "Children's bike size 12, Taiwanese Rideau Bike brand, color A, model BX, suitable from 3 to 5 years old",
@@ -493,7 +493,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '1',
-                'subsub_category_id' => '6'
+                'sub_category_id' => '4'
             ],[
                 'name' => 'BALANCE BIKE FOR DRIVING LESSONS',
                 'description' => "Balance bike for children's education, size 12, suitable from 4 to 6 years old",
@@ -503,7 +503,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '1',
-                'subsub_category_id' => '6'
+                'sub_category_id' => '4'
             ],[
                 'name' => 'EGOS KELLY 150 - 2021',
                 'description' => "Egos Kelly 150 - 2021 model, cash price 22450 pounds - special discount for a limited time 2950 pounds on cash sale only Price after discount 19500 specifications Climbing angle: 15 degrees to 20 degrees with fixed torque Front brake: Oil pressure disc Rear brake: Drum Battery type Lead acid battery Battery capacity: 7 Ah Battery voltage 12V Engine type: Latest version CVT 150cc GY7 Engine power: 8.3 kW (11.19 HP) Engine torque: 10.78 Nm At 6500 rpm LED Tail Light: Yes LED Headlight: Yes Alarm: Yes Remote Control: Yes MP3: Yes Front Windscreen: Yes Body Size: (L*W*H): 1890*68*1100mm Wheelbase: 1278 mm Wheel size: 3.5-10 or 90-90-10 Payload: 150 kg Seat height: 810 mm Double rear assist, dual front shock assist.",
@@ -513,7 +513,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '2',
-                'subsub_category_id' => null
+                'sub_category_id' => null
             ],[
                 'name' => 'EGOS MONOD 150 - 2021',
                 'description' => "Egos Monod 150 - Model 2021 Cache price 19500 pounds - special discount for a limited time 2550 pounds on cash sale only Price after discount 16950 Specifications Climb angle: 15 degrees to 20 degrees with constant torque Front brake: Oil pressure disc (Bumper) Rear brake: drum type Battery Battery Acid + Lead Battery Capacity: 7 Ah Battery voltage 12 V Engine type: Latest version CVT 150cc GY7 Engine Power: 8.3 kW (11.19 HP) Engine torque: 10.78 Nm at 6500 rpm Tail light: 35 W Headlight Front LED: Yes Alarm: Yes Remote Control: Yes MP3: Yes USB: Yes Front Wind Deflector: Yes Body Size: (L*W*H): 1760*68*1050mm Wheelbase: 1260mm Size Wheel: 3.5-10 Payload: 150 kg Seat height: 780 mm Double rear assist, dual front shock assist. Colors: blue - white - black - red",
@@ -523,7 +523,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '2',
-                'subsub_category_id' => null
+                'sub_category_id' => null
             ],[
                 'name' => 'EGOS AMID 200 – 2021',
                 'description' => "المواصفات:
@@ -559,7 +559,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '2',
-                'subsub_category_id' => null
+                'sub_category_id' => null
             ],[
                 'name' => 'EGOS FORCE 200 - 2021',
                 'description' => "Egos Force 200 - 2021 model, cache price 28700 pounds - special discount for a limited time on the cache only 3750 pounds price after discount 24950 Climbing angle: 15 degrees or 20 degrees Front brake: oil pressure disc Rear brake: oil pressure disc Battery type Acid + lead battery Battery capacity: 7 or 9 Ah Battery voltage 12 V Engine type: Latest version CVT 175cc GY7 Engine Power: 9.3 kW (12.53 hp) Engine torque: 11.70 Nm at 6500 rpm LED tail light : Yes Headlight LED: Yes Alarm: Yes Remote Control: Yes MP3: Yes Front Wind Deflector: Yes Body Size: (L*W*H): 2010*780*1100 mm Wheelbase: 1283 mm Wheel Size: 130-60-13 Payload: 150 kg Seat height: 810 mm Double rear assist, dual front shock assist. Colors: blue - gray - white - orange - yellow",
@@ -569,7 +569,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '2',
-                'subsub_category_id' => null
+                'sub_category_id' => null
             ],[
                 'name' => 'EGOS CRUISER 200 – 2021',
                 'description' => "Egos Cruiser 200 - Model 2021 Cache price 33950 pounds - special discount for a limited time on the cache only 4450 pounds Price after discount 29500 Specifications Climb angle: 15 degrees to 20 degrees with fixed torque Front brakes: oil pressure disc Rear brakes: oil pressure disc (PACM) Battery Type Lead Acid Battery Battery Capacity: 7 or 9 Ah Battery Voltage 12V Engine Type: Latest Version CVT 175cc GY7 Engine Power: 9.3 kW (12.53 hp) Engine Torque: 11.70 Nm Meter at 6500 rpm Tail Light (Tail Lights) LED: Yes Headlight LED: Yes Alarm: Yes Remote Control: Yes MP3: Yes Front Windscreen: Yes Body Size: (L*W*H): 1960*880*2110mm Wheelbase: 1285mm Wheel Size: 130-60-13 Payload: 150kg Seat Height: 810mm Double Auxiliary Rear.",
@@ -579,7 +579,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '2',
-                'subsub_category_id' => null
+                'sub_category_id' => null
             ],[
                 'name' => 'EGOS TITAN 200 – 2021 MODEL',
                 'description' => "Egos Titan 200 - 2021 model, cache price 39750 pounds - special discount for a limited time on cash only 4800 pounds price after discount 34950 Specifications Climbing angle: 15 degrees to 20 degrees with fixed torque Front brakes: oil pressure disc Rear brake: oil pressure disc (PACM) Battery Type Lead Acid Battery Battery Capacity: 7 or 9 Ah Battery Voltage 12V Engine Type: Latest Version CVT 175cc GY7 Engine Air Cooled. Engine power: 9.3 kW (12.53 hp) Engine torque: 11.70 Nm at 6500 rpm Tail light (rear lantern) LED: Yes Headlight LED: Yes Alarm: Yes Remote control: Yes MP3: Yes Front windscreen: Yes Body size: (L*W*H): 2240*810*2110 mm Wheelbase: 1285 mm Wheel size: 130-60-13 Payload: 150 kg Seat height: 800 mm Double Auxiliary Rear . Dual front shock assist. Colors: black - brown * black - white * black",
@@ -589,7 +589,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '2',
-                'subsub_category_id' => null
+                'sub_category_id' => null
             ],[
                 'name' => 'IRON GYM',
                 'description' => '',
@@ -599,7 +599,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '6',
-                'subsub_category_id' => null
+                'sub_category_id' => null
             ],[
                 'name' => 'AQLA',
                 'description' => '',
@@ -609,7 +609,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '6',
-                'subsub_category_id' => null
+                'sub_category_id' => null
             ],[
                 'name' => 'CHINESE CAR HOLDER',
                 'description' => 'Chinese car holder for a load of 2 bikes of all sizes, easy to disassemble and install, equipped with rubber bases to not hurt the car',
@@ -619,7 +619,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '7',
-                'subsub_category_id' => null
+                'sub_category_id' => null
             ],[
                 'name' => 'Linhai 150CC Auto',
                 'description' => '',
@@ -629,7 +629,7 @@ class ProductsSeeder extends Seeder
                 'image3' => 'buggy13.jpeg',
                 'image4' => 'buggy14.jpeg',
                 'category_id' => '8',
-                'subsub_category_id' => null
+                'sub_category_id' => null
             ],[
                 'name' => 'Linhai 300CC 4X4',
                 'description' => 'Warranty 6 months',
@@ -639,7 +639,7 @@ class ProductsSeeder extends Seeder
                 'image3' => 'buggy22.jpeg',
                 'image4' => '',
                 'category_id' => '8',
-                'subsub_category_id' => null
+                'sub_category_id' => null
             ],[
                 'name' => 'Segway 570CC',
                 'description' => 'Warranty 2 Years',
@@ -649,7 +649,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '8',
-                'subsub_category_id' => null
+                'sub_category_id' => null
             ],[
                 'name' => 'iTank Single-Battery',
                 'description' => '',
@@ -659,7 +659,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '9',
-                'subsub_category_id' => null
+                'sub_category_id' => null
             ],[
                 'name' => 'iLark',
                 'description' => '',
@@ -669,7 +669,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '9',
-                'subsub_category_id' => null
+                'sub_category_id' => null
             ],[
                 'name' => 'iTank Dual-Battery',
                 'description' => '',
@@ -679,7 +679,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '9',
-                'subsub_category_id' => null
+                'sub_category_id' => null
             ],[
                 'name' => 'iTango HO',
                 'description' => '',
@@ -689,7 +689,7 @@ class ProductsSeeder extends Seeder
                 'image3' => '',
                 'image4' => '',
                 'category_id' => '9',
-                'subsub_category_id' => null
+                'sub_category_id' => null
             ]
             
         ]);

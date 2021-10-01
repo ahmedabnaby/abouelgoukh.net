@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\SubCategories;
+use App\Models\Products;
 use App\Models\SubsubCategories;
 use Illuminate\Http\Request;
 
@@ -47,9 +48,11 @@ class SubCategoriesController extends Controller
      */
     public function show($id)
     {
-        $sub_category_name = SubCategories::where('id',$id)->get();
-        $sub_category = SubsubCategories::where('sub_category_id',$id)->get();
-        return view('products.bicycles.sub_categories.show')->withSubcategories($sub_category)->withSubcategoryname($sub_category_name);  
+        $sub_category = Products::where('sub_category_id',$id)->get();
+        // $sub_category = SubsubCategories::where('sub_category_id',$id)->get();
+        dd($sub_category);
+        // return view('products.bicycles.sub_categories.show')->withSubcategoryname($sub_category_name);
+        return view('products.bicycles.subsub_categories.show_bicycles')->withSubcategories($sub_category);
     }
 
     /**

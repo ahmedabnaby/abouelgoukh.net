@@ -37,6 +37,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset('assets/vendor/fontawesome-free/css/all.min.css')}}">
 </head>
 <body>
+    @include('sweetalert::alert')
     @include('inc.navbar')
     @yield('content')
     @include('inc.footer')

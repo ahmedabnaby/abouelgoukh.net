@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\SubCategories;
 use App\Models\Orders;
 use Session;
+use Alert;
 use App\Http\Controllers\PayMobController;
 
 
@@ -66,7 +67,9 @@ class PaymentController extends Controller
         ]);
         
         \Cart::clear();
-        return redirect()->back()->withErrors(['Hoooray! Your Order Has Been Submitted!', 'The Message']);
+        // return redirect()->back()->withErrors(['Hoooray! Your Order Has Been Submitted!', 'The Message']);
+        Alert::success('Order recieved', 'Thank you!, We will contact you soon.');
+        return redirect()->route('home');
 
     }
 

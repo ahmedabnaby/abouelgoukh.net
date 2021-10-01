@@ -1,4 +1,5 @@
 @extends('layouts.app')
+<title>Abou El Goukh - Checkout</title>
 @section('content')
 <main class="main">
 

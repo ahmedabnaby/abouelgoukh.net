@@ -37,7 +37,7 @@ Route::resource('products','App\Http\Controllers\ProductsController');
 
 Route::get('/e_car', 'App\Http\Controllers\ProductsController@e_car')->name('e_car');
 
-Route::get('bicycles/show/{id}/{sub_sub_category_id}','App\Http\Controllers\ProductsController@show')->name('products.show');
+Route::get('bicycles/show/{id}/{sub_category_id}','App\Http\Controllers\ProductsController@show')->name('products.show');
 Route::get('/bicycles', 'App\Http\Controllers\ProductsController@bicycles_index')->name('bicycles');
 
 Route::get('/accessories', 'App\Http\Controllers\ProductsController@accessories')->name('accessories');
@@ -63,7 +63,6 @@ Route::get('/electric_scooter/show_electric_scooter/{id}','App\Http\Controllers\
 
 
 Route::get('/add-to-cart/{product}', 'App\Http\Controllers\CartController@addToCart')->name('cart.add');
-// Route::get('/cart','App\Http\Controllers\CartController@cart')->name('cart');
 Route::get('/cart/destroy/{itemId}','App\Http\Controllers\CartController@destroy')->name('cart.destroy');
 
 

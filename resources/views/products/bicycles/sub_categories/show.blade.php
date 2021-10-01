@@ -54,31 +54,6 @@
                 
                 <div class="row row-sm">
 
-                    {{-- @foreach ($subsub_categories as $subsub_category)
-                    @if ($sub_category->id === $subsub_category->sub_category_id)
-  
-                    <div class="col-6 col-md-4 col-xl-3">
-                        <div class="product-default inner-quickview inner-icon">
-                            <figure>
-                                <a href="#">
-                                    <img src="{{asset('assets/images/abouelgoukh/'.$subsub_category->image)}}">
-                                </a>
-                                <a href="#" class="btn-quickview" title="Quick View">View</a> 
-                            </figure>
-                            <div class="product-details">
-                                <div class="category-wrap">
-                                    <div class="category-list">
-                                        <a href="#" class="product-category">Bicycles under the age of 13</a>
-                                    </div>
-                                </div>
-                                <h2 class="product-title">
-                                    <a href="#">{{$subsub_category->name}}</a>
-                                </h2>
-                            </div>
-                        </div>
-                    </div>
-                    @endif
-                    @endforeach --}}
         @if(count($subcategories)>0)
 
                     @foreach ($subcategories as $subcategory)

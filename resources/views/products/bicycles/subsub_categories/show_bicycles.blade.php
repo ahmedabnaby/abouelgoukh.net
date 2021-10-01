@@ -36,7 +36,7 @@
                                 <div class="content-left">
                                     <span>EXTRA</span>
                                     <h2>20% OFF</h2>
-                                    <h4 class="cross-txt">BIKES</h4>
+                                    <h4 class="cross-txt">BIKwwwwwwwwwwwES</h4>
                                 </div>
                                 <div class="content-center">
                                     <img src="{{asset('assets/images/abouelgoukh/800_610d57021404d.png')}}" class="bike_padding">

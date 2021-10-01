@@ -27,7 +27,7 @@ class SubCategoriesSeeder extends Seeder
                 'image' => 'assets/images/abouelgoukh/800_5ebbee66d545d.jpg',
                 'category_id' => '1'
             ],[
-                'name' => 'Bicycles under the age of 13',
+                'name' => 'Kids Bikes',
                 'image' => 'assets/images/abouelgoukh/800_5fd8f7febbbcc.jpg',
                 'category_id' => '1'
             ]

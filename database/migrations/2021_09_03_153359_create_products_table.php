@@ -23,12 +23,12 @@ class CreateProductsTable extends Migration
             $table->string('image4')->nullable();
             $table->text('description');
             $table->integer('price');
-            $table->unsignedBigInteger('subsub_category_id')->nullable();
+            $table->unsignedBigInteger('sub_category_id')->nullable();
             // $table->integer('old_price')->nullable();
             $table->timestamps();
 
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
-            $table->foreign('subsub_category_id')->references('id')->on('subsub_categories')->onDelete('cascade');
+            $table->foreign('sub_category_id')->references('id')->on('sub_categories')->onDelete('cascade');
         });
     }
 
