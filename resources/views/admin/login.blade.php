@@ -1,4 +1,10 @@
 @extends('layouts.app')
+@section('header')
+<title>Abou El Goukh - Login</title>
+<meta name="description" content="Abou El Goukh started the business in 1952 & along time it became known as one the best importers of Bikes, Bicycles, Scooters, E-cars, Petrol Scooters, Motorcycles, Kids Equipment, & Kids Toys. We have some of the best brands worldwide in our field">
+<meta name="keywords" content="A summary about of webpage content">
+<link rel="canonical" href="http://abouelgoukhstore.com/admin" />
+@endsection
 @section('content')
 <main class="main">
     <nav aria-label="breadcrumb" class="breadcrumb-nav">

@@ -231,6 +231,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Cart' => Darryldecode\Cart\Facades\CartFacade::class,
+        'Input' => Illuminate\Support\Facades\Input::class,
         'Alert' => RealRashid\SweetAlert\Facades\Alert::class,
     ],
 

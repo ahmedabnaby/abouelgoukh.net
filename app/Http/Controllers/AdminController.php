@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 use Auth;
 use App\Models\Admin;
 use App\Models\Orders;
+use App\Models\Products;
+use App\Models\Categories;
 use Illuminate\Http\Request;
 use Session;
 
@@ -49,5 +51,12 @@ class AdminController extends Controller
         });
         
         return view('admin.dashboard')->withOrders($orders);
+    }
+    public function adminPanel()
+    {
+        $products = Products::all();
+        $categories = Categories::all();
+        
+        return view('admin.adminPanel')->withProducts($products)->withCategories($categories);
     }
 }

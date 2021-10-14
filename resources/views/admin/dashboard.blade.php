@@ -1,4 +1,12 @@
 @extends('layouts.app')
+
+@section('header')
+<title>Abou El Goukh - Dashboard</title>
+<meta name="description" content="Abou El Goukh started the business in 1952 & along time it became known as one the best importers of Bikes, Bicycles, Scooters, E-cars, Petrol Scooters, Motorcycles, Kids Equipment, & Kids Toys. We have some of the best brands worldwide in our field">
+<meta name="keywords" content="A summary about of webpage content">
+<link rel="canonical" href="http://abouelgoukhstore.com/admin" />
+@endsection
+
 @section('content')
 
 <main class="main">
@@ -122,8 +130,8 @@
                     <h3 class="widget-title">My Account</h3>
 
                     <ul class="list">
-                        <li class="active"><a href="#">Account Dashboard</a></li>
-                        <li><a href="#">Account Information</a></li>
+                        <li class="active"><a href="{{route('dashboard')}}">Orders</a></li>
+                        <li><a href="{{route('adminPanel')}}">Admin Panel</a></li>
                     </ul>
                 </div><!-- End .widget -->
             </aside><!-- End .col-lg-3 -->

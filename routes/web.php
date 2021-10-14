@@ -19,6 +19,16 @@ Route::get('/checkout', 'App\Http\Controllers\PagesController@checkout')->name('
 Route::post('/payment','App\Http\Controllers\PaymentController@payment')->name('payment');
 Route::post('/search','App\Http\Controllers\ProductsController@search')->name('search');
 
+Route::post('/CategoryEdit/{id}','App\Http\Controllers\CategoriesController@CategoryEdit')->name('CategoryEdit');
+Route::get('/CategoryDelete/{id}','App\Http\Controllers\CategoriesController@CategoryDelete')->name('CategoryDelete');
+Route::get('/CategoryShow/{id}','App\Http\Controllers\CategoriesController@CategoryShow')->name('CategoryShow');
+Route::post('/CategoryStore','App\Http\Controllers\CategoriesController@CategoryStore')->name('CategoryStore');
+
+
+Route::post('/ProductEdit/{id}','App\Http\Controllers\CategoriesController@ProductEdit')->name('ProductEdit');
+Route::get('/ProductDelete/{id}','App\Http\Controllers\CategoriesController@ProductDelete')->name('ProductDelete');
+Route::get('/ProductShow/{id}','App\Http\Controllers\CategoriesController@ProductShow')->name('ProductShow');
+
 
 Route::get('/cash','App\Http\Controllers\PaymentController@cash')->name('cash');
 Route::get('/card','App\Http\Controllers\PaymentController@card')->name('card');
@@ -29,9 +39,11 @@ Route::get('/admin','App\Http\Controllers\AdminController@login_view')->name('lo
 Route::post('admin-login','App\Http\Controllers\AdminController@admin_login')->name('admin_login');
 Route::get('logout', '\App\Http\Controllers\AdminController@logout')->middleware('role');
 Route::get('dashboard', 'App\Http\Controllers\AdminController@dashboard')->name('dashboard')->middleware('role');
+Route::get('adminPanel', 'App\Http\Controllers\AdminController@adminPanel')->name('adminPanel')->middleware('role');
 
 
 Route::resource('sub_categories','App\Http\Controllers\SubCategoriesController');
+Route::resource('categories','App\Http\Controllers\CategoriesController');
 Route::resource('products','App\Http\Controllers\ProductsController');
 
 Route::get('/e_car', 'App\Http\Controllers\ProductsController@e_car')->name('e_car');
