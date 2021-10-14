@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Categories;
 use App\Models\Products;
-use Illuminate\Http\Request;
+// use Illuminate\Http\Request;
+use Request;
 
 class CategoriesController extends Controller
 {
@@ -100,22 +101,20 @@ class CategoriesController extends Controller
     public function CategoryStore(Request $request)
     {
 
-        // $request->validate([
+        $rules = array(
+            'name'       => 'required',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        );
+        $validator = \Validator::make(Request::all(), $rules);
+        
+        // dd($validator);
+  
 
-        //     'name' => 'required',
-
-        //     'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-
-        // ]);
+        $input = Request::all();
 
   
 
-        $input = $request->all();
-
-        // dd($input);
-  
-
-        if ($image = $request->file('image')) {
+        if ($image = Request::file('image')) {
 
             $destinationPath = 'image/';
 
