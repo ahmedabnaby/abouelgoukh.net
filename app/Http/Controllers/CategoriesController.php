@@ -107,7 +107,7 @@ class CategoriesController extends Controller
         );
         $validator = \Validator::make(Request::all(), $rules);
         
-        // dd($validator);
+        dd($validator);
   
 
         $input = Request::all();
