@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Categories;
 use App\Models\Products;
-// use Illuminate\Http\Request;
-use Request;
+use Illuminate\Http\Request;
+// use Request;
 
 class CategoriesController extends Controller
 {
@@ -101,40 +101,54 @@ class CategoriesController extends Controller
     public function CategoryStore(Request $request)
     {
 
-        $rules = array(
-            'name'       => 'required',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-        );
-        $validator = \Validator::make(Request::all(), $rules);
+        $request->validate([
+            'name' => 'required',
+            'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+        ]);
+        $path = $request->file('image')->store('public/images');
+        $category = new Categories;
+        $category->name = $request->name;
+        $category->image = $path;
+        $category->save();
+     
+        return redirect()->route('adminPanel')
+                        ->with('success','Category has been created successfully.');
+
+
+        // $rules = array(
+        //     'name'       => 'required',
+        //     'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        // );
+        // $validator = \Validator::make(Request::all(), $rules);
         
-        dd($validator);
+        
+        
+        // $input = Request::all();
+        // dd($validator);
+
   
 
-        $input = Request::all();
+        // if ($image = Request::file('image')) {
 
-  
+        //     $destinationPath = 'image/';
 
-        if ($image = Request::file('image')) {
+        //     $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
 
-            $destinationPath = 'image/';
+        //     $image->move($destinationPath, $profileImage);
 
-            $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+        //     $input['image'] = "$profileImage";
 
-            $image->move($destinationPath, $profileImage);
-
-            $input['image'] = "$profileImage";
-
-        }
+        // }
 
     
 
-        Categories::create($input);
+        // Categories::create($input);
 
      
 
-        return redirect()->route('adminPanel')
+        // return redirect()->route('adminPanel')
 
-                        ->with('success','Category created successfully.');
+        //                 ->with('success','Category created successfully.');
 
     }
 

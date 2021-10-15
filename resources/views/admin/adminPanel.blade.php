@@ -33,7 +33,7 @@
                 <div class="modal fade" id="createCategory" tabindex="-1" role="dialog" aria-labelledby="createCategoryLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
-                            <form action="{{route('CategoryStore')}}" method="POST">
+                            <form action="{{route('CategoryStore')}}" enctype="multipart/form-data" method="POST">
                                 @csrf
                                 <div class="modal-header">
                                     <h3 class="modal-title" id="createCategoryLabel">Create New Category</h3>
@@ -45,7 +45,7 @@
                                 <div class="modal-body">
                                         <div class="form-group required-field">
                                             <label>Category Name </label>
-                                            <input type="text" name = "name" class="form-control form-control-sm" >
+                                            <input type="text" name="name" class="form-control form-control-sm" >
                                         </div><!-- End .form-group -->
 
                                         <div class="form-group required-field">
