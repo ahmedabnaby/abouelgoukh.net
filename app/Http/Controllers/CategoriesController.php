@@ -106,8 +106,8 @@ class CategoriesController extends Controller
             'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
         ]);
         $path = $request->file('image')->store('public/images');
-        dd($path);
         $category = new Categories;
+        dd($category);
         $category->name = $request->name;
         $category->image = $path;
         $category->save();
