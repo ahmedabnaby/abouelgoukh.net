@@ -86,7 +86,7 @@
                                                 <td class="product-col">
                                                     <figure class="product-image-container">
                                                         <a href="{{route('CategoryShow',$category->id)}}" class="product-image">
-                                                            <img src="assets/images/abouelgoukh/{{$category->image}}" alt="product">
+                                                            <img src="{{asset('storage/'.$category->image)}}" alt="product">
                                                         </a>
                                                     </figure>
                                                     <h2 class="product-title">
