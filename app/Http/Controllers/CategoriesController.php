@@ -110,7 +110,7 @@ class CategoriesController extends Controller
         $category->name = $request->name;
         $category->image = $path;
         $category->save();
-        dd($category);
+        // dd($category);
      
         return redirect()->route('adminPanel')
                         ->with('success','Category has been created successfully.');
