@@ -107,9 +107,9 @@ class CategoriesController extends Controller
         ]);
         $path = $request->file('image')->store('public/images');
         $category = new Categories;
-        dd($category);
         $category->name = $request->name;
         $category->image = $path;
+        dd($category);
         $category->save();
      
         return redirect()->route('adminPanel')
