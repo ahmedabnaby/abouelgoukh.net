@@ -86,8 +86,8 @@
                                                 <td class="product-col">
                                                     <figure class="product-image-container">
                                                         <a href="{{route('CategoryShow',$category->id)}}" class="product-image">
-                                                            {{-- {{dd(asset('storage/'.$category->image))}} --}}
-                                                            <img src="{{asset('storage/'.$category->image)}}" alt="product">
+                                                            {{dd(asset('storage/'.$category->image))}}
+                                                            {{-- <img src="{{asset('storage/'.$category->image)}}" alt="product"> --}}
                                                         </a>
                                                     </figure>
                                                     <h2 class="product-title">
