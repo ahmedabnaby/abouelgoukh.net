@@ -61,10 +61,29 @@
                     <div class="col-6 col-md-4 col-xl-3">
                         <div class="product-default inner-quickview inner-icon">
                             <figure>
+
+                                @if ($scooter->status === 0 && $scooter->routeName != 'new')
                                 <a href="{{route('scooters.show',$scooter->id)}}">
                                     <img src="{{asset('assets/images/abouelgoukh/scooters/'.$scooter->image)}}">
                                 </a>
                                 <a href="{{route('scooters.show',$scooter->id)}}" class="btn-quickview" title="Quick View">View</a> 
+            
+                                @elseif ($scooter->status === 1 && $scooter->routeName != 'new')
+                                <a href="{{route('scooters.show',$scooter->id)}}">
+                                    <img src="{{asset('storage/'.$scooter->image)}}">
+                                </a>
+                                <a href="{{route('scooters.show',$scooter->id)}}" class="btn-quickview" title="Quick View">View</a> 
+                                @else
+                         
+                                <a href="{{route('scooters.show',$scooter->id)}}">
+                                    <img src="{{asset('storage/'.$scooter->image)}}">
+                                </a>
+                                <a href="{{route('scooters.show',$scooter->id)}}" class="btn-quickview" title="Quick View">View</a> 
+
+                                @endif
+
+
+   
                             </figure>
                             <div class="product-details">
                                 <h2 class="product-title">
@@ -79,7 +98,7 @@
                     @endif
                     @endforeach
                     @else
-                    <h1>No Categories</h1>
+                    <h1>Stay tuned for new products.</h1>
         @endif 
                 </div><!-- End .row -->
 
@@ -97,14 +116,27 @@
                         <div class="collapse show" id="widget-body-2">
                             <div class="widget-body">
                                 <div class="product-intro">
-                                    @foreach ($scooters as $scooter)
+                                    @foreach ($scooters->take(52) as $scooter)
                                     @if ($scooter->category_id === 2)
                                         
                                     <div class="product-default left-details product-widget">
                                         <figure>
-                                            <a href="product.html">
+                                            @if ($scooter->status === 0 && $scooter->routeName != 'new')
+                                            <a href="{{route('scooters.show',$scooter->id)}}">
                                                 <img src="{{asset('assets/images/abouelgoukh/scooters/'.$scooter->image)}}">
                                             </a>
+                        
+                                            @elseif ($scooter->status === 1 && $scooter->routeName != 'new')
+                                            <a href="{{route('scooters.show',$scooter->id)}}">
+                                                <img src="{{asset('storage/'.$scooter->image)}}">
+                                            </a>
+                                            @else
+                                     
+                                            <a href="{{route('scooters.show',$scooter->id)}}">
+                                                <img src="{{asset('storage/'.$scooter->image)}}">
+                                            </a>
+            
+                                            @endif
                                         </figure>
                                         <div class="product-details">
                                             <h2 class="product-title">

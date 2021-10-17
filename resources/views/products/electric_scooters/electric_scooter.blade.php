@@ -61,10 +61,25 @@
                     <div class="col-6 col-md-4 col-xl-3">
                         <div class="product-default inner-quickview inner-icon">
                             <figure>
+                                @if ($electric_scooter->status === 0 && $electric_scooter->routeName != 'new')
                                 <a href="{{route('electric_scooter.show',$electric_scooter->id)}}">
-                                    <img src="{{asset('assets/images/abouelgoukh/electric_scooter/'.$electric_scooter->image2)}}">
+                                    <img src="{{asset('assets/images/abouelgoukh/electric_scooter/'.$electric_scooter->image)}}">
                                 </a>
                                 <a href="{{route('electric_scooter.show',$electric_scooter->id)}}" class="btn-quickview" title="Quick View">View</a> 
+            
+                                @elseif ($electric_scooter->status === 1 && $electric_scooter->routeName != 'new')
+                                <a href="{{route('electric_scooter.show',$electric_scooter->id)}}">
+                                    <img src="{{asset('storage/'.$electric_scooter->image)}}">
+                                </a>
+                                <a href="{{route('electric_scooter.show',$electric_scooter->id)}}" class="btn-quickview" title="Quick View">View</a> 
+                                @else
+                         
+                                <a href="{{route('electric_scooter.show',$electric_scooter->id)}}">
+                                    <img src="{{asset('storage/'.$electric_scooter->image)}}">
+                                </a>
+                                <a href="{{route('electric_scooter.show',$electric_scooter->id)}}" class="btn-quickview" title="Quick View">View</a> 
+
+                                @endif
                             </figure>
                             <div class="product-details">
                                 <h2 class="product-title">
@@ -79,7 +94,7 @@
                     @endif
                     @endforeach
                     @else
-                    <h1>No Categories</h1>
+                    <h1>Stay tuned for new products.</h1>
         @endif 
                 </div><!-- End .row -->
 
@@ -102,9 +117,22 @@
                                         
                                     <div class="product-default left-details product-widget">
                                         <figure>
+                                            @if ($electric_scooter->status === 0 && $electric_scooter->routeName != 'new')
                                             <a href="{{route('electric_scooter.show',$electric_scooter->id)}}">
-                                                <img src="{{asset('assets/images/abouelgoukh/electric_scooter/'.$electric_scooter->image2)}}">
+                                                <img src="{{asset('assets/images/abouelgoukh/electric_scooter/'.$electric_scooter->image)}}">
                                             </a>
+                        
+                                            @elseif ($electric_scooter->status === 1 && $electric_scooter->routeName != 'new')
+                                            <a href="{{route('electric_scooter.show',$electric_scooter->id)}}">
+                                                <img src="{{asset('storage/'.$electric_scooter->image)}}">
+                                            </a>
+                                            @else
+                                     
+                                            <a href="{{route('electric_scooter.show',$electric_scooter->id)}}">
+                                                <img src="{{asset('storage/'.$electric_scooter->image)}}">
+                                            </a>
+            
+                                            @endif
                                         </figure>
                                         <div class="product-details">
                                             <h2 class="product-title">

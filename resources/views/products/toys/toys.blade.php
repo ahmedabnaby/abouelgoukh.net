@@ -1,8 +1,8 @@
 @extends('layouts.app')
 @section('header')
 <title>Abou El Goukh - Products - Kid Toys</title>
-<meta name="description" content="Abou El Goukh is one of the many good suppliers of kids toys in Egypt, we are known for our many products for your kids happiness.">
-<meta name="keywords" content="toys, kids, kid toys, egypt, cairo, elrehab, madinaty, maadi">
+<meta name="description" content="Abou El Goukh is one of the many good suppliers of toys toys in Egypt, we are known for our many products for your toys happiness.">
+<meta name="keywords" content="toys, toys, kid toys, egypt, cairo, elrehab, madinaty, maadi">
 <link rel="canonical" href="http://abouelgoukhstore.com/toys" />
 @endsection
 @section('content')
@@ -54,8 +54,41 @@
                 
                 <div class="row row-sm">
 
+                    <div style="display: none;">
+                        {{$countToys=\App\Models\Products::where(['category_id' => 6])->get()}}
+                    </div>
+                    @if(count($countToys)>0)
 
-                    <h1 style="text-align: center;">Stay tuned for new products.</h1>
+                    @foreach ($toys as $toy)
+                    @if ($toy->category_id === 6)
+                    <div class="col-6 col-md-4 col-xl-3">
+                        <div class="product-default inner-quickview inner-icon">
+                            <figure>
+
+                               
+                                <a href="{{route('toys.show',$toy->id)}}">
+                                    <img src="{{asset('storage/'.$toy->image)}}">
+                                </a>
+                                <a href="{{route('toys.show',$toy->id)}}" class="btn-quickview" title="Quick View">View</a> 
+
+
+   
+                            </figure>
+                            <div class="product-details">
+                                <h2 class="product-title">
+                                    <a href="{{route('toys.show',$toy->id)}}">{{$toy->name}}</a>
+                                </h2>
+                                <h2 class="product-price">
+                                    <h3>{{number_format($toy->price)}} EGP</h3>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                    @endif
+                    @endforeach
+                    @else
+                    <h1>Stay tuned for new products.</h1>
+        @endif 
 
                 </div><!-- End .row -->
 

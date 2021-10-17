@@ -61,9 +61,27 @@
                     <div class="col-6 col-md-4 col-xl-3">
                         <div class="product-default inner-quickview inner-icon">
                             <figure>
+
+                                @if ($accessory->status === 0 && $accessory->routeName != 'new')
                                 <a href="{{route('accessories.show',$accessory->id)}}">
                                     <img src="{{asset('assets/images/abouelgoukh/accessories/'.$accessory->image)}}">
                                 </a>
+                                <a href="{{route('accessories.show',$accessory->id)}}" class="btn-quickview" title="Quick View">View</a> 
+            
+                                @elseif ($accessory->status === 1 && $accessory->routeName != 'new')
+                                <a href="{{route('accessories.show',$accessory->id)}}">
+                                    <img src="{{asset('storage/'.$accessory->image)}}">
+                                </a>
+                                <a href="{{route('accessories.show',$accessory->id)}}" class="btn-quickview" title="Quick View">View</a> 
+                                @else
+                         
+                                <a href="{{route('accessories.show',$accessory->id)}}">
+                                    <img src="{{asset('storage/'.$accessory->image)}}">
+                                </a>
+                                <a href="{{route('accessories.show',$accessory->id)}}" class="btn-quickview" title="Quick View">View</a> 
+
+                                @endif
+                                
                                 <a href="{{route('accessories.show',$accessory->id)}}" class="btn-quickview" title="Quick View">View</a> 
                             </figure>
                             <div class="product-details">

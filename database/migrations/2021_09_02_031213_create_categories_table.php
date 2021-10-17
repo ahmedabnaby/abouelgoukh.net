@@ -17,6 +17,8 @@ class CreateCategoriesTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('image');
+            $table->string('routeName');
+            $table->tinyInteger('status');
             $table->timestamps();
         });
     }

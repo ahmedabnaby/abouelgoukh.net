@@ -8,7 +8,6 @@
 @endsection
 
 @section('content')
-
 <main class="main">
     <nav aria-label="breadcrumb" class="breadcrumb-nav">
         <div class="container">
@@ -25,7 +24,59 @@
                 <h2>My Dashboard</h2>
 
                 <h3>Products</h3>
+                <div class="float-right">
+                    <a href="#" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#createProduct">Create New Product</a>
+                </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="createProduct" tabindex="-1" role="dialog" aria-labelledby="createProductLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <form action="{{route('ProductStore')}}" enctype="multipart/form-data" method="POST">
+                                @csrf
+                                <div class="modal-header">
+                                    <h3 class="modal-title" id="createProductLabel">Create New Product</h3>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div><!-- End .modal-header -->
                 
+                                <div class="modal-body">
+                                        <div class="form-group required-field">
+                                            <label>Product Name </label>
+                                            <input type="text" name="name" class="form-control form-control-sm" placeholder="Name" />
+                                            <input type="hidden" name="category_id" value="{{$categoryid}}">
+                                            <input type="hidden" name="status" value="1">
+                                            
+                                        </div><!-- End .form-group -->
+                
+                                        <div class="form-group required-field">
+                                            <label>Product Price </label>
+                                            <input type="text" name="price" class="form-control form-control-sm" placeholder="Price" />
+                                        </div>
+
+                                        <div class="form-group required-field">
+                                            <label>Product Description </label>
+                                            <textarea name="description" class="form-control form-control-sm" ></textarea>
+                                        </div>
+
+                                        <div class="form-group required-field">
+                                            <label>Product Image </label>
+                                            <input type="file" name="image" class="form-control form-control-sm" >
+                                        </div>
+                
+                
+                                </div><!-- End .modal-body -->
+                
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-link btn-sm" data-dismiss="modal">Cancel</button>
+                                    <button type="submit" class="btn btn-primary btn-sm">Save changes</button>
+                                </div><!-- End .modal-footer -->
+                            </form>
+                        </div><!-- End .modal-content -->
+                    </div><!-- End .modal-dialog -->
+                </div><!-- End .modal -->
+                                
                 <main class="main">
 
                     <div class="container">
@@ -47,9 +98,17 @@
                                             <tr class="product-row">
                                                 <td class="product-col">
                                                     <figure class="product-image-container">
+                                                        @if ($product->status === 0)
                                                         <a href="#" class="product-image">
                                                             <img src="{{asset('assets/images/abouelgoukh/all/'.$product->image)}}" alt="product">
                                                         </a>
+
+                                                        @else
+                                                 
+                                                        <a href="#" class="product-image">
+                                                            <img src="{{asset('storage/'.$product->image)}}" alt="product">
+                                                        </a>
+                                                        @endif
                                                     </figure>
                                                     <h4 class="product-title">
                                                         {{$product->name}}
@@ -57,15 +116,18 @@
                                                 </td>
                                                 <td class="product-title">{{number_format($product->price)}} EGP</td>
 
-                                                <td><a href="#" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#addressModal">Edit</a></td>
+                                                <td><a href="#" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#addressModal-{{$product->id}}">Edit</a></td>
                                                 
                                                 <td><a href="{{route('ProductDelete',$product->id)}}" class="btn btn-sm btn-danger">Delete</a></td>
                                             </tr>
                                             <!-- Modal -->
-                                            <div class="modal fade" id="addressModal" tabindex="-1" role="dialog" aria-labelledby="addressModalLabel" aria-hidden="true">
+                                            <div class="modal fade" id="addressModal-{{$product->id}}" tabindex="-1" role="dialog" aria-labelledby="addressModalLabel" aria-hidden="true">
                                                 <div class="modal-dialog" role="document">
+                                                    <div style="display: none;">
+                                                        {{$productWhere=\App\Models\Products::where(['id' => $product->id])->get()}}
+                                                        </div>
                                                     <div class="modal-content">
-                                                        <form action="{{route('ProductEdit',$product->id)}}" method="POST">
+                                                        <form action="{{route('ProductEdit',$product->id)}}" enctype="multipart/form-data" method="POST">
                                                             @csrf
                                                             <div class="modal-header">
                                                                 <h3 class="modal-title" id="addressModalLabel">Edit Product</h3>
@@ -74,23 +136,32 @@
                                                                 </button>
                                                             </div><!-- End .modal-header -->
                                                             <div class="modal-body">
-                                                                    <div class="form-group required-field">
-                                                                        <label>Product Name </label>
-                                                                        <input type="text" name = "name" class="form-control form-control-sm">
-                                                                    </div><!-- End .form-group -->
-
-                                                                    <div class="form-group required-field">
-                                                                        <label>Product Price </label>
-                                                                        <input type="text" name = "price" class="form-control form-control-sm" >
-                                                                    </div><!-- End .form-group -->
-
-                                                                    <div class="form-group required-field">
-                                                                        <label>Product Image </label>
-                                                                        <input type="file" name="image" class="form-control form-control-sm" >
-                                                                    </div>
-
-
-                                                            </div><!-- End .modal-body -->
+                                                                <div class="form-group required-field">
+                                                                    <label>Product Name </label>
+                                                                    <input type="text" name="name" class="form-control form-control-sm" placeholder="Name" value="{{$productWhere[0]->name}}"/>
+                                                                    <input type="hidden" name="category_id" value="{{$productWhere[0]->category_id}}">
+                                                                    <input type="hidden" name="status" value="1">
+                                                                    
+                                                                </div><!-- End .form-group -->
+                                        
+                                                                <div class="form-group required-field">
+                                                                    <label>Product Price </label>
+                                                                    <input type="text" name="price" class="form-control form-control-sm" placeholder="Price" value="{{$productWhere[0]->price}}"/>
+                                                                </div>
+                        
+                        
+                                                                <div class="form-group required-field">
+                                                                    <label>Product Description </label>
+                                                                    <textarea name="description" class="form-control form-control-sm" >{{$productWhere[0]->description}}</textarea>
+                                                                </div>
+                        
+                                                                <div class="form-group required-field">
+                                                                    <label>Product Image </label>
+                                                                    <input type="file" name="image" class="form-control form-control-sm" />
+                                                                </div>
+                                        
+                                        
+                                                        </div><!-- End .modal-body -->
 
                                                             <div class="modal-footer">
                                                                 <button type="button" class="btn btn-link btn-sm" data-dismiss="modal">Cancel</button>

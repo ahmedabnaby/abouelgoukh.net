@@ -61,9 +61,26 @@
                     <div class="col-6 col-md-4 col-xl-3">
                         <div class="product-default inner-quickview inner-icon">
                             <figure>
+                                @if ($car_holder->status === 0 && $car_holder->routeName != 'new')
                                 <a href="{{route('car_holders.show',$car_holder->id)}}">
                                     <img src="{{asset('assets/images/abouelgoukh/car_holders/'.$car_holder->image)}}">
                                 </a>
+                                <a href="{{route('car_holders.show',$car_holder->id)}}" class="btn-quickview" title="Quick View">View</a> 
+            
+                                @elseif ($car_holder->status === 1 && $car_holder->routeName != 'new')
+                                <a href="{{route('car_holders.show',$car_holder->id)}}">
+                                    <img src="{{asset('storage/'.$car_holder->image)}}">
+                                </a>
+                                <a href="{{route('car_holders.show',$car_holder->id)}}" class="btn-quickview" title="Quick View">View</a> 
+                                @else
+                         
+                                <a href="{{route('car_holders.show',$car_holder->id)}}">
+                                    <img src="{{asset('storage/'.$car_holder->image)}}">
+                                </a>
+                                <a href="{{route('car_holders.show',$car_holder->id)}}" class="btn-quickview" title="Quick View">View</a> 
+
+                                @endif
+
                                 <a href="{{route('car_holders.show',$car_holder->id)}}" class="btn-quickview" title="Quick View">View</a> 
                             </figure>
                             <div class="product-details">
@@ -102,9 +119,22 @@
                                         
                                     <div class="product-default left-details product-widget">
                                         <figure>
+                                            @if ($car_holder->status === 0 && $car_holder->routeName != 'new')
                                             <a href="{{route('car_holders.show',$car_holder->id)}}">
                                                 <img src="{{asset('assets/images/abouelgoukh/car_holders/'.$car_holder->image)}}">
                                             </a>
+                        
+                                            @elseif ($car_holder->status === 1 && $car_holder->routeName != 'new')
+                                            <a href="{{route('car_holders.show',$car_holder->id)}}">
+                                                <img src="{{asset('storage/'.$car_holder->image)}}">
+                                            </a>
+                                            @else
+                                     
+                                            <a href="{{route('car_holders.show',$car_holder->id)}}">
+                                                <img src="{{asset('storage/'.$car_holder->image)}}">
+                                            </a>
+            
+                                            @endif
                                         </figure>
                                         <div class="product-details">
                                             <h2 class="product-title">

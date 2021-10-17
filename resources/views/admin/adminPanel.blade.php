@@ -8,7 +8,6 @@
 @endsection
 
 @section('content')
-
 <main class="main">
     <nav aria-label="breadcrumb" class="breadcrumb-nav">
         <div class="container">
@@ -46,6 +45,7 @@
                                         <div class="form-group required-field">
                                             <label>Category Name </label>
                                             <input type="text" name="name" class="form-control form-control-sm" >
+                                            <input type="hidden" name="status" value="1">
                                         </div><!-- End .form-group -->
 
                                         <div class="form-group required-field">
@@ -85,46 +85,60 @@
                                             <tr class="product-row">
                                                 <td class="product-col">
                                                     <figure class="product-image-container">
+                                                        @if ($category->status === 0)
+                                                        <a href="{{route('CategoryShow',$category->id)}}" class="product-image">
+                                                            <img src="{{asset('assets/images/abouelgoukh/'.$category->image)}}" alt="product">
+                                                        </a>
+
+                                                        @else
+                                                 
                                                         <a href="{{route('CategoryShow',$category->id)}}" class="product-image">
                                                             {{-- {{dd(asset('storage/'.$category->image))}} --}}
                                                             <img src="{{asset('storage/'.$category->image)}}" alt="product">
                                                         </a>
+                                                        @endif
+                                                        
                                                     </figure>
                                                     <h2 class="product-title">
                                                         <a href="{{route('CategoryShow',$category->id)}}">{{$category->name}}</a>
                                                     </h2>
                                                 </td>
-                                                <td><a href="#" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#addressModal">Edit</a></td>
+                                                <td><a href="#" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#addressModal-{{$category->id}}">Edit</a></td>
                                                 
                                                 <td><a href="{{route('CategoryDelete',$category->id)}}" class="btn btn-sm btn-danger">Delete</a></td>
                                             </tr>
+
                                             <!-- Modal -->
-                                            <div class="modal fade" id="addressModal" tabindex="-1" role="dialog" aria-labelledby="addressModalLabel" aria-hidden="true">
+                                            <div class="modal fade" id="addressModal-{{$category->id}}" tabindex="-1" role="dialog" aria-labelledby="addressModalLabel" aria-hidden="true">
                                                 <div class="modal-dialog" role="document">
+                                                    <div style="display: none;">
+                                                    {{$categoryWhere=\App\Models\Categories::where(['id' => $category->id])->get()}}
+                                                    </div>
                                                     <div class="modal-content">
-                                                        <form action="{{route('CategoryEdit',$category->id)}}" method="POST">
+                                                        <form action="{{route('CategoryEdit',$category->id)}}" enctype="multipart/form-data" method="POST">
                                                             @csrf
                                                             <div class="modal-header">
-                                                                <h3 class="modal-title" id="addressModalLabel">Edit Category</h3>
+                                                                <h3 class="modal-title" id="createCategoryLabel">Edit Category</h3>
                                                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                                 <span aria-hidden="true">&times;</span>
                                                                 </button>
                                                             </div><!-- End .modal-header -->
-
+                                                                        
                                                             <div class="modal-body">
                                                                     <div class="form-group required-field">
                                                                         <label>Category Name </label>
-                                                                        <input type="text" name = "name" class="form-control form-control-sm" >
+                                                                        <input type="text" name="name" class="form-control form-control-sm" value="{{$categoryWhere[0]->name}}" required/>
+                                                                        <input type="hidden" name="status" value="1">
                                                                     </div><!-- End .form-group -->
-
+                                                                        
                                                                     <div class="form-group required-field">
                                                                         <label>Category Image </label>
-                                                                        <input type="file" name="image" class="form-control form-control-sm" >
+                                                                        <input type="file" name="image" class="form-control form-control-sm"  required/>
                                                                     </div>
-
-
+                                                                        
+                                                                        
                                                             </div><!-- End .modal-body -->
-
+                                                                        
                                                             <div class="modal-footer">
                                                                 <button type="button" class="btn btn-link btn-sm" data-dismiss="modal">Cancel</button>
                                                                 <button type="submit" class="btn btn-primary btn-sm">Save changes</button>
@@ -134,6 +148,7 @@
                                                 </div><!-- End .modal-dialog -->
                                             </div><!-- End .modal -->
                                             @endforeach
+
                                         </tbody>
         
                                     </table>

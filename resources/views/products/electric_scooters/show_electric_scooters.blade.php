@@ -31,12 +31,22 @@
                         <div class="col-lg-4 col-md-6 product-single-gallery">
                             <div class="product-slider-container product-item">
                                 <div class="product-single-carousel owl-carousel owl-theme">
-                                    <div class="product-item">
-                                        <img class="product-single-image" src="{{asset('assets/images/abouelgoukh/electric_scooter/'.$product->image2)}}" data-zoom-image="{{asset('assets/images/abouelgoukh/electric_scooter/'.$product->image)}}"/>
-                                    </div>
+                                    @if ($product->status === 0 && $product->routeName != 'new')
                                     <div class="product-item">
                                         <img class="product-single-image" src="{{asset('assets/images/abouelgoukh/electric_scooter/'.$product->image)}}" data-zoom-image="{{asset('assets/images/abouelgoukh/electric_scooter/'.$product->image)}}"/>
                                     </div>
+                
+                                    @elseif ($product->status === 1 && $product->routeName != 'new')
+                                    <div class="product-item">
+                                        <img class="product-single-image" src="{{asset('storage/'.$product->image)}}" data-zoom-image="{{asset('storage/'.$product->image)}}"/>
+                                    </div>
+                                    @else
+                             
+                                    <div class="product-item">
+                                        <img class="product-single-image" src="{{asset('storage/'.$product->image)}}" data-zoom-image="{{asset('storage/'.$product->image)}}"/>
+                                    </div>
+    
+                                    @endif
                                 </div>
                                 <!-- End .product-single-carousel -->
                                 <span class="prod-full-screen">
@@ -44,12 +54,22 @@
                                 </span>
                             </div>
                             <div class="prod-thumbnail row owl-dots" id='carousel-custom-dots'>
-                                <div class="col-3 owl-dot">
-                                    <img src="{{asset('assets/images/abouelgoukh/electric_scooter/'.$product->image2)}}"/>
-                                </div>
+                                @if ($product->status === 0 && $product->routeName != 'new')
                                 <div class="col-3 owl-dot">
                                     <img src="{{asset('assets/images/abouelgoukh/electric_scooter/'.$product->image)}}"/>
                                 </div>
+            
+                                @elseif ($product->status === 1 && $product->routeName != 'new')
+                                <div class="col-3 owl-dot">
+                                    <img src="{{asset('storage/'.$product->image)}}"/>
+                                </div>
+                                @else
+                         
+                                <div class="col-3 owl-dot">
+                                    <img src="{{asset('storage/'.$product->image)}}"/>
+                                </div>
+
+                                @endif
 
                             </div>
                         </div><!-- End .col-lg-5 -->
@@ -103,9 +123,22 @@
                                         
                                     <div class="product-default left-details product-widget">
                                         <figure>
+                                            @if ($electric_scooter->status === 0 && $electric_scooter->routeName != 'new')
                                             <a href="{{route('electric_scooter.show',$electric_scooter->id)}}">
-                                                <img src="{{asset('assets/images/abouelgoukh/electric_scooter/'.$electric_scooter->image2)}}">
+                                                <img src="{{asset('assets/images/abouelgoukh/electric_scooter/'.$electric_scooter->image)}}">
                                             </a>
+                        
+                                            @elseif ($electric_scooter->status === 1 && $electric_scooter->routeName != 'new')
+                                            <a href="{{route('electric_scooter.show',$electric_scooter->id)}}">
+                                                <img src="{{asset('storage/'.$electric_scooter->image)}}">
+                                            </a>
+                                            @else
+                                     
+                                            <a href="{{route('electric_scooter.show',$electric_scooter->id)}}">
+                                                <img src="{{asset('storage/'.$electric_scooter->image)}}">
+                                            </a>
+            
+                                            @endif
                                         </figure>
                                         <div class="product-details">
                                             <h2 class="product-title">

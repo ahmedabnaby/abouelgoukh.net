@@ -16,7 +16,7 @@ class ProductsController extends Controller
      */
     public function index()
     {
-        return view('products.index')->with('products',Products::all());
+        return view('products.index')->with('products',Products::all())->with('categories',Categories::all());
     }
 
     public function search(Request $request)
@@ -165,15 +165,27 @@ class ProductsController extends Controller
 
     public function kids_scooter()
     {
-        return view('products.kids_scooter.kids_scooter');
+        return view('products.kids_scooter.kids_scooter')->with('kids',Products::all());
     }
 
+    public function show_kids_scooters($id)
+    {
+        $kid = Products::findOrFail($id);
+        $kids = Products::all();
+        return view('products.kids_scooter.show_kids_scooters')->withProduct($kid)->withKids($kids);
+    }
 
     public function toys()
     {
-        return view('products.toys.toys');
+        return view('products.toys.toys')->with('toys',Products::all());
     }
 
+    public function show_toys($id)
+    {
+        $toy = Products::findOrFail($id);
+        $toys = Products::all();
+        return view('products.toys.show_toys')->withProduct($toy)->withToys($toys);
+    }
 
     public function sports()
     {

@@ -92,7 +92,34 @@
                     }
                 }
             }">
-                <div class="product-default inner-quickview inner-icon center-details" id="category1">
+            @foreach ($categories as $category)
+            <div class="product-default inner-quickview inner-icon center-details" id="category1">
+                <figure>
+                    @if ($category->status === 0 && $category->routeName != 'new')
+                    <a href="{{route($category->routeName)}}" class="product-image">
+                        <img src="{{asset('assets/images/abouelgoukh/'.$category->image)}}" alt="product">
+                    </a>
+
+                    @elseif ($category->status === 1 && $category->routeName != 'new')
+                    <a href="{{route($category->routeName)}}" class="product-image">
+                        <img src="{{asset('storage/'.$category->image)}}" alt="product">
+                    </a>
+                    @else
+             
+                    <a href="{{route('NewCategoryShow',$category->id)}}" class="product-image">
+                        <img src="{{asset('storage/'.$category->image)}}" alt="product">
+                    </a>
+                    @endif
+                    <a href="#" class="btn-quickview" title="Quick View">Quick View</a> 
+                </figure>
+                <div class="product-details product_details_edited">
+                    <h2 class="product-title">
+                        <a href="#">{{$category->name}}</a>
+                    </h2>
+                </div><!-- End .product-details -->
+            </div>  
+            @endforeach
+                {{-- <div class="product-default inner-quickview inner-icon center-details" id="category1">
                     <figure>
                         <a href="{{route('bicycles')}}">
                             <img src="assets/images/abouelgoukh/Untitled design.png">
@@ -221,7 +248,7 @@
                             <a href="{{route('e_car')}}" target="_blank">E-Cars</a>
                         </h2>
                     </div><!-- End .product-details -->
-                </div>  
+                </div>   --}}
             </div>
         </section>
 

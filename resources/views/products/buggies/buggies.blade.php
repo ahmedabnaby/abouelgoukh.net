@@ -61,9 +61,25 @@
                     <div class="col-6 col-md-4 col-xl-3">
                         <div class="product-default inner-quickview inner-icon">
                             <figure>
+                                @if ($buggy->status === 0 && $buggy->routeName != 'new')
                                 <a href="{{route('buggy.show',$buggy->id)}}">
                                     <img src="{{asset('assets/images/abouelgoukh/buggy/'.$buggy->image)}}">
                                 </a>
+                                <a href="{{route('buggy.show',$buggy->id)}}" class="btn-quickview" title="Quick View">View</a> 
+            
+                                @elseif ($buggy->status === 1 && $buggy->routeName != 'new')
+                                <a href="{{route('buggy.show',$buggy->id)}}">
+                                    <img src="{{asset('storage/'.$buggy->image)}}">
+                                </a>
+                                <a href="{{route('buggy.show',$buggy->id)}}" class="btn-quickview" title="Quick View">View</a> 
+                                @else
+                         
+                                <a href="{{route('buggy.show',$buggy->id)}}">
+                                    <img src="{{asset('storage/'.$buggy->image)}}">
+                                </a>
+                                <a href="{{route('buggy.show',$buggy->id)}}" class="btn-quickview" title="Quick View">View</a> 
+
+                                @endif
                                 <a href="{{route('buggy.show',$buggy->id)}}" class="btn-quickview" title="Quick View">View</a> 
                             </figure>
                             <div class="product-details">
@@ -102,9 +118,22 @@
                                         
                                     <div class="product-default left-details product-widget">
                                         <figure>
+                                            @if ($buggy->status === 0 && $buggy->routeName != 'new')
                                             <a href="{{route('buggy.show',$buggy->id)}}">
                                                 <img src="{{asset('assets/images/abouelgoukh/buggy/'.$buggy->image)}}">
                                             </a>
+                        
+                                            @elseif ($buggy->status === 1 && $buggy->routeName != 'new')
+                                            <a href="{{route('buggy.show',$buggy->id)}}">
+                                                <img src="{{asset('storage/'.$buggy->image)}}">
+                                            </a>
+                                            @else
+                                     
+                                            <a href="{{route('buggy.show',$buggy->id)}}">
+                                                <img src="{{asset('storage/'.$buggy->image)}}">
+                                            </a>
+            
+                                            @endif
                                         </figure>
                                         <div class="product-details">
                                             <h2 class="product-title">

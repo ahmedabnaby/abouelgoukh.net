@@ -23,6 +23,8 @@ class CreateProductsTable extends Migration
             $table->string('image4')->nullable();
             $table->text('description');
             $table->integer('price');
+            $table->string('routeName')->nullable();
+            $table->tinyInteger('status');
             $table->unsignedBigInteger('sub_category_id')->nullable();
             // $table->integer('old_price')->nullable();
             $table->timestamps();

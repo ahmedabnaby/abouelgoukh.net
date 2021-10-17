@@ -18,6 +18,11 @@ Route::get('/contact', 'App\Http\Controllers\PagesController@contact')->name('co
 Route::get('/checkout', 'App\Http\Controllers\PagesController@checkout')->name('checkout');
 Route::post('/payment','App\Http\Controllers\PaymentController@payment')->name('payment');
 Route::post('/search','App\Http\Controllers\ProductsController@search')->name('search');
+Route::get('/new/{id}','App\Http\Controllers\CategoriesController@NewCategoryShow')->name('new');
+
+Route::get('/NewCategoryShow/{id}','App\Http\Controllers\CategoriesController@NewCategoryShow')->name('NewCategoryShow');
+Route::get('/NewProductsShow/{id}','App\Http\Controllers\CategoriesController@NewProductsShow')->name('NewProductsShow');
+
 
 Route::post('/CategoryEdit/{id}','App\Http\Controllers\CategoriesController@CategoryEdit')->name('CategoryEdit');
 Route::get('/CategoryDelete/{id}','App\Http\Controllers\CategoriesController@CategoryDelete')->name('CategoryDelete');
@@ -27,7 +32,8 @@ Route::post('/CategoryStore','App\Http\Controllers\CategoriesController@Category
 
 Route::post('/ProductEdit/{id}','App\Http\Controllers\CategoriesController@ProductEdit')->name('ProductEdit');
 Route::get('/ProductDelete/{id}','App\Http\Controllers\CategoriesController@ProductDelete')->name('ProductDelete');
-Route::get('/ProductShow/{id}','App\Http\Controllers\CategoriesController@ProductShow')->name('ProductShow');
+// Route::get('/ProductShow/{id}','App\Http\Controllers\CategoriesController@ProductShow')->name('ProductShow');
+Route::post('/ProductStore','App\Http\Controllers\CategoriesController@ProductStore')->name('ProductStore');
 
 
 Route::get('/cash','App\Http\Controllers\PaymentController@cash')->name('cash');
@@ -58,7 +64,10 @@ Route::get('/scooters', 'App\Http\Controllers\ProductsController@scooters')->nam
 Route::get('/scooters/show_scooters/{id}','App\Http\Controllers\ProductsController@show_scooters')->name('scooters.show');
 
 Route::get('/kids-scooter', 'App\Http\Controllers\ProductsController@kids_scooter')->name('kids_scooter');
+Route::get('/kids-scooter/show_kids_scooters/{id}', 'App\Http\Controllers\ProductsController@show_kids_scooters')->name('kids.show');
+
 Route::get('/toys', 'App\Http\Controllers\ProductsController@toys')->name('toys');
+Route::get('/toys/show_toys/{id}', 'App\Http\Controllers\ProductsController@show_toys')->name('toys.show');
 
 Route::get('/sports', 'App\Http\Controllers\ProductsController@sports')->name('sports');
 Route::get('/sports/show_sports/{id}','App\Http\Controllers\ProductsController@show_sports')->name('sports.show');

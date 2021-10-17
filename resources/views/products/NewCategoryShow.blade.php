@@ -1,9 +1,6 @@
 @extends('layouts.app')
 @section('header')
-<title>Abou El Goukh - Products - Kids Scooters</title>
-<meta name="description" content="Abou El Goukh is known for supplying the best equipment for kids. One of our best products is kids kids.">
-<meta name="keywords" content="boys, girls, kids, kids, kid toys, maadi, madinaty, elrehab">
-<link rel="canonical" href="http://abouelgoukhstore.com/kids-scooter" />
+<title>Abou El Goukh - Products</title>
 @endsection
 @section('content')
 <main class="main">
@@ -11,7 +8,7 @@
         <div class="container">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href={{route('home')}}>Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Kids Scooters</li>
+                <li class="breadcrumb-item active" aria-current="page">{{$category[0]->name}}</li>
             </ol>
         </div>
     </nav>
@@ -54,77 +51,82 @@
                 
                 <div class="row row-sm">
 
-                    <div style="display: none;">
-                        {{$countKids=\App\Models\Products::where(['category_id' => 4])->get()}}
-                    </div>
-                    @if(count($countKids)>0)
+        @if(count($products)>0)
 
-                    @foreach ($kids as $scooter)
-                    @if ($scooter->category_id === 4)
+                    @foreach ($products as $product)
                     <div class="col-6 col-md-4 col-xl-3">
                         <div class="product-default inner-quickview inner-icon">
                             <figure>
 
-                                @if ($scooter->status === 0 && $scooter->routeName != 'new')
-                                <a href="{{route('kids.show',$scooter->id)}}">
-                                    <img src="{{asset('assets/images/abouelgoukh/kids/'.$scooter->image)}}">
+                                <a href="{{route('NewProductsShow',$product->id)}}">
+                                    <img src="{{asset('storage/'.$product->image)}}">
                                 </a>
-                                <a href="{{route('kids.show',$scooter->id)}}" class="btn-quickview" title="Quick View">View</a> 
-            
-                                @elseif ($scooter->status === 1 && $scooter->routeName != 'new')
-                                <a href="{{route('kids.show',$scooter->id)}}">
-                                    <img src="{{asset('storage/'.$scooter->image)}}">
-                                </a>
-                                <a href="{{route('kids.show',$scooter->id)}}" class="btn-quickview" title="Quick View">View</a> 
-                                @else
-                         
-                                <a href="{{route('kids.show',$scooter->id)}}">
-                                    <img src="{{asset('storage/'.$scooter->image)}}">
-                                </a>
-                                <a href="{{route('kids.show',$scooter->id)}}" class="btn-quickview" title="Quick View">View</a> 
-
-                                @endif
-
-
+                                <a href="{{route('NewProductsShow',$product->id)}}" class="btn-quickview" title="Quick View">View</a> 
    
                             </figure>
                             <div class="product-details">
                                 <h2 class="product-title">
-                                    <a href="{{route('kids.show',$scooter->id)}}">{{$scooter->name}}</a>
+                                    <a href="{{route('NewProductsShow',$product->id)}}">{{$product->name}}</a>
                                 </h2>
                                 <h2 class="product-price">
-                                    <h3>{{number_format($scooter->price)}} EGP</h3>
+                                    <h3>{{number_format($product->price)}} EGP</h3>
                                 </h2>
                             </div>
                         </div>
                     </div>
-                    @endif
                     @endforeach
                     @else
-                    <h1>Stay tuned for new products.</h1>
+                    <h1>No Categories</h1>
         @endif 
-
                 </div><!-- End .row -->
 
             </div><!-- End .col-lg-9 -->
-
-            <aside class="sidebar-shop col-lg-2 order-lg-first">
+            <div class="sidebar-overlay"></div>
+            <div class="sidebar-toggle"><i class="icon-right-open"></i></div>
+            <aside class="sidebar-product col-lg-3 col-xl-2 padding-left-lg mobile-sidebar">
                 <div class="sidebar-wrapper">
+
                     <div class="widget">
                         <h3 class="widget-title">
-                            <a data-toggle="collapse" href="#widget-body-2" role="button" aria-expanded="true" aria-controls="widget-body-2">Kids Scooters</a>
+                            <a data-toggle="collapse" href="#widget-body-2" role="button" aria-expanded="true" aria-controls="widget-body-2">Featured Products</a>
                         </h3>
 
                         <div class="collapse show" id="widget-body-2">
                             <div class="widget-body">
-                                <ul class="cat-list">
-                                    <li><a href="#">None</a></li>
-                                </ul>
+                                <div class="product-intro">
+                                    @foreach ($products as $product)
+                                    @if ($product->category_id === $category[0]->id)
+                                        
+                                    <div class="product-default left-details product-widget">
+                                        <figure>
+                                            <a href="{{route('NewProductsShow',$product->id)}}">
+                                                <img src="{{asset('storage/'.$product->image)}}">
+                                            </a>
+                                        </figure>
+                                        <div class="product-details">
+                                            <h2 class="product-title">
+                                                <a href="{{route('NewProductsShow',$product->id)}}">{{$product->name}}</a>
+                                            </h2>
+                                            <div class="ratings-container">
+                                                <div class="product-ratings">
+                                                    <span class="ratings" style="width:100%"></span><!-- End .ratings -->
+                                                    <span class="tooltiptext tooltip-top"></span>
+                                                </div><!-- End .product-ratings -->
+                                            </div><!-- End .product-container -->
+                                            <div class="price-box">
+                                                <span class="product-price">{{number_format($product->price)}} EGP</span>
+                                            </div><!-- End .price-box -->
+                                        </div><!-- End .product-details -->
+                                    </div>
+                                    @endif
+                                    @endforeach
+
+                                </div>
                             </div><!-- End .widget-body -->
                         </div><!-- End .collapse -->
                     </div><!-- End .widget -->
-                </div><!-- End .sidebar-wrapper -->
-            </aside><!-- End .col-lg-3 -->
+
+            </aside><!-- End .col-md-3 -->
         </div><!-- End .row -->
     </div><!-- End .container -->
 

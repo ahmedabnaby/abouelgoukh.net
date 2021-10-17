@@ -1,9 +1,9 @@
 @extends('layouts.app')
 @section('header')
-<title>Abou El Goukh - Products - Sports Equipment</title>
-<meta name="description" content="As we are in the sports niche, Abou El Goukh also supply some sports products like Iron Gym & Oqla for pull ups.">
-<meta name="keywords" content="Iron Gym, Oqla, Aqla, Sports at home, home, rehab, madinaty, maadi">
-<link rel="canonical" href="http://abouelgoukhstore.com/sports" />
+<title>Abou El Goukh - Products - Kids Scooters</title>
+<meta name="description" content="Abou El Goukh is known for supplying the best equipment for kids. One of our best products is kids kids.">
+<meta name="keywords" content="boys, girls, kids, kids, kid toys, maadi, madinaty, elrehab">
+<link rel="canonical" href="http://abouelgoukhstore.com/kids-scooter" />
 @endsection
 @section('content')
 <main class="main">
@@ -31,22 +31,15 @@
                         <div class="col-lg-4 col-md-6 product-single-gallery">
                             <div class="product-slider-container product-item">
                                 <div class="product-single-carousel owl-carousel owl-theme">
-                                    @if ($product->status === 0 && $product->routeName != 'new')
-                                    <div class="product-item">
-                                        <img class="product-single-image" src="{{asset('assets/images/abouelgoukh/sports/'.$product->image)}}" data-zoom-image="{{asset('assets/images/abouelgoukh/sports/'.$product->image)}}"/>
-                                    </div>
-                
-                                    @elseif ($product->status === 1 && $product->routeName != 'new')
-                                    <div class="product-item">
-                                        <img class="product-single-image" src="{{asset('storage/'.$product->image)}}" data-zoom-image="{{asset('storage/'.$product->image)}}"/>
-                                    </div>
-                                    @else
-                             
-                                    <div class="product-item">
-                                        <img class="product-single-image" src="{{asset('storage/'.$product->image)}}" data-zoom-image="{{asset('storage/'.$product->image)}}"/>
-                                    </div>
-    
-                                    @endif
+                                    
+
+
+                                <div class="product-item">
+                                    <img class="product-single-image" src="{{asset('storage/'.$product->image)}}" data-zoom-image="{{asset('storage/'.$product->image)}}"/>
+                                </div>
+
+
+                                
                                     
                                 </div>
                                 <!-- End .product-single-carousel -->
@@ -55,22 +48,12 @@
                                 </span>
                             </div>
                             <div class="prod-thumbnail row owl-dots" id='carousel-custom-dots'>
-                                @if ($product->status === 0 && $product->routeName != 'new')
-                                <div class="col-3 owl-dot">
-                                    <img src="{{asset('assets/images/abouelgoukh/sports/'.$product->image)}}"/>
-                                </div>
-            
-                                @elseif ($product->status === 1 && $product->routeName != 'new')
-                                <div class="col-3 owl-dot">
-                                    <img src="{{asset('storage/'.$product->image)}}"/>
-                                </div>
-                                @else
-                         
+
+                               
                                 <div class="col-3 owl-dot">
                                     <img src="{{asset('storage/'.$product->image)}}"/>
                                 </div>
 
-                                @endif
                             </div>
                         </div><!-- End .col-lg-5 -->
 
@@ -85,7 +68,6 @@
                                 <div class="product-desc">
                                     <p>{{$product->description}}</p>
                                 </div><!-- End .product-desc -->
-
 
                                 <form action="{{route('cart.add',$product->id)}}" method="get">
 
@@ -119,31 +101,21 @@
                         <div class="collapse show" id="widget-body-2">
                             <div class="widget-body">
                                 <div class="product-intro">
-                                    @foreach ($sports as $sport)
-                                        @if ($sport->category_id === 5)
+                                    @foreach ($kids as $scooter)
+                                        @if ($scooter->category_id === 4)
                                         
                                     <div class="product-default left-details product-widget">
                                         <figure>
-                                            @if ($sport->status === 0 && $sport->routeName != 'new')
-                                            <a href="{{route('sports.show',$sport->id)}}">
-                                                <img src="{{asset('assets/images/abouelgoukh/sports/'.$sport->image)}}">
-                                            </a>
-                        
-                                            @elseif ($sport->status === 1 && $sport->routeName != 'new')
-                                            <a href="{{route('sports.show',$sport->id)}}">
-                                                <img src="{{asset('storage/'.$sport->image)}}">
-                                            </a>
-                                            @else
-                                     
-                                            <a href="{{route('sports.show',$sport->id)}}">
-                                                <img src="{{asset('storage/'.$sport->image)}}">
+
+                                            <a href="{{route('kids.show',$scooter->id)}}">
+                                                <img src="{{asset('storage/'.$scooter->image)}}">
                                             </a>
             
-                                            @endif
+                                            
                                         </figure>
                                         <div class="product-details">
                                             <h2 class="product-title">
-                                                <a href="{{route('sports.show',$sport->id)}}">{{$sport->name}}</a>
+                                                <a href="{{route('kids.show',$scooter->id)}}">{{$scooter->name}}</a>
                                             </h2>
                                             <div class="ratings-container">
                                                 <div class="product-ratings">
@@ -152,7 +124,7 @@
                                                 </div><!-- End .product-ratings -->
                                             </div><!-- End .product-container -->
                                             <div class="price-box">
-                                                <span class="product-price">{{number_format($sport->price)}} EGP</span>
+                                                <span class="product-price">{{number_format($scooter->price)}} EGP</span>
                                             </div><!-- End .price-box -->
                                         </div><!-- End .product-details -->
                                     </div>

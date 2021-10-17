@@ -1,5 +1,4 @@
 <header class="header">
-
     <div class="header-middle sticky-header">
         <div class="container">
             <div class="header-left">
@@ -21,7 +20,15 @@
                                 <div class="col-md-4">
                                   <a class="nolink">Categories</a>
                                   <ul class="submenu">
-                                    <li><a href="{{route('bicycles')}}">Bicycles</a></li>
+                                      @foreach ($categories as $category)
+                                      @if ($category->routeName==='new')
+                                        <li><a href="{{route($category->routeName,$category->id)}}">{{$category->name}}</a></li>
+                                      @else
+                                        <li><a href="{{route($category->routeName)}}">{{$category->name}}</a></li>
+                                      @endif
+                                      @endforeach
+                                    <li><a href="{{route('e_car')}}" target="_blank">E-Cars</a></li>
+                                    {{-- <li><a href="{{route('bicycles')}}">Bicycles</a></li>
                                     <li><a href="{{route('scooters')}}">Petrol Scooter</a></li>
                                     <li><a href="{{route('accessories')}}">Accessories</a></li>
                                     <li><a href="{{route('kids_scooter')}}">Kids scooter</a></li>
@@ -30,7 +37,7 @@
                                     <li><a href="{{route('car_holders')}}">Bicycle Car Holder</a></li>
                                     <li><a href="{{route('buggy')}}">Beach Buggy</a></li>
                                     <li><a href="{{route('electric_scooter')}}">3-Wheel Electric Scooter</a></li>
-                                    <li><a href="{{route('e_car')}}" target="_blank">E-Cars</a></li>
+                                    <li><a href="{{route('e_car')}}" target="_blank">E-Cars</a></li> --}}
                                   </ul>
                                 </div>
                                 <div class="col-md-8 image-container">

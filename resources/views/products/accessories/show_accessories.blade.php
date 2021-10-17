@@ -31,12 +31,23 @@
                         <div class="col-lg-4 col-md-6 product-single-gallery">
                             <div class="product-slider-container product-item">
                                 <div class="product-single-carousel owl-carousel owl-theme">
+                                    @if ($product->status === 0 && $product->routeName != 'new')
                                     <div class="product-item">
-                                        <img class="product-single-image" src="{{asset('assets/images/abouelgoukh/accessories/'.$product->image)}}" data-zoom-image="{{asset('assets/images/abouelgoukh/bicycles/'.$product->image)}}"/>
+                                        <img class="product-single-image" src="{{asset('assets/images/abouelgoukh/accessories/'.$product->image)}}" data-zoom-image="{{asset('assets/images/abouelgoukh/accessories/'.$product->image)}}"/>
                                     </div>
+                
+                                    @elseif ($product->status === 1 && $product->routeName != 'new')
                                     <div class="product-item">
-                                        <img class="product-single-image" src="{{asset('assets/images/abouelgoukh/accessories/'.$product->image)}}" data-zoom-image="{{asset('assets/images/abouelgoukh/bicycles/'.$product->image)}}"/>
+                                        <img class="product-single-image" src="{{asset('storage/'.$product->image)}}" data-zoom-image="{{asset('storage/'.$product->image)}}"/>
                                     </div>
+                                    @else
+                             
+                                    <div class="product-item">
+                                        <img class="product-single-image" src="{{asset('storage/'.$product->image)}}" data-zoom-image="{{asset('storage/'.$product->image)}}"/>
+                                    </div>
+    
+                                    @endif
+    
                                 </div>
                                 <!-- End .product-single-carousel -->
                                 <span class="prod-full-screen">
@@ -44,12 +55,22 @@
                                 </span>
                             </div>
                             <div class="prod-thumbnail row owl-dots" id='carousel-custom-dots'>
+                                @if ($product->status === 0 && $product->routeName != 'new')
                                 <div class="col-3 owl-dot">
                                     <img src="{{asset('assets/images/abouelgoukh/accessories/'.$product->image)}}"/>
                                 </div>
+            
+                                @elseif ($product->status === 1 && $product->routeName != 'new')
                                 <div class="col-3 owl-dot">
-                                    <img src="{{asset('assets/images/abouelgoukh/accessories/'.$product->image)}}"/>
+                                    <img src="{{asset('storage/'.$product->image)}}"/>
                                 </div>
+                                @else
+                         
+                                <div class="col-3 owl-dot">
+                                    <img src="{{asset('storage/'.$product->image)}}"/>
+                                </div>
+
+                                @endif
                             </div>
                         </div><!-- End .col-lg-5 -->
 
@@ -101,9 +122,22 @@
                                         
                                     <div class="product-default left-details product-widget">
                                         <figure>
+                                            @if ($accessory->status === 0 && $accessory->routeName != 'new')
                                             <a href="{{route('accessories.show',$accessory->id)}}">
                                                 <img src="{{asset('assets/images/abouelgoukh/accessories/'.$accessory->image)}}">
                                             </a>
+                        
+                                            @elseif ($accessory->status === 1 && $accessory->routeName != 'new')
+                                            <a href="{{route('accessories.show',$accessory->id)}}">
+                                                <img src="{{asset('storage/'.$accessory->image)}}">
+                                            </a>
+                                            @else
+                                     
+                                            <a href="{{route('accessories.show',$accessory->id)}}">
+                                                <img src="{{asset('storage/'.$accessory->image)}}">
+                                            </a>
+            
+                                            @endif
                                         </figure>
                                         <div class="product-details">
                                             <h2 class="product-title">

@@ -57,14 +57,30 @@
         @if(count($sports)>0)
 
                     @foreach ($sports as $sport)
-                    @if ($sport->category_id === 6)
+                    @if ($sport->category_id === 5)
                     <div class="col-6 col-md-4 col-xl-3">
                         <div class="product-default inner-quickview inner-icon">
                             <figure>
+                                @if ($sport->status === 0 && $sport->routeName != 'new')
                                 <a href="{{route('sports.show',$sport->id)}}">
                                     <img src="{{asset('assets/images/abouelgoukh/sports/'.$sport->image)}}">
                                 </a>
                                 <a href="{{route('sports.show',$sport->id)}}" class="btn-quickview" title="Quick View">View</a> 
+            
+                                @elseif ($sport->status === 1 && $sport->routeName != 'new')
+                                <a href="{{route('sports.show',$sport->id)}}">
+                                    <img src="{{asset('storage/'.$sport->image)}}">
+                                </a>
+                                <a href="{{route('sports.show',$sport->id)}}" class="btn-quickview" title="Quick View">View</a> 
+                                @else
+                         
+                                <a href="{{route('sports.show',$sport->id)}}">
+                                    <img src="{{asset('storage/'.$sport->image)}}">
+                                </a>
+                                <a href="{{route('sports.show',$sport->id)}}" class="btn-quickview" title="Quick View">View</a> 
+
+                                @endif
+                                
                             </figure>
                             <div class="product-details">
                                 <h2 class="product-title">
@@ -79,7 +95,7 @@
                     @endif
                     @endforeach
                     @else
-                    <h1>No Categories</h1>
+                    <h1>Stay tuned for new products.</h1>
         @endif 
                 </div><!-- End .row -->
 
@@ -98,13 +114,26 @@
                             <div class="widget-body">
                                 <div class="product-intro">
                                     @foreach ($sports as $sport)
-                                    @if ($sport->category_id === 6)
+                                    @if ($sport->category_id === 5)
                                         
                                     <div class="product-default left-details product-widget">
                                         <figure>
-                                            <a href="product.html">
+                                            @if ($sport->status === 0 && $sport->routeName != 'new')
+                                            <a href="{{route('sports.show',$sport->id)}}">
                                                 <img src="{{asset('assets/images/abouelgoukh/sports/'.$sport->image)}}">
                                             </a>
+                        
+                                            @elseif ($sport->status === 1 && $sport->routeName != 'new')
+                                            <a href="{{route('sports.show',$sport->id)}}">
+                                                <img src="{{asset('storage/'.$sport->image)}}">
+                                            </a>
+                                            @else
+                                     
+                                            <a href="{{route('sports.show',$sport->id)}}">
+                                                <img src="{{asset('storage/'.$sport->image)}}">
+                                            </a>
+            
+                                            @endif
                                         </figure>
                                         <div class="product-details">
                                             <h2 class="product-title">
