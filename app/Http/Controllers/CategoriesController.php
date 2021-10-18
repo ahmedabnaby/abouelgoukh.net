@@ -103,7 +103,8 @@ class CategoriesController extends Controller
        $products = Products::where('category_id',$id)->get();
        $categories = Categories::all();
        $sub_categories = SubCategories::all();
-       $sub_category_id = Products::where('sub_category_id',$products[0]->sub_category_id)->get();
+       $sub_category_id = SubCategories::where('category_id',$id)->get();
+    //    dd($sub_category_id);
        return view('admin.productsShow')->withProducts($products)->withCategoryid($id)->withCategories($categories)->withSubcategoryid($sub_category_id)->withSubcategories($sub_categories);
     }
 
