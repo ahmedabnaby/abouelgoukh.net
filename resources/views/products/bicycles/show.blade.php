@@ -31,7 +31,24 @@
                         <div class="col-lg-4 col-md-6 product-single-gallery">
                             <div class="product-slider-container product-item">
                                 <div class="product-single-carousel owl-carousel owl-theme">
+                                    
+                                    @if ($product->status === 0 && $product->routeName != 'new')
                                     <div class="product-item">
+                                        <img class="product-single-image" src="{{asset('assets/images/abouelgoukh/bicycles/'.$product->image)}}" data-zoom-image="{{asset('assets/images/abouelgoukh/bicycles/'.$product->image)}}"/>
+                                    </div>
+                
+                                    @elseif ($product->status === 1 && $product->routeName != 'new')
+                                    <div class="product-item">
+                                        <img class="product-single-image" src="{{asset('storage/'.$product->image)}}" data-zoom-image="{{asset('storage/'.$product->image)}}"/>
+                                    </div>
+                                    @else
+                             
+                                    <div class="product-item">
+                                        <img class="product-single-image" src="{{asset('storage/'.$product->image)}}" data-zoom-image="{{asset('storage/'.$product->image)}}"/>
+                                    </div>
+    
+                                    @endif
+                                    {{-- <div class="product-item">
                                         <img class="product-single-image" src="{{asset('assets/images/abouelgoukh/bicycles/'.$product->image)}}" data-zoom-image="{{asset('assets/images/abouelgoukh/bicycles/'.$product->image)}}"/>
                                     </div>
                                     @if (($product->image2 && $product->image3) != '')
@@ -45,7 +62,7 @@
                                     </div>
                                     @else
                                         <div class="display:none;"></div>
-                                    @endif
+                                    @endif --}}
                                 </div>
                                 <!-- End .product-single-carousel -->
                                 <span class="prod-full-screen">
@@ -53,7 +70,23 @@
                                 </span>
                             </div>
                             <div class="prod-thumbnail row owl-dots" id='carousel-custom-dots'>
+                                @if ($product->status === 0 && $product->routeName != 'new')
                                 <div class="col-3 owl-dot">
+                                    <img src="{{asset('assets/images/abouelgoukh/bicycles/'.$product->image)}}"/>
+                                </div>
+            
+                                @elseif ($product->status === 1 && $product->routeName != 'new')
+                                <div class="col-3 owl-dot">
+                                    <img src="{{asset('storage/'.$product->image)}}"/>
+                                </div>
+                                @else
+                         
+                                <div class="col-3 owl-dot">
+                                    <img src="{{asset('storage/'.$product->image)}}"/>
+                                </div>
+
+                                @endif
+                                {{-- <div class="col-3 owl-dot">
                                     <img src="{{asset('assets/images/abouelgoukh/bicycles/'.$product->image)}}"/>
                                 </div>
                                 @if (($product->image2 && $product->image3) != '')
@@ -67,7 +100,7 @@
                                 </div>
                                 @else
                                     <div class="display:none;"></div>
-                                @endif
+                                @endif --}}
                             </div>
                         </div><!-- End .col-lg-5 -->
 
@@ -116,13 +149,28 @@
                             <div class="widget-body">
                                 <div class="product-intro">
                                     @foreach ($bicycles->take(32) as $bicycle)
-                                        @if ($bicycle->category_id === 1)
+                                        @if ($bicycle->category_id === $bicycle->sub_category_id)
                                         
                                     <div class="product-default left-details product-widget">
                                         <figure>
+                                            @if ($bicycle->status === 0 && $bicycle->routeName != 'new')
                                             <a href="{{route('bicycle.show',$bicycle->id)}}">
                                                 <img src="{{asset('assets/images/abouelgoukh/bicycles/'.$bicycle->image)}}">
                                             </a>
+                        
+                                            @elseif ($bicycle->status === 1 && $bicycle->routeName != 'new')
+                                            <a href="{{route('bicycle.show',$bicycle->id)}}">
+                                                <img src="{{asset('storage/'.$bicycle->image)}}">
+                                            </a>
+                                            @else
+                                     
+                                            <a href="{{route('bicycles.show',$bicycle->id)}}">
+                                                <img src="{{asset('storage/'.$bicycle->image)}}">
+                                            </a>
+            
+                                            @endif
+
+                                            
                                         </figure>
                                         <div class="product-details">
                                             <h2 class="product-title">

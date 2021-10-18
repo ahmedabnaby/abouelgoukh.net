@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Categories;
+use App\Models\SubCategories;
 use App\Models\Products;
 use Illuminate\Http\Request;
 // use Request;
@@ -101,7 +102,9 @@ class CategoriesController extends Controller
     {
        $products = Products::where('category_id',$id)->get();
        $categories = Categories::all();
-       return view('admin.productsShow')->withProducts($products)->withCategoryid($id)->withCategories($categories);
+       $sub_categories = SubCategories::all();
+       $sub_category_id = Products::where('sub_category_id',$products[0]->sub_category_id)->get();
+       return view('admin.productsShow')->withProducts($products)->withCategoryid($id)->withCategories($categories)->withSubcategoryid($sub_category_id)->withSubcategories($sub_categories);
     }
 
     public function CategoryStore(Request $request)
@@ -170,6 +173,22 @@ class CategoriesController extends Controller
             'description' => 'required',
             'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
         ]);
+        if($request->category_id === '1')
+        {
+        $path = $request->file('image')->store('images');
+        $product = new Products;
+        $product->name = $request->name;
+        $product->category_id = $request->category_id;
+        $product->sub_category_id = $request->sub_categories;
+        $product->image = $path;
+        $product->routeName = 'new';
+        $product->price = $request->price;
+        $product->status = $request->status;
+        $product->description = $request->description;
+        $product->save();
+        }
+        else
+        {
         $path = $request->file('image')->store('images');
         $product = new Products;
         $product->name = $request->name;
@@ -180,7 +199,7 @@ class CategoriesController extends Controller
         $product->status = $request->status;
         $product->description = $request->description;
         $product->save();
-     
+        }
         return redirect()->back();
     }
     public function NewProductsShow($id)

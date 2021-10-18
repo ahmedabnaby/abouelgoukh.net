@@ -61,11 +61,30 @@
                     <div class="col-6 col-md-4 col-xl-3">
                         <div class="product-default inner-quickview inner-icon">
                             <figure>
-                                <a href="{{route('bicycle.show',['id'=>$subcategory->id,'sub_category_id'=>'1'])}}">
-                                    
+
+                                @if ($subcategory->status === 0 && $subcategory->routeName != 'new')
+                                <a href="{{route('bicycle.show',['id'=>$subcategory->id,'sub_category_id'=>$subcategoryname[0]->id])}}">
                                     <img src="{{asset('assets/images/abouelgoukh/bicycles/'.$subcategory->image)}}">
                                 </a>
-                                <a href="{{route('bicycle.show',['id'=>$subcategory->id,'sub_category_id'=>'1'])}}" class="btn-quickview" title="Quick View">View</a> 
+                                <a href="{{route('bicycle.show',['id'=>$subcategory->id,'sub_category_id'=>$subcategoryname[0]->id])}}" class="btn-quickview" title="Quick View">View</a> 
+                        
+                                            @elseif ($subcategory->status === 1 && $subcategory->routeName != 'new')
+                                            <a href="{{route('bicycle.show',['id'=>$subcategory->id,'sub_category_id'=>$subcategoryname[0]->id])}}">
+                                                <img src="{{asset('storage/'.$subcategory->image)}}">
+                                            </a>
+                                            <a href="{{route('bicycle.show',['id'=>$subcategory->id,'sub_category_id'=>$subcategoryname[0]->id])}}" class="btn-quickview" title="Quick View">View</a> 
+                                            @else
+                                     
+
+                                            <a href="{{route('bicycle.show',['id'=>$subcategory->id,'sub_category_id'=>$subcategoryname[0]->id])}}">
+                                                <img src="{{asset('storage/'.$subcategory->image)}}">
+                                            </a>
+                                            <a href="{{route('bicycle.show',['id'=>$subcategory->id,'sub_category_id'=>$subcategoryname[0]->id])}}" class="btn-quickview" title="Quick View">View</a> 
+
+            
+                                            @endif
+
+
                             </figure>
                             <div class="product-details">
                                 <div class="category-wrap">
@@ -74,7 +93,7 @@
                                     </div>
                                 </div>
                                 <h2 class="product-title">
-                                    <a href="{{route('bicycle.show',['id'=>$subcategory->id,'sub_category_id'=>'1'])}}">{{$subcategory->name}}</a>
+                                    <a href="{{route('bicycle.show',['id'=>$subcategory->id,'sub_category_id'=>$subcategoryname[0]->id])}}">{{$subcategory->name}}</a>
                                 </h2>
                             </div>
                         </div>

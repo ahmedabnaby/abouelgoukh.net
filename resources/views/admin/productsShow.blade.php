@@ -50,6 +50,15 @@
                                             
                                         </div><!-- End .form-group -->
                 
+                                        @if ($categoryid === '1')
+                                        <div class="form-group required-field">
+                                        <select name="sub_categories" id="sub_categories" class="form-control form-control-sm">
+                                            @foreach ($subcategories as $subcategory)
+                                                <option value={{$subcategory->id}}>{{$subcategory->name}}</option>
+                                            @endforeach
+                                        </select>
+                                        </div>
+                                        @endif
                                         <div class="form-group required-field">
                                             <label>Product Price </label>
                                             <input type="text" name="price" class="form-control form-control-sm" placeholder="Price" />
