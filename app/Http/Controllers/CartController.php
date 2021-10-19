@@ -15,6 +15,8 @@ class CartController extends Controller
             'id' => $product->id,
             'name' => $product->name,
             'price' => $product->price,
+            'status' => $product->status,
+            'routeName' => $product->routeName,
             'quantity' => request('quantity'),
             'attributes' => array(
                 'image' => $product->image

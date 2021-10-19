@@ -104,9 +104,23 @@
                                     </div><!-- End .product-details -->
 
                                     <figure class="product-image-container">
+
+                                        @if ($cartItem->status === 0 && $cartItem->routeName != 'new')
                                         <a href="#" class="product-image">
                                             <img src="{{asset('assets/images/abouelgoukh/all/'.$cartItem->attributes->image)}}" alt="product">
                                         </a>
+                    
+                                        @elseif ($cartItem->status === 1 && $cartItem->routeName != 'new')
+                                        <a href="#" class="product-image">
+                                            <img src="{{env('AWS_URL').$cartItem->attributes->image}}" alt="product">
+                                        </a>
+                                        @else
+                                        <a href="#" class="product-image">
+                                            <img src="{{env('AWS_URL').$cartItem->attributes->image}}" alt="product">
+                                        </a>
+                                        @endif
+
+     
                                         <a href="{{route('cart.destroy',$cartItem->id)}}" class="btn-remove" title="Remove Product"><i class="icon-retweet"></i></a>
                                     </figure>
                                 </div><!-- End .product -->
