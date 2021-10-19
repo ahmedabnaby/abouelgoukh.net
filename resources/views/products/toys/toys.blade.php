@@ -67,7 +67,8 @@
 
                                
                                 <a href="{{route('toys.show',$toy->id)}}">
-                                    <img src="{{asset('storage/'.$toy->image)}}">
+                                    {{-- <img src="{{asset('storage/'.$toy->image)}}"> --}}
+                                    <img src="{{env('AWS_URL').$toy->image}}">
                                 </a>
                                 <a href="{{route('toys.show',$toy->id)}}" class="btn-quickview" title="Quick View">View</a> 
 

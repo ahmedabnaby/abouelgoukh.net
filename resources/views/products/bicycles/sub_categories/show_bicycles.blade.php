@@ -70,14 +70,16 @@
                         
                                             @elseif ($subcategory->status === 1 && $subcategory->routeName != 'new')
                                             <a href="{{route('bicycle.show',['id'=>$subcategory->id,'sub_category_id'=>$subcategoryname[0]->id])}}">
-                                                <img src="{{asset('storage/'.$subcategory->image)}}">
+                                                {{-- <img src="{{asset('storage/'.$subcategory->image)}}"> --}}
+                                                <img src="{{env('AWS_URL').$subcategory->image}}" />
                                             </a>
                                             <a href="{{route('bicycle.show',['id'=>$subcategory->id,'sub_category_id'=>$subcategoryname[0]->id])}}" class="btn-quickview" title="Quick View">View</a> 
                                             @else
                                      
 
                                             <a href="{{route('bicycle.show',['id'=>$subcategory->id,'sub_category_id'=>$subcategoryname[0]->id])}}">
-                                                <img src="{{asset('storage/'.$subcategory->image)}}">
+                                                {{-- <img src="{{asset('storage/'.$subcategory->image)}}"> --}}
+                                                <img src="{{env('AWS_URL').$subcategory->image}}" />
                                             </a>
                                             <a href="{{route('bicycle.show',['id'=>$subcategory->id,'sub_category_id'=>$subcategoryname[0]->id])}}" class="btn-quickview" title="Quick View">View</a> 
 
@@ -94,6 +96,9 @@
                                 </div>
                                 <h2 class="product-title">
                                     <a href="{{route('bicycle.show',['id'=>$subcategory->id,'sub_category_id'=>$subcategoryname[0]->id])}}">{{$subcategory->name}}</a>
+                                </h2>
+                                <h2 class="product-price">
+                                    <h3>{{number_format($subcategory->price)}} EGP</h3>
                                 </h2>
                             </div>
                         </div>

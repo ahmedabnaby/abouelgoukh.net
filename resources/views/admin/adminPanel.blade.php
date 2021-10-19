@@ -44,13 +44,13 @@
                                 <div class="modal-body">
                                         <div class="form-group required-field">
                                             <label>Category Name </label>
-                                            <input type="text" name="name" class="form-control form-control-sm" >
+                                            <input type="text" name="name" class="form-control form-control-sm" required/>
                                             <input type="hidden" name="status" value="1">
                                         </div><!-- End .form-group -->
 
                                         <div class="form-group required-field">
                                             <label>Category Image </label>
-                                            <input type="file" name="image" class="form-control form-control-sm" >
+                                            <input type="file" name="image" class="form-control form-control-sm" required/>
                                         </div>
 
 
@@ -94,7 +94,8 @@
                                                  
                                                         <a href="{{route('CategoryShow',$category->id)}}" class="product-image">
                                                             {{-- {{dd(asset('storage/'.$category->image))}} --}}
-                                                            <img src="{{asset('storage/'.$category->image)}}" alt="product">
+                                                            {{-- <img src="{{asset('storage/'.$category->image)}}" alt="product"> --}}
+                                                        <img src="{{env('AWS_URL').$category->image}}" alt="product">
                                                         </a>
                                                         @endif
                                                         

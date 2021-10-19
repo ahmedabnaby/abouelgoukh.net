@@ -70,13 +70,15 @@
             
                                 @elseif ($accessory->status === 1 && $accessory->routeName != 'new')
                                 <a href="{{route('accessories.show',$accessory->id)}}">
-                                    <img src="{{asset('storage/'.$accessory->image)}}">
+                                    {{-- <img src="{{asset('storage/'.$accessory->image)}}"> --}}
+                                    <img src="{{env('AWS_URL').$accessory->image}}" alt="product"/>
                                 </a>
                                 <a href="{{route('accessories.show',$accessory->id)}}" class="btn-quickview" title="Quick View">View</a> 
                                 @else
                          
                                 <a href="{{route('accessories.show',$accessory->id)}}">
-                                    <img src="{{asset('storage/'.$accessory->image)}}">
+                                    {{-- <img src="{{asset('storage/'.$accessory->image)}}"> --}}
+                                    <img src="{{env('AWS_URL').$accessory->image}}" alt="product"/>
                                 </a>
                                 <a href="{{route('accessories.show',$accessory->id)}}" class="btn-quickview" title="Quick View">View</a> 
 

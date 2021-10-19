@@ -33,9 +33,8 @@
                                 <div class="product-single-carousel owl-carousel owl-theme">
                                     
 
-
                                 <div class="product-item">
-                                    <img class="product-single-image" src="{{asset('storage/'.$product->image)}}" data-zoom-image="{{asset('storage/'.$product->image)}}"/>
+                                    <img class="product-single-image" src="{{env('AWS_URL').$product->image}}" data-zoom-image="{{env('AWS_URL').$product->image}}"/>
                                 </div>
 
 
@@ -51,7 +50,8 @@
 
                                
                                 <div class="col-3 owl-dot">
-                                    <img src="{{asset('storage/'.$product->image)}}"/>
+                                    {{-- <img src="{{asset('storage/'.$product->image)}}"/> --}}
+                                    <img src="{{env('AWS_URL').$product->image}}">
                                 </div>
 
                             </div>
@@ -108,7 +108,8 @@
                                         <figure>
 
                                             <a href="{{route('toys.show',$scooter->id)}}">
-                                                <img src="{{asset('storage/'.$scooter->image)}}">
+                                                {{-- <img src="{{asset('storage/'.$scooter->image)}}"> --}}
+                                                    <img src="{{env('AWS_URL').$scooter->image}}">
                                             </a>
             
                                             

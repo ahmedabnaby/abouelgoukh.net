@@ -69,13 +69,15 @@
             
                                 @elseif ($electric_scooter->status === 1 && $electric_scooter->routeName != 'new')
                                 <a href="{{route('electric_scooter.show',$electric_scooter->id)}}">
-                                    <img src="{{asset('storage/'.$electric_scooter->image)}}">
+                                    {{-- <img src="{{asset('storage/'.$electric_scooter->image)}}"> --}}
+                                        <img src="{{env('AWS_URL').$electric_scooter->image}}">
                                 </a>
                                 <a href="{{route('electric_scooter.show',$electric_scooter->id)}}" class="btn-quickview" title="Quick View">View</a> 
                                 @else
                          
                                 <a href="{{route('electric_scooter.show',$electric_scooter->id)}}">
-                                    <img src="{{asset('storage/'.$electric_scooter->image)}}">
+                                    {{-- <img src="{{asset('storage/'.$electric_scooter->image)}}"> --}}
+                                        <img src="{{env('AWS_URL').$electric_scooter->image}}">
                                 </a>
                                 <a href="{{route('electric_scooter.show',$electric_scooter->id)}}" class="btn-quickview" title="Quick View">View</a> 
 
@@ -124,12 +126,14 @@
                         
                                             @elseif ($electric_scooter->status === 1 && $electric_scooter->routeName != 'new')
                                             <a href="{{route('electric_scooter.show',$electric_scooter->id)}}">
-                                                <img src="{{asset('storage/'.$electric_scooter->image)}}">
+                                                {{-- <img src="{{asset('storage/'.$electric_scooter->image)}}"> --}}
+                                                <img src="{{env('AWS_URL').$electric_scooter->image}}">
                                             </a>
                                             @else
                                      
                                             <a href="{{route('electric_scooter.show',$electric_scooter->id)}}">
-                                                <img src="{{asset('storage/'.$electric_scooter->image)}}">
+                                                {{-- <img src="{{asset('storage/'.$electric_scooter->image)}}"> --}}
+                                                <img src="{{env('AWS_URL').$electric_scooter->image}}">
                                             </a>
             
                                             @endif

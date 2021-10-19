@@ -41,12 +41,12 @@
             
                                 @elseif ($product->status === 1 && $product->routeName != 'new')
                                 <div class="product-item">
-                                    <img class="product-single-image" src="{{asset('storage/'.$product->image)}}" data-zoom-image="{{asset('storage/'.$product->image)}}"/>
+                                    <img class="product-single-image" src="{{env('AWS_URL').$product->image}}" data-zoom-image="{{env('AWS_URL').$product->image}}"/>
                                 </div>
                                 @else
                          
                                 <div class="product-item">
-                                    <img class="product-single-image" src="{{asset('storage/'.$product->image)}}" data-zoom-image="{{asset('storage/'.$product->image)}}"/>
+                                    <img class="product-single-image" src="{{env('AWS_URL').$product->image}}" data-zoom-image="{{env('AWS_URL').$product->image}}"/>
                                 </div>
 
                                 @endif
@@ -68,12 +68,14 @@
             
                                 @elseif ($product->status === 1 && $product->routeName != 'new')
                                 <div class="col-3 owl-dot">
-                                    <img src="{{asset('storage/'.$product->image)}}"/>
+                                    {{-- <img src="{{asset('storage/'.$product->image)}}"/> --}}
+                                <img src="{{env('AWS_URL').$product->image}}">
                                 </div>
                                 @else
                          
                                 <div class="col-3 owl-dot">
-                                    <img src="{{asset('storage/'.$product->image)}}"/>
+                                    {{-- <img src="{{asset('storage/'.$product->image)}}"/> --}}
+                                <img src="{{env('AWS_URL').$product->image}}">
                                 </div>
 
                                 @endif
@@ -137,12 +139,14 @@
                         
                                             @elseif ($scooter->status === 1 && $scooter->routeName != 'new')
                                             <a href="{{route('scooters.show',$scooter->id)}}">
-                                                <img src="{{asset('storage/'.$scooter->image)}}">
+                                                {{-- <img src="{{asset('storage/'.$scooter->image)}}"> --}}
+                                                <img src="{{env('AWS_URL').$scooter->image}}">
                                             </a>
                                             @else
                                      
                                             <a href="{{route('scooters.show',$scooter->id)}}">
-                                                <img src="{{asset('storage/'.$scooter->image)}}">
+                                                {{-- <img src="{{asset('storage/'.$scooter->image)}}"> --}}
+                                                <img src="{{env('AWS_URL').$scooter->image}}">
                                             </a>
             
                                             @endif

@@ -39,12 +39,13 @@
                 
                                     @elseif ($product->status === 1 && $product->routeName != 'new')
                                     <div class="product-item">
-                                        <img class="product-single-image" src="{{asset('storage/'.$product->image)}}" data-zoom-image="{{asset('storage/'.$product->image)}}"/>
+                                        <img class="product-single-image" src="{{env('AWS_URL').$product->image}}" data-zoom-image="{{env('AWS_URL').$product->image}}"/>
+                                        {{-- <img src="{{env('AWS_URL').$subcategory->image}}" /> --}}
                                     </div>
                                     @else
                              
                                     <div class="product-item">
-                                        <img class="product-single-image" src="{{asset('storage/'.$product->image)}}" data-zoom-image="{{asset('storage/'.$product->image)}}"/>
+                                        <img class="product-single-image" src="{{env('AWS_URL').$product->image}}" data-zoom-image="{{env('AWS_URL').$product->image}}"/>
                                     </div>
     
                                     @endif
@@ -77,12 +78,12 @@
             
                                 @elseif ($product->status === 1 && $product->routeName != 'new')
                                 <div class="col-3 owl-dot">
-                                    <img src="{{asset('storage/'.$product->image)}}"/>
+                                    <img src="{{env('AWS_URL').$product->image}}" />
                                 </div>
                                 @else
                          
                                 <div class="col-3 owl-dot">
-                                    <img src="{{asset('storage/'.$product->image)}}"/>
+                                    <img src="{{env('AWS_URL').$product->image}}" />
                                 </div>
 
                                 @endif

@@ -38,12 +38,13 @@
                 
                                     @elseif ($product->status === 1 && $product->routeName != 'new')
                                     <div class="product-item">
-                                        <img class="product-single-image" src="{{asset('storage/'.$product->image)}}" data-zoom-image="{{asset('storage/'.$product->image)}}"/>
+                                        <img class="product-single-image" src="{{env('AWS_URL').$product->image}}" data-zoom-image="{{env('AWS_URL').$product->image}}"/>
+                                        {{-- <img src="{{env('AWS_URL').$accessory->image}}" alt="product"/> --}}
                                     </div>
                                     @else
                              
                                     <div class="product-item">
-                                        <img class="product-single-image" src="{{asset('storage/'.$product->image)}}" data-zoom-image="{{asset('storage/'.$product->image)}}"/>
+                                        <img class="product-single-image" src="{{env('AWS_URL').$product->image}}" data-zoom-image="{{env('AWS_URL').$product->image}}"/>
                                     </div>
     
                                     @endif
@@ -62,12 +63,14 @@
             
                                 @elseif ($product->status === 1 && $product->routeName != 'new')
                                 <div class="col-3 owl-dot">
-                                    <img src="{{asset('storage/'.$product->image)}}"/>
+                                    {{-- <img src="{{asset('storage/'.$product->image)}}"/> --}}
+                                    <img src="{{env('AWS_URL').$product->image}}" />
                                 </div>
                                 @else
                          
                                 <div class="col-3 owl-dot">
-                                    <img src="{{asset('storage/'.$product->image)}}"/>
+                                    {{-- <img src="{{asset('storage/'.$product->image)}}"/> --}}
+                                    <img src="{{env('AWS_URL').$product->image}}" />
                                 </div>
 
                                 @endif
@@ -129,12 +132,14 @@
                         
                                             @elseif ($accessory->status === 1 && $accessory->routeName != 'new')
                                             <a href="{{route('accessories.show',$accessory->id)}}">
-                                                <img src="{{asset('storage/'.$accessory->image)}}">
+                                                {{-- <img src="{{asset('storage/'.$accessory->image)}}"> --}}
+                                                <img src="{{env('AWS_URL').$accessory->image}}" />
                                             </a>
                                             @else
                                      
                                             <a href="{{route('accessories.show',$accessory->id)}}">
-                                                <img src="{{asset('storage/'.$accessory->image)}}">
+                                                {{-- <img src="{{asset('storage/'.$accessory->image)}}"> --}}
+                                                <img src="{{env('AWS_URL').$accessory->image}}" />
                                             </a>
             
                                             @endif

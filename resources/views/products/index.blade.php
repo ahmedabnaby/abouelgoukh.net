@@ -102,12 +102,13 @@
 
                     @elseif ($category->status === 1 && $category->routeName != 'new')
                     <a href="{{route($category->routeName)}}" class="product-image">
-                        <img src="{{asset('storage/'.$category->image)}}" alt="product">
+                        {{-- <img src="{{asset('storage/'.$category->image)}}" alt="product"> --}}
+                        <img src="{{env('AWS_URL').$category->image}}" alt="product"/>
                     </a>
                     @else
              
                     <a href="{{route('NewCategoryShow',$category->id)}}" class="product-image">
-                        <img src="{{asset('storage/'.$category->image)}}" alt="product">
+                        <img src="{{env('AWS_URL').$category->image}}" alt="product"/>
                     </a>
                     @endif
                     <a href="#" class="btn-quickview" title="Quick View">Quick View</a> 

@@ -70,13 +70,15 @@
             
                                 @elseif ($scooter->status === 1 && $scooter->routeName != 'new')
                                 <a href="{{route('scooters.show',$scooter->id)}}">
-                                    <img src="{{asset('storage/'.$scooter->image)}}">
+                                    {{-- <img src="{{asset('storage/'.$scooter->image)}}"> --}}
+                                    <img src="{{env('AWS_URL').$scooter->image}}">
                                 </a>
                                 <a href="{{route('scooters.show',$scooter->id)}}" class="btn-quickview" title="Quick View">View</a> 
                                 @else
                          
                                 <a href="{{route('scooters.show',$scooter->id)}}">
-                                    <img src="{{asset('storage/'.$scooter->image)}}">
+                                    {{-- <img src="{{asset('storage/'.$scooter->image)}}"> --}}
+                                    <img src="{{env('AWS_URL').$scooter->image}}">
                                 </a>
                                 <a href="{{route('scooters.show',$scooter->id)}}" class="btn-quickview" title="Quick View">View</a> 
 
@@ -128,12 +130,14 @@
                         
                                             @elseif ($scooter->status === 1 && $scooter->routeName != 'new')
                                             <a href="{{route('scooters.show',$scooter->id)}}">
-                                                <img src="{{asset('storage/'.$scooter->image)}}">
+                                                {{-- <img src="{{asset('storage/'.$scooter->image)}}"> --}}
+                                                <img src="{{env('AWS_URL').$scooter->image}}">
                                             </a>
                                             @else
                                      
                                             <a href="{{route('scooters.show',$scooter->id)}}">
-                                                <img src="{{asset('storage/'.$scooter->image)}}">
+                                                {{-- <img src="{{asset('storage/'.$scooter->image)}}"> --}}
+                                                <img src="{{env('AWS_URL').$scooter->image}}">
                                             </a>
             
                                             @endif

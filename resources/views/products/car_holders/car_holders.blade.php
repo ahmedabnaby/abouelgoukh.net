@@ -69,13 +69,15 @@
             
                                 @elseif ($car_holder->status === 1 && $car_holder->routeName != 'new')
                                 <a href="{{route('car_holders.show',$car_holder->id)}}">
-                                    <img src="{{asset('storage/'.$car_holder->image)}}">
+                                    {{-- <img src="{{asset('storage/'.$car_holder->image)}}"> --}}
+                                    <img src="{{env('AWS_URL').$car_holder->image}}">
                                 </a>
                                 <a href="{{route('car_holders.show',$car_holder->id)}}" class="btn-quickview" title="Quick View">View</a> 
                                 @else
                          
                                 <a href="{{route('car_holders.show',$car_holder->id)}}">
-                                    <img src="{{asset('storage/'.$car_holder->image)}}">
+                                    {{-- <img src="{{asset('storage/'.$car_holder->image)}}"> --}}
+                                    <img src="{{env('AWS_URL').$car_holder->image}}">
                                 </a>
                                 <a href="{{route('car_holders.show',$car_holder->id)}}" class="btn-quickview" title="Quick View">View</a> 
 
@@ -126,12 +128,14 @@
                         
                                             @elseif ($car_holder->status === 1 && $car_holder->routeName != 'new')
                                             <a href="{{route('car_holders.show',$car_holder->id)}}">
-                                                <img src="{{asset('storage/'.$car_holder->image)}}">
+                                                {{-- <img src="{{asset('storage/'.$car_holder->image)}}"> --}}
+                                                <img src="{{env('AWS_URL').$car_holder->image}}">
                                             </a>
                                             @else
                                      
                                             <a href="{{route('car_holders.show',$car_holder->id)}}">
-                                                <img src="{{asset('storage/'.$car_holder->image)}}">
+                                                {{-- <img src="{{asset('storage/'.$car_holder->image)}}"> --}}
+                                                <img src="{{env('AWS_URL').$car_holder->image}}">
                                             </a>
             
                                             @endif

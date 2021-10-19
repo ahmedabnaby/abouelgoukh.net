@@ -29,7 +29,7 @@
                             <div class="product-slider-container product-item">
                                 <div class="product-single-carousel owl-carousel owl-theme">
                                     <div class="product-item">
-                                        <img class="product-single-image" src="{{asset('storage/'.$product[0]->image)}}" data-zoom-image="{{asset('storage/'.$product[0]->image)}}"/>
+                                        <img class="product-single-image" src="{{env('AWS_URL').$product[0]->image}}" data-zoom-image="{{env('AWS_URL').$product[0]->image}}"/>
                                     </div>
                                 </div>
                                 <!-- End .product-single-carousel -->
@@ -39,7 +39,7 @@
                             </div>
                             <div class="prod-thumbnail row owl-dots" id='carousel-custom-dots'>
                                 <div class="col-3 owl-dot">
-                                    <img src="{{asset('storage/'.$product[0]->image)}}"/>
+                                    <img src="{{env('AWS_URL').$product[0]->image}}"/>
                                 </div>
                             </div>
                         </div><!-- End .col-lg-5 -->

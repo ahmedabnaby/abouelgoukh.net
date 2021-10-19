@@ -44,7 +44,7 @@
                                 <div class="modal-body">
                                         <div class="form-group required-field">
                                             <label>Product Name </label>
-                                            <input type="text" name="name" class="form-control form-control-sm" placeholder="Name" />
+                                            <input type="text" name="name" class="form-control form-control-sm" placeholder="Name" required/>
                                             <input type="hidden" name="category_id" value="{{$categoryid}}">
                                             <input type="hidden" name="status" value="1">
                                             
@@ -61,7 +61,7 @@
                                         @endif
                                         <div class="form-group required-field">
                                             <label>Product Price </label>
-                                            <input type="text" name="price" class="form-control form-control-sm" placeholder="Price" />
+                                            <input type="number" name="price" class="form-control form-control-sm" placeholder="Price" required />
                                         </div>
 
                                         <div class="form-group required-field">
@@ -71,7 +71,7 @@
 
                                         <div class="form-group required-field">
                                             <label>Product Image </label>
-                                            <input type="file" name="image" class="form-control form-control-sm" >
+                                            <input type="file" name="image" class="form-control form-control-sm" required>
                                         </div>
                 
                 
@@ -115,7 +115,8 @@
                                                         @else
                                                  
                                                         <a href="#" class="product-image">
-                                                            <img src="{{asset('storage/'.$product->image)}}" alt="product">
+                                                            {{-- <img src="{{asset('storage/'.$product->image)}}" alt="product"> --}}
+                                                            <img src="{{env('AWS_URL').$product->image}}" alt="product"/>
                                                         </a>
                                                         @endif
                                                     </figure>
@@ -147,7 +148,7 @@
                                                             <div class="modal-body">
                                                                 <div class="form-group required-field">
                                                                     <label>Product Name </label>
-                                                                    <input type="text" name="name" class="form-control form-control-sm" placeholder="Name" value="{{$productWhere[0]->name}}"/>
+                                                                    <input type="text" name="name" class="form-control form-control-sm" placeholder="Name" value="{{$productWhere[0]->name}}" required/>
                                                                     <input type="hidden" name="category_id" value="{{$productWhere[0]->category_id}}">
                                                                     <input type="hidden" name="status" value="1">
                                                                     
@@ -155,7 +156,7 @@
                                         
                                                                 <div class="form-group required-field">
                                                                     <label>Product Price </label>
-                                                                    <input type="text" name="price" class="form-control form-control-sm" placeholder="Price" value="{{$productWhere[0]->price}}"/>
+                                                                    <input type="number" name="price" class="form-control form-control-sm" placeholder="Price" value="{{$productWhere[0]->price}}" required/>
                                                                 </div>
                         
                         
@@ -166,7 +167,7 @@
                         
                                                                 <div class="form-group required-field">
                                                                     <label>Product Image </label>
-                                                                    <input type="file" name="image" class="form-control form-control-sm" />
+                                                                    <input type="file" name="image" class="form-control form-control-sm"  required/>
                                                                 </div>
                                         
                                         

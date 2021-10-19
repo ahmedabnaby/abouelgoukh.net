@@ -77,9 +77,15 @@ class CategoriesController extends Controller
             'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
         ]);
         $data = Categories::find($id);
-        $path = $request->file('image')->store('images');
+        // $path = $request->file('image')->store('images');
         $data->name = $request->name;
-        $data->image = $path;
+        $image = $request->file('image');
+        $file_name = uniqid() .'.'. $image->getClientOriginalName();
+        $s3 = \Storage::disk('s3');
+        $s3filePath = '/' . $file_name;
+        $s3->put($s3filePath, file_get_contents($image), 'public');
+
+        $data->image = $file_name;
         $data->status = $request->status;
         $data->save();
         return redirect()->back();
@@ -115,11 +121,17 @@ class CategoriesController extends Controller
             'name' => 'required',
             'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
         ]);
-        $path = $request->file('image')->store('public/images');
+        $image = $request->file('image');
+        $file_name = uniqid() .'.'. $image->getClientOriginalName();
+        $s3 = \Storage::disk('s3');
+        $s3filePath = '/' . $file_name;
+        $s3->put($s3filePath, file_get_contents($image), 'public');
+        // dd($s3);
+        // $path = $request->file('image')->store('public/images');
         $category = new Categories;
         $category->name = $request->name;
         $category->routeName = 'new';
-        $category->image = $path;
+        $category->image = $file_name;
         $category->status = $request->status;
         $category->save();
         // dd($category);
@@ -142,12 +154,17 @@ class CategoriesController extends Controller
             'description' => 'required',
             'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
         ]);
-        $path = $request->file('image')->store('images');
+        // $path = $request->file('image')->store('images');
+        $image = $request->file('image');
+        $file_name = uniqid() .'.'. $image->getClientOriginalName();
+        $s3 = \Storage::disk('s3');
+        $s3filePath = '/' . $file_name;
+        $s3->put($s3filePath, file_get_contents($image), 'public');
         $data = Products::find($id);
         $data->name = $request->name;
         $data->price = $request->price;
         $data->category_id = $request->category_id;
-        $data->image = $path;
+        $data->image = $file_name;
         $data->status = $request->status;
         $data->description = $request->description;
         $data->save();
@@ -176,12 +193,17 @@ class CategoriesController extends Controller
         ]);
         if($request->category_id === '1')
         {
-        $path = $request->file('image')->store('images');
+        $image = $request->file('image');
+        $file_name = uniqid() .'.'. $image->getClientOriginalName();
+        $s3 = \Storage::disk('s3');
+        $s3filePath = '/' . $file_name;
+        $s3->put($s3filePath, file_get_contents($image), 'public');
+        // $path = $request->file('image')->store('images');
         $product = new Products;
         $product->name = $request->name;
         $product->category_id = $request->category_id;
         $product->sub_category_id = $request->sub_categories;
-        $product->image = $path;
+        $product->image = $file_name;
         $product->routeName = 'new';
         $product->price = $request->price;
         $product->status = $request->status;
@@ -190,11 +212,16 @@ class CategoriesController extends Controller
         }
         else
         {
-        $path = $request->file('image')->store('images');
+        // $path = $request->file('image')->store('images');
+        $image = $request->file('image');
+        $file_name = uniqid() .'.'. $image->getClientOriginalName();
+        $s3 = \Storage::disk('s3');
+        $s3filePath = '/' . $file_name;
+        $s3->put($s3filePath, file_get_contents($image), 'public');
         $product = new Products;
         $product->name = $request->name;
         $product->category_id = $request->category_id;
-        $product->image = $path;
+        $product->image = $file_name;
         $product->routeName = 'new';
         $product->price = $request->price;
         $product->status = $request->status;

@@ -69,13 +69,17 @@
             
                                 @elseif ($buggy->status === 1 && $buggy->routeName != 'new')
                                 <a href="{{route('buggy.show',$buggy->id)}}">
-                                    <img src="{{asset('storage/'.$buggy->image)}}">
+                                    {{-- <img src="{{asset('storage/'.$buggy->image)}}"> --}}
+                                    <img src="{{env('AWS_URL').$buggy->image}}">
+                                    
                                 </a>
                                 <a href="{{route('buggy.show',$buggy->id)}}" class="btn-quickview" title="Quick View">View</a> 
                                 @else
                          
                                 <a href="{{route('buggy.show',$buggy->id)}}">
-                                    <img src="{{asset('storage/'.$buggy->image)}}">
+                                    {{-- <img src="{{asset('storage/'.$buggy->image)}}"> --}}
+                                    <img src="{{env('AWS_URL').$buggy->image}}">
+                                    
                                 </a>
                                 <a href="{{route('buggy.show',$buggy->id)}}" class="btn-quickview" title="Quick View">View</a> 
 
@@ -125,12 +129,14 @@
                         
                                             @elseif ($buggy->status === 1 && $buggy->routeName != 'new')
                                             <a href="{{route('buggy.show',$buggy->id)}}">
-                                                <img src="{{asset('storage/'.$buggy->image)}}">
+                                                {{-- <img src="{{asset('storage/'.$buggy->image)}}"> --}}
+                                                <img src="{{env('AWS_URL').$buggy->image}}">
                                             </a>
                                             @else
                                      
                                             <a href="{{route('buggy.show',$buggy->id)}}">
-                                                <img src="{{asset('storage/'.$buggy->image)}}">
+                                                {{-- <img src="{{asset('storage/'.$buggy->image)}}"> --}}
+                                                <img src="{{env('AWS_URL').$buggy->image}}">
                                             </a>
             
                                             @endif

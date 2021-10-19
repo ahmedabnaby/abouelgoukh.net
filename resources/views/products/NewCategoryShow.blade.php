@@ -59,7 +59,8 @@
                             <figure>
 
                                 <a href="{{route('NewProductsShow',$product->id)}}">
-                                    <img src="{{asset('storage/'.$product->image)}}">
+                                    {{-- <img src="{{asset('storage/'.$product->image)}}"> --}}
+                                    <img src="{{env('AWS_URL').$product->image}}" alt="product">
                                 </a>
                                 <a href="{{route('NewProductsShow',$product->id)}}" class="btn-quickview" title="Quick View">View</a> 
    
@@ -100,7 +101,8 @@
                                     <div class="product-default left-details product-widget">
                                         <figure>
                                             <a href="{{route('NewProductsShow',$product->id)}}">
-                                                <img src="{{asset('storage/'.$product->image)}}">
+                                                {{-- <img src="{{asset('storage/'.$product->image)}}"> --}}
+                                                <img src="{{env('AWS_URL').$product->image}}" alt="product">
                                             </a>
                                         </figure>
                                         <div class="product-details">
