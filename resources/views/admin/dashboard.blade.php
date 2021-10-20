@@ -58,9 +58,27 @@
                                 <tr class="product-row">
                                             <td class="product-col">
                                                 <figure class="product-image-container">
-                                                    <a href="product.html" class="product-image">
+
+                                                    @if ($item->status === 0 && $item->routeName != 'new')
+                                                    <a href="#" class="product-image">
                                                         <img src="assets/images/abouelgoukh/all/{{$item['associatedModel']['image']}}" alt="product">
                                                     </a>
+                                
+                                                    @elseif ($item->status === 1 && $item->routeName != 'new')
+                                                    <a href="#" class="product-image">
+                                                        {{-- <img src="{{asset('storage/'.$category->image)}}" alt="product"> --}}
+                                                        <img src="{{env('AWS_URL').$item['associatedModel']['image']}}" alt="product"/>
+                                                    </a>
+                                                    @else
+                                             
+                                                    <a href="#" class="product-image">
+                                                        <img src="{{env('AWS_URL').$item['associatedModel']['image']}}" alt="product"/>
+                                                    </a>
+                                                    @endif
+
+                                                    {{-- <a href="product.html" class="product-image">
+                                                        <img src="assets/images/abouelgoukh/all/{{$item['associatedModel']['image']}}" alt="product">
+                                                    </a> --}}
                                                 </figure>
                                                 <h2 class="product-title">
                                                     <a href="product.html">{{$item['name'] }}</a>

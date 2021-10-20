@@ -37,9 +37,23 @@
                                 <tr>
                                     <td class="product-col">
                                         <figure class="product-image-container">
+                                            @if ($cartItem->status === 0 && $cartItem->routeName != 'new')
                                             <a href="product.html" class="product-image">
                                                 <img src="{{asset('assets/images/abouelgoukh/all/'.$cartItem->attributes->image)}}" alt="product">
                                             </a>
+                        
+                                            @elseif ($cartItem->status === 1 && $cartItem->routeName != 'new')
+                                            <a href="#" class="product-image">
+                                                {{-- <img src="{{asset('storage/'.$category->image)}}" alt="product"> --}}
+                                                <img src="{{env('AWS_URL').$cartItem->attributes->image}}" alt="product"/>
+                                            </a>
+                                            @else
+                                     
+                                            <a href="#" class="product-image">
+                                                <img src="{{env('AWS_URL').$cartItem->attributes->image}}" alt="product"/>
+                                            </a>
+                                            @endif
+ 
                                         </figure>
                                         <div>
                                             <h2 class="product-title">
