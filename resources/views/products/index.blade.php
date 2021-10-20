@@ -99,19 +99,21 @@
                     <a href="{{route($category->routeName)}}" class="product-image">
                         <img src="{{asset('assets/images/abouelgoukh/'.$category->image)}}" alt="product">
                     </a>
-
+                    <a href="{{route($category->routeName)}}" class="btn-quickview" title="Quick View">Quick View</a>
                     @elseif ($category->status === 1 && $category->routeName != 'new')
                     <a href="{{route($category->routeName)}}" class="product-image">
                         {{-- <img src="{{asset('storage/'.$category->image)}}" alt="product"> --}}
                         <img src="{{env('AWS_URL').$category->image}}" alt="product"/>
                     </a>
+                    <a href="{{route($category->routeName)}}" class="btn-quickview" title="Quick View">Quick View</a>
                     @else
              
                     <a href="{{route('NewCategoryShow',$category->id)}}" class="product-image">
                         <img src="{{env('AWS_URL').$category->image}}" alt="product"/>
-                    </a>
+                    </a>   
+                    <a href="{{route('NewCategoryShow',$category->id)}}" class="btn-quickview" title="Quick View">Quick View</a>
                     @endif
-                    <a href="#" class="btn-quickview" title="Quick View">Quick View</a> 
+                     
                 </figure>
                 <div class="product-details product_details_edited">
                     <h2 class="product-title">
