@@ -34,16 +34,16 @@
                         <table class="table table-mini-cart">
                             <tbody>
                                 @foreach ($cartItems as $cartItem)
-                                 {{dd($cartItem->attributes->status)}}     
+                            
                                 <tr>
                                     <td class="product-col">
                                         <figure class="product-image-container">
-                                            @if ($cartItem->status === 0 && $cartItem->routeName != 'new')
+                                            @if ($cartItem->attributes->status === 0 && $cartItem->attributes->routeName != 'new')
                                             <a href="product.html" class="product-image">
                                                 <img src="{{asset('assets/images/abouelgoukh/all/'.$cartItem->attributes->image)}}" alt="product">
                                             </a>
                         
-                                            @elseif ($cartItem->status === 1 && $cartItem->routeName != 'new')
+                                            @elseif ($cartItem->attributes->status === 1 && $cartItem->attributes->routeName != 'new')
                                             <a href="#" class="product-image">
                                                 {{-- <img src="{{asset('storage/'.$category->image)}}" alt="product"> --}}
                                                 <img src="{{env('AWS_URL').$cartItem->attributes->image}}" alt="product"/>
