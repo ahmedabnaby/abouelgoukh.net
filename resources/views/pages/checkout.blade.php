@@ -34,6 +34,7 @@
                         <table class="table table-mini-cart">
                             <tbody>
                                 @foreach ($cartItems as $cartItem)
+                                 {{dd($cartItem)}}     
                                 <tr>
                                     <td class="product-col">
                                         <figure class="product-image-container">
