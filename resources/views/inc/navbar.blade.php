@@ -105,12 +105,12 @@
 
                                     <figure class="product-image-container">
 
-                                        @if ($cartItem->status === 0 && $cartItem->routeName != 'new')
+                                        @if ($cartItem->attributes->status === 0 && $cartItem->attributes->routeName != 'new')
                                         <a href="#" class="product-image">
                                             <img src="{{asset('assets/images/abouelgoukh/all/'.$cartItem->attributes->image)}}" alt="product">
                                         </a>
                     
-                                        @elseif ($cartItem->status === 1 && $cartItem->routeName != 'new')
+                                        @elseif ($cartItem->attributes->status === 1 && $cartItem->attributes->routeName != 'new')
                                         <a href="#" class="product-image">
                                             <img src="{{env('AWS_URL').$cartItem->attributes->image}}" alt="product">
                                         </a>
@@ -188,16 +188,13 @@
                           <div class="row row-sm">
                             <div class="col-md-4">
                               <ul class="submenu">
-                                <li><a href="{{route('bicycles')}}">Bicycles</a></li>
-                                <li><a href="{{route('scooters')}}">Petrol Scooter</a></li>
-                                <li><a href="{{route('accessories')}}">Accessories</a></li>
-                                <li><a href="{{route('kids_scooter')}}">Kids scooter</a></li>
-                                <li><a href="{{route('sports')}}">Sport</a></li>
-                                <li><a href="{{route('toys')}}">Toys</a></li>
-                                <li><a href="{{route('car_holders')}}">Bicycle Car Holder</a></li>
-                                <li><a href="{{route('buggy')}}">Beach Buggy</a></li>
-                                <li><a href="{{route('electric_scooter')}}">3-Wheel Electric Scooter</a></li>
-                                <li><a href="{{route('e_car')}}" target="_blank">E-Cars</a></li>
+                                   @foreach ($categories as $category)
+                                      @if ($category->routeName==='new')
+                                        <li><a href="{{route($category->routeName,$category->id)}}">{{$category->name}}</a></li>
+                                      @else
+                                        <li><a href="{{route($category->routeName)}}">{{$category->name}}</a></li>
+                                      @endif
+                                      @endforeach
                               </ul>
                             </div>
                           </div>
