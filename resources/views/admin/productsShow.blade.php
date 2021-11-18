@@ -128,6 +128,12 @@
 
                                                 <td><a href="#" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#addressModal-{{$product->id}}">Edit</a></td>
                                                 
+                                                @if ($product->visibility === 1)
+                                                    <td><a href="{{route('ProductHide',$product->id)}}" class="btn btn-sm btn-default">Hide</a></td>
+                                                @else
+                                                    <td><a href="{{route('ProductShowHidden',$product->id)}}" class="btn btn-sm btn-success">Show</a></td>
+                                                @endif
+
                                                 <td><a href="{{route('ProductDelete',$product->id)}}" class="btn btn-sm btn-danger">Delete</a></td>
                                             </tr>
                                             <!-- Modal -->

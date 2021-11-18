@@ -57,7 +57,7 @@
         @if(count($buggies)>0)
 
                     @foreach ($buggies as $buggy)
-                    @if ($buggy->category_id === 8)
+                    @if ($buggy->category_id === 8 && $buggy->visibility === 1)
                     <div class="col-6 col-md-4 col-xl-3">
                         <div class="product-default inner-quickview inner-icon">
                             <figure>

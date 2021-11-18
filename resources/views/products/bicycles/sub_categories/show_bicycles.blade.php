@@ -58,6 +58,8 @@
 
                     @foreach ($bicycles as $subcategory)
   
+                    @if ($subcategory->visibility === 1)
+                        
                     <div class="col-6 col-md-4 col-xl-3">
                         <div class="product-default inner-quickview inner-icon">
                             <figure>
@@ -103,6 +105,7 @@
                             </div>
                         </div>
                     </div>
+                    @endif
                     @endforeach
                     @else
                     <h1>Our new collection is coming soon!</h1>

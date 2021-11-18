@@ -60,7 +60,7 @@
                     @if(count($countToys)>0)
 
                     @foreach ($toys as $toy)
-                    @if ($toy->category_id === 6)
+                    @if ($toy->category_id === 6 && $toy->visibility === 1)
                     <div class="col-6 col-md-4 col-xl-3">
                         <div class="product-default inner-quickview inner-icon">
                             <figure>

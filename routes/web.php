@@ -32,6 +32,8 @@ Route::post('/CategoryStore','App\Http\Controllers\CategoriesController@Category
 
 Route::post('/ProductEdit/{id}','App\Http\Controllers\CategoriesController@ProductEdit')->name('ProductEdit');
 Route::get('/ProductDelete/{id}','App\Http\Controllers\CategoriesController@ProductDelete')->name('ProductDelete');
+Route::get('/ProductHide/{id}','App\Http\Controllers\CategoriesController@ProductHide')->name('ProductHide');
+Route::get('/ProductShowHidden/{id}','App\Http\Controllers\CategoriesController@ProductShowHidden')->name('ProductShowHidden');
 // Route::get('/ProductShow/{id}','App\Http\Controllers\CategoriesController@ProductShow')->name('ProductShow');
 Route::post('/ProductStore','App\Http\Controllers\CategoriesController@ProductStore')->name('ProductStore');
 

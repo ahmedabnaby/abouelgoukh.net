@@ -57,7 +57,7 @@
         @if(count($scooters)>0)
 
                     @foreach ($scooters as $scooter)
-                    @if ($scooter->category_id === 2)
+                    @if ($scooter->category_id === 2 && $scooter->visibility === 1)
                     <div class="col-6 col-md-4 col-xl-3">
                         <div class="product-default inner-quickview inner-icon">
                             <figure>

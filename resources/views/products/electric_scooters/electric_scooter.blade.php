@@ -57,7 +57,7 @@
         @if(count($electric_scooters)>0)
 
                     @foreach ($electric_scooters as $electric_scooter)
-                    @if ($electric_scooter->category_id === 9)
+                    @if ($electric_scooter->category_id === 9 && $electric_scooter->visibility === 1)
                     <div class="col-6 col-md-4 col-xl-3">
                         <div class="product-default inner-quickview inner-icon">
                             <figure>

@@ -177,6 +177,22 @@ class CategoriesController extends Controller
         return redirect()->back();
 
     }
+    public function ProductHide($id)
+    {
+        $product = Products::find($id);
+        $product->visibility = '0';
+        $product->save();
+        return redirect()->back();
+
+    }
+    public function ProductShowHidden($id)
+    {
+        $product = Products::find($id);
+        $product->visibility = '1';
+        $product->save();
+        return redirect()->back();
+
+    }
     public function ProductShow($id)
     {
        $products = Products::where('category_id',$id)->get();

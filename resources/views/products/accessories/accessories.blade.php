@@ -57,7 +57,7 @@
         @if(count($accessories)>0)
 
                     @foreach ($accessories as $accessory)
-                    @if ($accessory->category_id === 3)
+                    @if ($accessory->category_id === 3 && $accessory->visibility === 1)
                     <div class="col-6 col-md-4 col-xl-3">
                         <div class="product-default inner-quickview inner-icon">
                             <figure>
