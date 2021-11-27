@@ -152,23 +152,71 @@ class CategoriesController extends Controller
             'price' => 'required',
             'category_id' => 'required',
             'description' => 'required',
-            'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+            'image' => 'image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+            'image2' => 'image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+            // 'image3' => 'image|mimes:jpg,png,jpeg,gif,svg|max:2048',
         ]);
-        // $path = $request->file('image')->store('images');
+
         $image = $request->file('image');
+        $image2 = $request->file('image2');
+        $image3 = $request->file('image3');
         $file_name = uniqid() .'.'. $image->getClientOriginalName();
         $s3 = \Storage::disk('s3');
         $s3filePath = '/' . $file_name;
         $s3->put($s3filePath, file_get_contents($image), 'public');
-        $data = Products::find($id);
-        $data->name = $request->name;
-        $data->price = $request->price;
-        $data->category_id = $request->category_id;
-        $data->image = $file_name;
-        $data->status = $request->status;
-        $data->description = $request->description;
-        $data->save();
-        return redirect()->back();
+        if($image2 != null && $image3 != null)
+        {
+            $file_name2 = uniqid() .'.'. $image2->getClientOriginalName();
+            $s3 = \Storage::disk('s3');
+            $s3filePath = '/' . $file_name2;
+            $s3->put($s3filePath, file_get_contents($image2), 'public');
+
+            $file_name3 = uniqid() .'.'. $image3->getClientOriginalName();
+            $s3 = \Storage::disk('s3');
+            $s3filePath = '/' . $file_name3;
+            $s3->put($s3filePath, file_get_contents($image3), 'public');
+            
+            $data = Products::find($id);
+            $data->name = $request->name;
+            $data->price = $request->price;
+            $data->category_id = $request->category_id;
+            $data->image = $file_name;
+            $data->image2 = $file_name2;
+            $data->image3 = $file_name3;
+            $data->status = $request->status;
+            $data->description = $request->description;
+            $data->save();
+            return redirect()->back();
+        }
+        if($image2 != null)
+        {
+            $file_name2 = uniqid() .'.'. $image2->getClientOriginalName();
+            $s3 = \Storage::disk('s3');
+            $s3filePath = '/' . $file_name2;
+            $s3->put($s3filePath, file_get_contents($image2), 'public');
+            $data = Products::find($id);
+            $data->name = $request->name;
+            $data->price = $request->price;
+            $data->category_id = $request->category_id;
+            $data->image = $file_name;
+            $data->image2 = $file_name2;
+            $data->status = $request->status;
+            $data->description = $request->description;
+            $data->save();
+            return redirect()->back();
+        }
+        else
+        {
+            $data = Products::find($id);
+            $data->name = $request->name;
+            $data->price = $request->price;
+            $data->category_id = $request->category_id;
+            $data->image = $file_name;
+            $data->status = $request->status;
+            $data->description = $request->description;
+            $data->save();
+            return redirect()->back();
+        }
     }
     public function ProductDelete($id)
     {

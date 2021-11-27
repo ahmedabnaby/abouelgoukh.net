@@ -38,7 +38,14 @@
                                     <img class="product-single-image" src="{{env('AWS_URL').$product->image}}" data-zoom-image="{{env('AWS_URL').$product->image}}"/>
                                 </div>
 
-
+                                @if ($product->image2 != null)
+                                <div class="product-item">
+                                    <img class="product-single-image" src="{{env('AWS_URL').$product->image2}}" data-zoom-image="{{env('AWS_URL').$product->image2}}"/>
+                                </div>
+                                <div class="product-item">
+                                    <img class="product-single-image" src="{{env('AWS_URL').$product->image3}}" data-zoom-image="{{env('AWS_URL').$product->image3}}"/>
+                                </div> 
+                                @endif
                                 
                                     
                                 </div>
@@ -54,6 +61,21 @@
                                     {{-- <img src="{{asset('storage/'.$product->image)}}"/> --}}
                                     <img src="{{env('AWS_URL').$product->image}}"/>
                                 </div>
+                                @if ($product->image2 != null && $product->image3 != null)
+                                <div class="col-3 owl-dot">
+                                    <img src="{{env('AWS_URL').$product->image2}}"/>
+                                </div>
+                                <div class="col-3 owl-dot">
+                                    <img src="{{env('AWS_URL').$product->image3}}"/>
+                                </div>
+                                @elseif ($product->image3 === null)
+                                <div class="col-3 owl-dot">
+                                    <img src="{{env('AWS_URL').$product->image2}}"/>
+                                </div>
+                                <div class="col-3 owl-dot" style="display: none;">
+                                    <img src="{{env('AWS_URL').$product->image3}}"/>
+                                </div>
+                                @endif
 
                             </div>
                         </div><!-- End .col-lg-5 -->

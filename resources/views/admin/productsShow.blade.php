@@ -173,10 +173,20 @@
                         
                                                                 <div class="form-group required-field">
                                                                     <label>Product Image </label>
-                                                                    <input type="file" name="image" class="form-control form-control-sm"  required/>
+                                                                    <input type="file" name="image" class="form-control form-control-sm" required/>
                                                                 </div>
-                                        
-                                        
+                                                                
+                                                                
+                                                                <div class="form-group">
+                                                                    <label>Product Image 2</label>
+                                                                    <input type="file" name="image2" class="form-control form-control-sm"/>
+                                                                </div>
+                                                                
+                                                                <div class="form-group">
+                                                                    <label>Product Image 3</label>
+                                                                    <input type="file" name="image3" class="form-control form-control-sm"/>
+                                                                </div>
+
                                                         </div><!-- End .modal-body -->
 
                                                             <div class="modal-footer">

@@ -31,6 +31,15 @@
                                     <div class="product-item">
                                         <img class="product-single-image" src="{{env('AWS_URL').$product[0]->image}}" data-zoom-image="{{env('AWS_URL').$product[0]->image}}"/>
                                     </div>
+                                    @if ($product[0]->image2 != null)
+                                    <div class="product-item">
+                                        <img class="product-single-image" src="{{env('AWS_URL').$product[0]->image2}}" data-zoom-image="{{env('AWS_URL').$product[0]->image2}}"/>
+                                    </div>
+                                    <div class="product-item">
+                                        <img class="product-single-image" src="{{env('AWS_URL').$product[0]->image3}}" data-zoom-image="{{env('AWS_URL').$product[0]->image3}}"/>
+                                    </div> 
+                                    @endif
+
                                 </div>
                                 <!-- End .product-single-carousel -->
                                 <span class="prod-full-screen">
@@ -41,6 +50,21 @@
                                 <div class="col-3 owl-dot">
                                     <img src="{{env('AWS_URL').$product[0]->image}}"/>
                                 </div>
+                                @if ($product[0]->image2 != null && $product[0]->image3 != null)
+                                <div class="col-3 owl-dot">
+                                    <img src="{{env('AWS_URL').$product[0]->image2}}"/>
+                                </div>
+                                <div class="col-3 owl-dot">
+                                    <img src="{{env('AWS_URL').$product[0]->image3}}"/>
+                                </div>
+                                @elseif ($product[0]->image3 === null)
+                                <div class="col-3 owl-dot">
+                                    <img src="{{env('AWS_URL').$product[0]->image2}}"/>
+                                </div>
+                                <div class="col-3 owl-dot" style="display: none;">
+                                    <img src="{{env('AWS_URL').$product[0]->image3}}"/>
+                                </div>
+                                @endif
                             </div>
                         </div><!-- End .col-lg-5 -->
 
