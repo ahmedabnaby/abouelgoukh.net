@@ -69,13 +69,15 @@
             
                                 @elseif ($sport->status === 1 && $sport->routeName != 'new')
                                 <a href="{{route('sports.show',$sport->id)}}">
-                                    <img src="{{asset('storage/'.$sport->image)}}">
+                                    {{-- <img src="{{asset('storage/'.$sport->image)}}"> --}}
+                                                <img src="{{env('AWS_URL').$sport->image}}">
                                 </a>
                                 <a href="{{route('sports.show',$sport->id)}}" class="btn-quickview" title="Quick View">View</a> 
                                 @else
                          
                                 <a href="{{route('sports.show',$sport->id)}}">
-                                    <img src="{{asset('storage/'.$sport->image)}}">
+                                    {{-- <img src="{{asset('storage/'.$sport->image)}}"> --}}
+                                                <img src="{{env('AWS_URL').$sport->image}}">
                                 </a>
                                 <a href="{{route('sports.show',$sport->id)}}" class="btn-quickview" title="Quick View">View</a> 
 
@@ -125,12 +127,14 @@
                         
                                             @elseif ($sport->status === 1 && $sport->routeName != 'new')
                                             <a href="{{route('sports.show',$sport->id)}}">
-                                                <img src="{{asset('storage/'.$sport->image)}}">
+                                                {{-- <img src="{{asset('storage/'.$sport->image)}}"> --}}
+                                                <img src="{{env('AWS_URL').$sport->image}}">
                                             </a>
                                             @else
                                      
                                             <a href="{{route('sports.show',$sport->id)}}">
-                                                <img src="{{asset('storage/'.$sport->image)}}">
+                                                {{-- <img src="{{asset('storage/'.$sport->image)}}"> --}}
+                                                <img src="{{env('AWS_URL').$sport->image}}">
                                             </a>
             
                                             @endif
